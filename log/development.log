@@ -1,0 +1,1031 @@
+
+
+Started GET "/employee/rgperez/official_travel.html" for 172.16.11.51 at 2014-03-17 17:41:21 +0800
+  [1m[36m (4.1ms)[0m  [1mSELECT 1 FROM RDB$DATABASE[0m
+Processing by RegularUserPagesController#official_travel as HTML
+  Parameters: {"username"=>"rgperez"}
+Compiled regular_user/official_travel.js  (0ms)  (pid 23962)
+  Rendered regular_user_pages/official_travel.html.erb within layouts/application (17.2ms)
+Compiled bootstrap.css  (0ms)  (pid 23962)
+Compiled jquery_notification.css  (0ms)  (pid 23962)
+Compiled mypeps_main.css  (0ms)  (pid 23962)
+Compiled extjs/resources/css/ext-all-scoped-debug.css  (2ms)  (pid 23962)
+Compiled icons.css  (0ms)  (pid 23962)
+Compiled application.css  (106ms)  (pid 23962)
+Compiled jquery.js  (0ms)  (pid 23962)
+Compiled bootstrap.min.js  (0ms)  (pid 23962)
+Compiled jquery_notification_v.1.js  (0ms)  (pid 23962)
+Compiled extjs/ext-all.js  (45ms)  (pid 23962)
+Compiled components/editor_window.js  (0ms)  (pid 23962)
+Compiled common_custom_fields.js  (0ms)  (pid 23962)
+Compiled common_functions.js  (0ms)  (pid 23962)
+Compiled components/crud_grid.js  (0ms)  (pid 23962)
+Compiled components/my_fieldset.js  (0ms)  (pid 23962)
+Compiled authenticity_token.js  (0ms)  (pid 23962)
+Compiled application.js  (181ms)  (pid 23962)
+Completed 200 OK in 496ms (Views: 495.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 172.16.11.51 at 2014-03-17 17:41:22 +0800
+  [1m[35m (3.2ms)[0m  SELECT 1 FROM RDB$DATABASE
+Served asset /application.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 172.16.11.51 at 2014-03-17 17:41:22 +0800
+  [1m[36m (2.9ms)[0m  [1mSELECT 1 FROM RDB$DATABASE[0m
+Served asset /bootstrap.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_notification.css?body=1" for 172.16.11.51 at 2014-03-17 17:41:22 +0800
+  [1m[35m (5.0ms)[0m  SELECT 1 FROM RDB$DATABASE
+Served asset /jquery_notification.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/mypeps_main.css?body=1" for 172.16.11.51 at 2014-03-17 17:41:22 +0800
+  [1m[36m (3.4ms)[0m  [1mSELECT 1 FROM RDB$DATABASE[0m
+Served asset /mypeps_main.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/extjs/resources/css/ext-all-scoped-debug.css?body=1" for 172.16.11.51 at 2014-03-17 17:41:22 +0800
+  [1m[35m (17.1ms)[0m  SELECT 1 FROM RDB$DATABASE
+Served asset /extjs/resources/css/ext-all-scoped-debug.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/icons.css?body=1" for 172.16.11.51 at 2014-03-17 17:41:22 +0800
+  [1m[36m (3.0ms)[0m  [1mSELECT 1 FROM RDB$DATABASE[0m
+Served asset /icons.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 172.16.11.51 at 2014-03-17 17:41:22 +0800
+  [1m[35m (3.0ms)[0m  SELECT 1 FROM RDB$DATABASE
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 172.16.11.51 at 2014-03-17 17:41:22 +0800
+  [1m[36m (4.7ms)[0m  [1mSELECT 1 FROM RDB$DATABASE[0m
+Served asset /bootstrap.min.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_notification_v.1.js?body=1" for 172.16.11.51 at 2014-03-17 17:41:22 +0800
+  [1m[35m (3.1ms)[0m  SELECT 1 FROM RDB$DATABASE
+Served asset /jquery_notification_v.1.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/extjs/ext-all.js?body=1" for 172.16.11.51 at 2014-03-17 17:41:22 +0800
+  [1m[36m (3.4ms)[0m  [1mSELECT 1 FROM RDB$DATABASE[0m
+Served asset /extjs/ext-all.js - 304 Not Modified (38ms)
+
+
+Started GET "/assets/components/editor_window.js?body=1" for 172.16.11.51 at 2014-03-17 17:41:22 +0800
+  [1m[35m (3.9ms)[0m  SELECT 1 FROM RDB$DATABASE
+Served asset /components/editor_window.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/common_custom_fields.js?body=1" for 172.16.11.51 at 2014-03-17 17:41:22 +0800
+  [1m[36m (2.9ms)[0m  [1mSELECT 1 FROM RDB$DATABASE[0m
+Served asset /common_custom_fields.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/common_functions.js?body=1" for 172.16.11.51 at 2014-03-17 17:41:22 +0800
+  [1m[35m (5.4ms)[0m  SELECT 1 FROM RDB$DATABASE
+Served asset /common_functions.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/components/crud_grid.js?body=1" for 172.16.11.51 at 2014-03-17 17:41:22 +0800
+  [1m[36m (3.2ms)[0m  [1mSELECT 1 FROM RDB$DATABASE[0m
+Served asset /components/crud_grid.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/components/my_fieldset.js?body=1" for 172.16.11.51 at 2014-03-17 17:41:22 +0800
+  [1m[35m (5.2ms)[0m  SELECT 1 FROM RDB$DATABASE
+Served asset /components/my_fieldset.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/authenticity_token.js?body=1" for 172.16.11.51 at 2014-03-17 17:41:22 +0800
+  [1m[36m (3.2ms)[0m  [1mSELECT 1 FROM RDB$DATABASE[0m
+Served asset /authenticity_token.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 172.16.11.51 at 2014-03-17 17:41:22 +0800
+  [1m[35m (2.8ms)[0m  SELECT 1 FROM RDB$DATABASE
+Served asset /application.js - 304 Not Modified (11ms)
+
+
+Started GET "/assets/regular_user/official_travel.js?body=1" for 172.16.11.51 at 2014-03-17 17:41:22 +0800
+  [1m[36m (3.5ms)[0m  [1mSELECT 1 FROM RDB$DATABASE[0m
+Served asset /regular_user/official_travel.js - 304 Not Modified (1ms)
+Connecting to database specified by database.yml
+  [1m[36m (3.7ms)[0m  [1mSELECT 1 FROM RDB$DATABASE[0m
+  [1m[35m (3.3ms)[0m  SELECT 1 FROM RDB$DATABASE
+
+
+Started GET "/employee/rgperez/dtr_history.html" for 172.16.11.51 at 2014-03-17 17:41:28 +0800
+  [1m[35m (3.2ms)[0m  SELECT 1 FROM RDB$DATABASE
+Processing by RegularUserPagesController#dtr_history as HTML
+  Parameters: {"username"=>"rgperez"}
+Compiled regular_user/dtr_history.js  (0ms)  (pid 23962)
+  Rendered regular_user_pages/dtr_history.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 17ms (Views: 15.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 172.16.11.51 at 2014-03-17 17:41:28 +0800
+  [1m[36m (4.2ms)[0m  [1mSELECT 1 FROM RDB$DATABASE[0m
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 172.16.11.51 at 2014-03-17 17:41:28 +0800
+  [1m[35m (2.9ms)[0m  SELECT 1 FROM RDB$DATABASE
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_notification.css?body=1" for 172.16.11.51 at 2014-03-17 17:41:28 +0800
+  [1m[36m (2.8ms)[0m  [1mSELECT 1 FROM RDB$DATABASE[0m
+Served asset /jquery_notification.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/mypeps_main.css?body=1" for 172.16.11.51 at 2014-03-17 17:41:28 +0800
+  [1m[35m (3.0ms)[0m  SELECT 1 FROM RDB$DATABASE
+Served asset /mypeps_main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/extjs/resources/css/ext-all-scoped-debug.css?body=1" for 172.16.11.51 at 2014-03-17 17:41:28 +0800
+  [1m[36m (2.8ms)[0m  [1mSELECT 1 FROM RDB$DATABASE[0m
+Served asset /extjs/resources/css/ext-all-scoped-debug.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/icons.css?body=1" for 172.16.11.51 at 2014-03-17 17:41:28 +0800
+  [1m[35m (5.0ms)[0m  SELECT 1 FROM RDB$DATABASE
+Served asset /icons.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 172.16.11.51 at 2014-03-17 17:41:28 +0800
+  [1m[36m (3.0ms)[0m  [1mSELECT 1 FROM RDB$DATABASE[0m
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 172.16.11.51 at 2014-03-17 17:41:28 +0800
+  [1m[35m (2.8ms)[0m  SELECT 1 FROM RDB$DATABASE
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_notification_v.1.js?body=1" for 172.16.11.51 at 2014-03-17 17:41:28 +0800
+  [1m[36m (3.2ms)[0m  [1mSELECT 1 FROM RDB$DATABASE[0m
+Served asset /jquery_notification_v.1.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/extjs/ext-all.js?body=1" for 172.16.11.51 at 2014-03-17 17:41:28 +0800
+  [1m[35m (3.2ms)[0m  SELECT 1 FROM RDB$DATABASE
+Served asset /extjs/ext-all.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/components/editor_window.js?body=1" for 172.16.11.51 at 2014-03-17 17:41:28 +0800
+  [1m[36m (3.1ms)[0m  [1mSELECT 1 FROM RDB$DATABASE[0m
+Served asset /components/editor_window.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/common_custom_fields.js?body=1" for 172.16.11.51 at 2014-03-17 17:41:28 +0800
+  [1m[35m (3.5ms)[0m  SELECT 1 FROM RDB$DATABASE
+Served asset /common_custom_fields.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/common_functions.js?body=1" for 172.16.11.51 at 2014-03-17 17:41:28 +0800
+  [1m[36m (3.5ms)[0m  [1mSELECT 1 FROM RDB$DATABASE[0m
+Served asset /common_functions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/components/crud_grid.js?body=1" for 172.16.11.51 at 2014-03-17 17:41:28 +0800
+  [1m[35m (3.0ms)[0m  SELECT 1 FROM RDB$DATABASE
+Served asset /components/crud_grid.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/components/my_fieldset.js?body=1" for 172.16.11.51 at 2014-03-17 17:41:28 +0800
+  [1m[36m (2.8ms)[0m  [1mSELECT 1 FROM RDB$DATABASE[0m
+Served asset /components/my_fieldset.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/authenticity_token.js?body=1" for 172.16.11.51 at 2014-03-17 17:41:28 +0800
+  [1m[35m (3.9ms)[0m  SELECT 1 FROM RDB$DATABASE
+Served asset /authenticity_token.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 172.16.11.51 at 2014-03-17 17:41:28 +0800
+  [1m[36m (3.0ms)[0m  [1mSELECT 1 FROM RDB$DATABASE[0m
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/regular_user/dtr_history.js?body=1" for 172.16.11.51 at 2014-03-17 17:41:29 +0800
+  [1m[35m (3.2ms)[0m  SELECT 1 FROM RDB$DATABASE
+Served asset /regular_user/dtr_history.js - 200 OK (1ms)
+
+
+Started GET "/dtr/history.json?_dc=1395049420950&id_no=GT-1900&end_date=&start_date=&page=1&start=0&limit=25" for 172.16.11.51 at 2014-03-17 17:41:29 +0800
+  [1m[36m (38.6ms)[0m  [1mSELECT 1 FROM RDB$DATABASE[0m
+Processing by DtrController#history as JSON
+  Parameters: {"_dc"=>"1395049420950", "id_no"=>"GT-1900", "end_date"=>"", "start_date"=>"", "page"=>"1", "start"=>"0", "limit"=>"25"}
+  [1m[35mempdtrs Columns (3.9ms)[0m   SELECT r.rdb$field_name, r.rdb$field_source, f.rdb$field_type, f.rdb$field_sub_type,
+ f.rdb$field_length, f.rdb$field_precision, f.rdb$field_scale,
+ COALESCE(r.rdb$default_source, f.rdb$default_source) rdb$default_source,
+ COALESCE(r.rdb$null_flag, f.rdb$null_flag) rdb$null_flag
+ FROM rdb$relation_fields r
+ JOIN rdb$fields f ON r.rdb$field_source = f.rdb$field_name
+ WHERE r.rdb$relation_name = 'EMPDTRS'
+ ORDER BY r.rdb$field_position
+
+  [1m[36m (4.8ms)[0m  [1m SELECT s.rdb$field_name
+ FROM rdb$indices i
+ JOIN rdb$index_segments s ON i.rdb$index_name = s.rdb$index_name
+ LEFT JOIN rdb$relation_constraints c ON i.rdb$index_name = c.rdb$index_name
+ WHERE i.rdb$relation_name = 'EMPDTRS' and c.rdb$constraint_type = 'PRIMARY KEY';
+[0m
+  [1m[35m (3.6ms)[0m  SELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM "EMPDTRS" WHERE (mypclient_id = 'MERCU' AND empidno = 'GT-1900') ROWS 1 TO 3) subquery_for_count 
+  [1m[36mEmpdtr Load (3.7ms)[0m  [1mSELECT "EMPDTRS".* FROM "EMPDTRS" WHERE (mypclient_id = 'MERCU' AND empidno = 'GT-1900') ROWS 1 TO 3[0m
+Completed 200 OK in 39ms (Views: 1.6ms | ActiveRecord: 16.0ms)
+
+
+Started GET "/employee/rgperez/payslip.html" for 172.16.11.51 at 2014-03-17 17:41:34 +0800
+  [1m[35m (3.0ms)[0m  SELECT 1 FROM RDB$DATABASE
+Processing by RegularUserPagesController#payslip as HTML
+  Parameters: {"username"=>"rgperez"}
+Compiled regular_user/payroll.js  (0ms)  (pid 23962)
+  Rendered regular_user_pages/payslip.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 16ms (Views: 15.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 172.16.11.51 at 2014-03-17 17:41:34 +0800
+  [1m[36m (3.3ms)[0m  [1mSELECT 1 FROM RDB$DATABASE[0m
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 172.16.11.51 at 2014-03-17 17:41:34 +0800
+  [1m[35m (3.6ms)[0m  SELECT 1 FROM RDB$DATABASE
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_notification.css?body=1" for 172.16.11.51 at 2014-03-17 17:41:34 +0800
+  [1m[36m (2.6ms)[0m  [1mSELECT 1 FROM RDB$DATABASE[0m
+Served asset /jquery_notification.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/mypeps_main.css?body=1" for 172.16.11.51 at 2014-03-17 17:41:34 +0800
+  [1m[35m (3.3ms)[0m  SELECT 1 FROM RDB$DATABASE
+Served asset /mypeps_main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/extjs/resources/css/ext-all-scoped-debug.css?body=1" for 172.16.11.51 at 2014-03-17 17:41:34 +0800
+  [1m[36m (3.9ms)[0m  [1mSELECT 1 FROM RDB$DATABASE[0m
+Served asset /extjs/resources/css/ext-all-scoped-debug.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/icons.css?body=1" for 172.16.11.51 at 2014-03-17 17:41:34 +0800
+  [1m[35m (3.3ms)[0m  SELECT 1 FROM RDB$DATABASE
+Served asset /icons.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 172.16.11.51 at 2014-03-17 17:41:34 +0800
+  [1m[36m (3.3ms)[0m  [1mSELECT 1 FROM RDB$DATABASE[0m
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 172.16.11.51 at 2014-03-17 17:41:34 +0800
+  [1m[35m (3.5ms)[0m  SELECT 1 FROM RDB$DATABASE
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_notification_v.1.js?body=1" for 172.16.11.51 at 2014-03-17 17:41:34 +0800
+  [1m[36m (3.3ms)[0m  [1mSELECT 1 FROM RDB$DATABASE[0m
+Served asset /jquery_notification_v.1.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/extjs/ext-all.js?body=1" for 172.16.11.51 at 2014-03-17 17:41:34 +0800
+  [1m[35m (3.0ms)[0m  SELECT 1 FROM RDB$DATABASE
+Served asset /extjs/ext-all.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/components/editor_window.js?body=1" for 172.16.11.51 at 2014-03-17 17:41:34 +0800
+  [1m[36m (3.6ms)[0m  [1mSELECT 1 FROM RDB$DATABASE[0m
+Served asset /components/editor_window.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/common_custom_fields.js?body=1" for 172.16.11.51 at 2014-03-17 17:41:34 +0800
+  [1m[35m (3.1ms)[0m  SELECT 1 FROM RDB$DATABASE
+Served asset /common_custom_fields.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/common_functions.js?body=1" for 172.16.11.51 at 2014-03-17 17:41:34 +0800
+  [1m[36m (3.3ms)[0m  [1mSELECT 1 FROM RDB$DATABASE[0m
+Served asset /common_functions.js - 304 Not Modified (0ms)
+
+
+
+Started GET "/assets/components/my_fieldset.js?body=1" for 172.16.11.51 at 2014-03-17 17:41:34 +0800
+
+  [1m[35m (3.2ms)[0m  SELECT 1 FROM RDB$DATABASE
+Served asset /components/my_fieldset.js - 304 Not Modified (0ms)
+Started GET "/assets/components/crud_grid.js?body=1" for 172.16.11.51 at 2014-03-17 17:41:34 +0800
+  [1m[36m (3.5ms)[0m  [1mSELECT 1 FROM RDB$DATABASE[0m
+
+
+Started GET "/assets/authenticity_token.js?body=1" for 172.16.11.51 at 2014-03-17 17:41:34 +0800
+  [1m[36m (3.4ms)[0m  [1mSELECT 1 FROM RDB$DATABASE[0m
+Served asset /authenticity_token.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 172.16.11.51 at 2014-03-17 17:41:34 +0800
+  [1m[35m (3.4ms)[0m  SELECT 1 FROM RDB$DATABASE
+Served asset /application.js - 304 Not Modified (0ms)
+Served asset /components/crud_grid.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/regular_user/payroll.js?body=1" for 172.16.11.51 at 2014-03-17 17:41:35 +0800
+  [1m[35m (3.1ms)[0m  SELECT 1 FROM RDB$DATABASE
+Served asset /regular_user/payroll.js - 304 Not Modified (1ms)
+
+
+Started GET "/employee/rgperez/process_attendance.html" for 172.16.11.51 at 2014-03-17 17:42:04 +0800
+  [1m[36m (3.2ms)[0m  [1mSELECT 1 FROM RDB$DATABASE[0m
+Processing by RegularUserPagesController#process_attendance as HTML
+  Parameters: {"username"=>"rgperez"}
+Compiled regular_user/process_attendance.js  (0ms)  (pid 24912)
+  Rendered regular_user_pages/process_attendance.html.erb within layouts/application (12.2ms)
+Completed 200 OK in 115ms (Views: 108.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 172.16.11.51 at 2014-03-17 17:42:04 +0800
+  [1m[35m (3.3ms)[0m  SELECT 1 FROM RDB$DATABASE
+
+
+Started GET "/assets/bootstrap.css?body=1" for 172.16.11.51 at 2014-03-17 17:42:04 +0800
+  [1m[36m (5.2ms)[0m  [1mSELECT 1 FROM RDB$DATABASE[0m
+Served asset /application.css - 304 Not Modified (38ms)
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_notification.css?body=1" for 172.16.11.51 at 2014-03-17 17:42:04 +0800
+  [1m[35m (3.1ms)[0m  SELECT 1 FROM RDB$DATABASE
+Served asset /jquery_notification.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/mypeps_main.css?body=1" for 172.16.11.51 at 2014-03-17 17:42:04 +0800
+  [1m[36m (17.8ms)[0m  [1mSELECT 1 FROM RDB$DATABASE[0m
+Served asset /mypeps_main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/extjs/resources/css/ext-all-scoped-debug.css?body=1" for 172.16.11.51 at 2014-03-17 17:42:04 +0800
+  [1m[35m (3.2ms)[0m  SELECT 1 FROM RDB$DATABASE
+Served asset /extjs/resources/css/ext-all-scoped-debug.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/icons.css?body=1" for 172.16.11.51 at 2014-03-17 17:42:04 +0800
+  [1m[36m (3.7ms)[0m  [1mSELECT 1 FROM RDB$DATABASE[0m
+Served asset /icons.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 172.16.11.51 at 2014-03-17 17:42:05 +0800
+  [1m[35m (7.1ms)[0m  SELECT 1 FROM RDB$DATABASE
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 172.16.11.51 at 2014-03-17 17:42:05 +0800
+  [1m[36m (3.1ms)[0m  [1mSELECT 1 FROM RDB$DATABASE[0m
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_notification_v.1.js?body=1" for 172.16.11.51 at 2014-03-17 17:42:05 +0800
+  [1m[35m (5.3ms)[0m  SELECT 1 FROM RDB$DATABASE
+Served asset /jquery_notification_v.1.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/extjs/ext-all.js?body=1" for 172.16.11.51 at 2014-03-17 17:42:05 +0800
+  [1m[36m (3.3ms)[0m  [1mSELECT 1 FROM RDB$DATABASE[0m
+Served asset /extjs/ext-all.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/components/editor_window.js?body=1" for 172.16.11.51 at 2014-03-17 17:42:05 +0800
+  [1m[35m (3.0ms)[0m  SELECT 1 FROM RDB$DATABASE
+Served asset /components/editor_window.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/common_custom_fields.js?body=1" for 172.16.11.51 at 2014-03-17 17:42:05 +0800
+  [1m[36m (5.1ms)[0m  [1mSELECT 1 FROM RDB$DATABASE[0m
+Served asset /common_custom_fields.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/common_functions.js?body=1" for 172.16.11.51 at 2014-03-17 17:42:05 +0800
+  [1m[35m (3.3ms)[0m  SELECT 1 FROM RDB$DATABASE
+Served asset /common_functions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/components/crud_grid.js?body=1" for 172.16.11.51 at 2014-03-17 17:42:05 +0800
+  [1m[36m (7.9ms)[0m  [1mSELECT 1 FROM RDB$DATABASE[0m
+Served asset /components/crud_grid.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/components/my_fieldset.js?body=1" for 172.16.11.51 at 2014-03-17 17:42:05 +0800
+  [1m[35m (3.3ms)[0m  SELECT 1 FROM RDB$DATABASE
+Served asset /components/my_fieldset.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/authenticity_token.js?body=1" for 172.16.11.51 at 2014-03-17 17:42:05 +0800
+  [1m[36m (3.1ms)[0m  [1mSELECT 1 FROM RDB$DATABASE[0m
+Served asset /authenticity_token.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 172.16.11.51 at 2014-03-17 17:42:05 +0800
+  [1m[35m (4.4ms)[0m  SELECT 1 FROM RDB$DATABASE
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/regular_user/process_attendance.js?body=1" for 172.16.11.51 at 2014-03-17 17:42:05 +0800
+  [1m[36m (3.2ms)[0m  [1mSELECT 1 FROM RDB$DATABASE[0m
+Served asset /regular_user/process_attendance.js - 304 Not Modified (1ms)
+
+
+Started GET "/employee/rgperez/overtime.html" for 172.16.11.51 at 2014-03-17 17:42:09 +0800
+  [1m[35m (3.2ms)[0m  SELECT 1 FROM RDB$DATABASE
+Processing by RegularUserPagesController#overtime as HTML
+  Parameters: {"username"=>"rgperez"}
+Compiled regular_user/overtime.js  (0ms)  (pid 23962)
+  Rendered regular_user_pages/overtime.html.erb within layouts/application (44.1ms)
+Completed 200 OK in 52ms (Views: 51.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 172.16.11.51 at 2014-03-17 17:42:09 +0800
+  [1m[36m (3.3ms)[0m  [1mSELECT 1 FROM RDB$DATABASE[0m
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 172.16.11.51 at 2014-03-17 17:42:09 +0800
+  [1m[35m (3.0ms)[0m  SELECT 1 FROM RDB$DATABASE
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_notification.css?body=1" for 172.16.11.51 at 2014-03-17 17:42:09 +0800
+  [1m[36m (14.2ms)[0m  [1mSELECT 1 FROM RDB$DATABASE[0m
+Served asset /jquery_notification.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/mypeps_main.css?body=1" for 172.16.11.51 at 2014-03-17 17:42:09 +0800
+  [1m[35m (3.0ms)[0m  SELECT 1 FROM RDB$DATABASE
+Served asset /mypeps_main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/extjs/resources/css/ext-all-scoped-debug.css?body=1" for 172.16.11.51 at 2014-03-17 17:42:09 +0800
+  [1m[36m (3.1ms)[0m  [1mSELECT 1 FROM RDB$DATABASE[0m
+Served asset /extjs/resources/css/ext-all-scoped-debug.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/icons.css?body=1" for 172.16.11.51 at 2014-03-17 17:42:09 +0800
+  [1m[35m (4.5ms)[0m  SELECT 1 FROM RDB$DATABASE
+Served asset /icons.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 172.16.11.51 at 2014-03-17 17:42:09 +0800
+  [1m[36m (3.0ms)[0m  [1mSELECT 1 FROM RDB$DATABASE[0m
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 172.16.11.51 at 2014-03-17 17:42:09 +0800
+  [1m[35m (2.8ms)[0m  SELECT 1 FROM RDB$DATABASE
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_notification_v.1.js?body=1" for 172.16.11.51 at 2014-03-17 17:42:10 +0800
+  [1m[36m (3.7ms)[0m  [1mSELECT 1 FROM RDB$DATABASE[0m
+Served asset /jquery_notification_v.1.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/extjs/ext-all.js?body=1" for 172.16.11.51 at 2014-03-17 17:42:10 +0800
+  [1m[35m (2.9ms)[0m  SELECT 1 FROM RDB$DATABASE
+Served asset /extjs/ext-all.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/components/editor_window.js?body=1" for 172.16.11.51 at 2014-03-17 17:42:10 +0800
+  [1m[36m (3.5ms)[0m  [1mSELECT 1 FROM RDB$DATABASE[0m
+Served asset /components/editor_window.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/common_custom_fields.js?body=1" for 172.16.11.51 at 2014-03-17 17:42:10 +0800
+  [1m[35m (3.2ms)[0m  SELECT 1 FROM RDB$DATABASE
+Served asset /common_custom_fields.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/common_functions.js?body=1" for 172.16.11.51 at 2014-03-17 17:42:10 +0800
+  [1m[36m (3.1ms)[0m  [1mSELECT 1 FROM RDB$DATABASE[0m
+Served asset /common_functions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/components/crud_grid.js?body=1" for 172.16.11.51 at 2014-03-17 17:42:10 +0800
+  [1m[35m (3.0ms)[0m  SELECT 1 FROM RDB$DATABASE
+Served asset /components/crud_grid.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/components/my_fieldset.js?body=1" for 172.16.11.51 at 2014-03-17 17:42:10 +0800
+  [1m[36m (2.5ms)[0m  [1mSELECT 1 FROM RDB$DATABASE[0m
+Served asset /components/my_fieldset.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/authenticity_token.js?body=1" for 172.16.11.51 at 2014-03-17 17:42:10 +0800
+  [1m[35m (3.3ms)[0m  SELECT 1 FROM RDB$DATABASE
+Served asset /authenticity_token.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 172.16.11.51 at 2014-03-17 17:42:10 +0800
+  [1m[36m (7.5ms)[0m  [1mSELECT 1 FROM RDB$DATABASE[0m
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/regular_user/overtime.js?body=1" for 172.16.11.51 at 2014-03-17 17:42:10 +0800
+  [1m[35m (2.9ms)[0m  SELECT 1 FROM RDB$DATABASE
+Served asset /regular_user/overtime.js - 304 Not Modified (1ms)
+
+
+Started GET "/employee/rgperez/leave.html" for 172.16.11.51 at 2014-03-17 17:42:15 +0800
+  [1m[36m (2.8ms)[0m  [1mSELECT 1 FROM RDB$DATABASE[0m
+Processing by RegularUserPagesController#leave as HTML
+  Parameters: {"username"=>"rgperez"}
+Compiled regular_user/leave_of_absence.js  (0ms)  (pid 23962)
+  Rendered regular_user_pages/leave.html.erb within layouts/application (44.2ms)
+Completed 200 OK in 52ms (Views: 51.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 172.16.11.51 at 2014-03-17 17:42:16 +0800
+  [1m[35m (3.5ms)[0m  SELECT 1 FROM RDB$DATABASE
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 172.16.11.51 at 2014-03-17 17:42:16 +0800
+  [1m[36m (2.9ms)[0m  [1mSELECT 1 FROM RDB$DATABASE[0m
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_notification.css?body=1" for 172.16.11.51 at 2014-03-17 17:42:16 +0800
+  [1m[35m (3.1ms)[0m  SELECT 1 FROM RDB$DATABASE
+Served asset /jquery_notification.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/mypeps_main.css?body=1" for 172.16.11.51 at 2014-03-17 17:42:16 +0800
+  [1m[36m (3.2ms)[0m  [1mSELECT 1 FROM RDB$DATABASE[0m
+Served asset /mypeps_main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/extjs/resources/css/ext-all-scoped-debug.css?body=1" for 172.16.11.51 at 2014-03-17 17:42:16 +0800
+  [1m[35m (3.8ms)[0m  SELECT 1 FROM RDB$DATABASE
+Served asset /extjs/resources/css/ext-all-scoped-debug.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/icons.css?body=1" for 172.16.11.51 at 2014-03-17 17:42:16 +0800
+  [1m[36m (2.9ms)[0m  [1mSELECT 1 FROM RDB$DATABASE[0m
+Served asset /icons.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 172.16.11.51 at 2014-03-17 17:42:16 +0800
+  [1m[35m (6.2ms)[0m  SELECT 1 FROM RDB$DATABASE
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 172.16.11.51 at 2014-03-17 17:42:16 +0800
+  [1m[36m (5.1ms)[0m  [1mSELECT 1 FROM RDB$DATABASE[0m
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_notification_v.1.js?body=1" for 172.16.11.51 at 2014-03-17 17:42:16 +0800
+  [1m[35m (3.1ms)[0m  SELECT 1 FROM RDB$DATABASE
+Served asset /jquery_notification_v.1.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/extjs/ext-all.js?body=1" for 172.16.11.51 at 2014-03-17 17:42:16 +0800
+  [1m[36m (3.3ms)[0m  [1mSELECT 1 FROM RDB$DATABASE[0m
+Served asset /extjs/ext-all.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/components/editor_window.js?body=1" for 172.16.11.51 at 2014-03-17 17:42:16 +0800
+  [1m[35m (3.2ms)[0m  SELECT 1 FROM RDB$DATABASE
+Served asset /components/editor_window.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/common_custom_fields.js?body=1" for 172.16.11.51 at 2014-03-17 17:42:16 +0800
+  [1m[36m (8.1ms)[0m  [1mSELECT 1 FROM RDB$DATABASE[0m
+Served asset /common_custom_fields.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/common_functions.js?body=1" for 172.16.11.51 at 2014-03-17 17:42:16 +0800
+  [1m[35m (3.1ms)[0m  SELECT 1 FROM RDB$DATABASE
+Served asset /common_functions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/components/crud_grid.js?body=1" for 172.16.11.51 at 2014-03-17 17:42:16 +0800
+  [1m[36m (2.7ms)[0m  [1mSELECT 1 FROM RDB$DATABASE[0m
+Served asset /components/crud_grid.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/components/my_fieldset.js?body=1" for 172.16.11.51 at 2014-03-17 17:42:16 +0800
+  [1m[35m (3.3ms)[0m  SELECT 1 FROM RDB$DATABASE
+Served asset /components/my_fieldset.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/authenticity_token.js?body=1" for 172.16.11.51 at 2014-03-17 17:42:16 +0800
+  [1m[36m (2.6ms)[0m  [1mSELECT 1 FROM RDB$DATABASE[0m
+Served asset /authenticity_token.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 172.16.11.51 at 2014-03-17 17:42:16 +0800
+  [1m[35m (3.5ms)[0m  SELECT 1 FROM RDB$DATABASE
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/regular_user/leave_of_absence.js?body=1" for 172.16.11.51 at 2014-03-17 17:42:16 +0800
+  [1m[36m (6.8ms)[0m  [1mSELECT 1 FROM RDB$DATABASE[0m
+Served asset /regular_user/leave_of_absence.js - 304 Not Modified (1ms)
+
+
+Started GET "/employee/rgperez/dtr_log.html" for 172.16.11.51 at 2014-03-17 17:42:24 +0800
+  [1m[35m (3.6ms)[0m  SELECT 1 FROM RDB$DATABASE
+Processing by RegularUserPagesController#dtr_log as HTML
+  Parameters: {"username"=>"rgperez"}
+Compiled regular_user/dtr_log.js  (0ms)  (pid 23962)
+  Rendered regular_user_pages/dtr_log.html.erb within layouts/application (44.0ms)
+Completed 200 OK in 52ms (Views: 51.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 172.16.11.51 at 2014-03-17 17:42:24 +0800
+  [1m[36m (3.4ms)[0m  [1mSELECT 1 FROM RDB$DATABASE[0m
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 172.16.11.51 at 2014-03-17 17:42:24 +0800
+  [1m[35m (3.0ms)[0m  SELECT 1 FROM RDB$DATABASE
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_notification.css?body=1" for 172.16.11.51 at 2014-03-17 17:42:24 +0800
+  [1m[36m (3.1ms)[0m  [1mSELECT 1 FROM RDB$DATABASE[0m
+Served asset /jquery_notification.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/mypeps_main.css?body=1" for 172.16.11.51 at 2014-03-17 17:42:24 +0800
+  [1m[35m (3.2ms)[0m  SELECT 1 FROM RDB$DATABASE
+Served asset /mypeps_main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/extjs/resources/css/ext-all-scoped-debug.css?body=1" for 172.16.11.51 at 2014-03-17 17:42:24 +0800
+  [1m[36m (3.0ms)[0m  [1mSELECT 1 FROM RDB$DATABASE[0m
+Served asset /extjs/resources/css/ext-all-scoped-debug.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/icons.css?body=1" for 172.16.11.51 at 2014-03-17 17:42:24 +0800
+  [1m[35m (3.2ms)[0m  SELECT 1 FROM RDB$DATABASE
+Served asset /icons.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 172.16.11.51 at 2014-03-17 17:42:24 +0800
+  [1m[36m (3.0ms)[0m  [1mSELECT 1 FROM RDB$DATABASE[0m
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 172.16.11.51 at 2014-03-17 17:42:24 +0800
+  [1m[35m (2.6ms)[0m  SELECT 1 FROM RDB$DATABASE
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_notification_v.1.js?body=1" for 172.16.11.51 at 2014-03-17 17:42:25 +0800
+  [1m[36m (3.4ms)[0m  [1mSELECT 1 FROM RDB$DATABASE[0m
+Served asset /jquery_notification_v.1.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/extjs/ext-all.js?body=1" for 172.16.11.51 at 2014-03-17 17:42:25 +0800
+  [1m[35m (3.0ms)[0m  SELECT 1 FROM RDB$DATABASE
+Served asset /extjs/ext-all.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/components/editor_window.js?body=1" for 172.16.11.51 at 2014-03-17 17:42:25 +0800
+  [1m[36m (3.2ms)[0m  [1mSELECT 1 FROM RDB$DATABASE[0m
+Served asset /components/editor_window.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/common_custom_fields.js?body=1" for 172.16.11.51 at 2014-03-17 17:42:25 +0800
+  [1m[35m (3.0ms)[0m  SELECT 1 FROM RDB$DATABASE
+Served asset /common_custom_fields.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/common_functions.js?body=1" for 172.16.11.51 at 2014-03-17 17:42:25 +0800
+  [1m[36m (3.2ms)[0m  [1mSELECT 1 FROM RDB$DATABASE[0m
+Served asset /common_functions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/components/crud_grid.js?body=1" for 172.16.11.51 at 2014-03-17 17:42:25 +0800
+  [1m[35m (2.9ms)[0m  SELECT 1 FROM RDB$DATABASE
+Served asset /components/crud_grid.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/components/my_fieldset.js?body=1" for 172.16.11.51 at 2014-03-17 17:42:25 +0800
+  [1m[36m (6.9ms)[0m  [1mSELECT 1 FROM RDB$DATABASE[0m
+Served asset /components/my_fieldset.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/authenticity_token.js?body=1" for 172.16.11.51 at 2014-03-17 17:42:25 +0800
+  [1m[35m (3.1ms)[0m  SELECT 1 FROM RDB$DATABASE
+Served asset /authenticity_token.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 172.16.11.51 at 2014-03-17 17:42:25 +0800
+  [1m[36m (3.4ms)[0m  [1mSELECT 1 FROM RDB$DATABASE[0m
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/regular_user/dtr_log.js?body=1" for 172.16.11.51 at 2014-03-17 17:42:25 +0800
+  [1m[35m (3.4ms)[0m  SELECT 1 FROM RDB$DATABASE
+Served asset /regular_user/dtr_log.js - 304 Not Modified (1ms)
+
+
+Started GET "/employee/rgperez/official_travel.html" for 172.16.11.51 at 2014-03-17 17:42:31 +0800
+  [1m[36m (3.4ms)[0m  [1mSELECT 1 FROM RDB$DATABASE[0m
+Processing by RegularUserPagesController#official_travel as HTML
+  Parameters: {"username"=>"rgperez"}
+  Rendered regular_user_pages/official_travel.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 7ms (Views: 6.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 172.16.11.51 at 2014-03-17 17:42:31 +0800
+  [1m[35m (3.3ms)[0m  SELECT 1 FROM RDB$DATABASE
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 172.16.11.51 at 2014-03-17 17:42:31 +0800
+  [1m[36m (3.1ms)[0m  [1mSELECT 1 FROM RDB$DATABASE[0m
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_notification.css?body=1" for 172.16.11.51 at 2014-03-17 17:42:31 +0800
+
+
+Started GET "/assets/mypeps_main.css?body=1" for 172.16.11.51 at 2014-03-17 17:42:31 +0800
+  [1m[36m (3.6ms)[0m  [1mSELECT 1 FROM RDB$DATABASE[0m
+  [1m[35m (4.6ms)[0m  SELECT 1 FROM RDB$DATABASE
+Served asset /jquery_notification.css - 304 Not Modified (0ms)
+Served asset /mypeps_main.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/extjs/resources/css/ext-all-scoped-debug.css?body=1" for 172.16.11.51 at 2014-03-17 17:42:31 +0800
+  [1m[35m (2.8ms)[0m  SELECT 1 FROM RDB$DATABASE
+Served asset /extjs/resources/css/ext-all-scoped-debug.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/icons.css?body=1" for 172.16.11.51 at 2014-03-17 17:42:31 +0800
+  [1m[36m (3.5ms)[0m  [1mSELECT 1 FROM RDB$DATABASE[0m
+Served asset /icons.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 172.16.11.51 at 2014-03-17 17:42:31 +0800
+  [1m[35m (3.0ms)[0m  SELECT 1 FROM RDB$DATABASE
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 172.16.11.51 at 2014-03-17 17:42:31 +0800
+  [1m[36m (3.3ms)[0m  [1mSELECT 1 FROM RDB$DATABASE[0m
+Served asset /bootstrap.min.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_notification_v.1.js?body=1" for 172.16.11.51 at 2014-03-17 17:42:31 +0800
+  [1m[35m (3.0ms)[0m  SELECT 1 FROM RDB$DATABASE
+Served asset /jquery_notification_v.1.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/extjs/ext-all.js?body=1" for 172.16.11.51 at 2014-03-17 17:42:31 +0800
+  [1m[36m (2.6ms)[0m  [1mSELECT 1 FROM RDB$DATABASE[0m
+Served asset /extjs/ext-all.js - 304 Not Modified (12ms)
+
+
+Started GET "/assets/components/editor_window.js?body=1" for 172.16.11.51 at 2014-03-17 17:42:32 +0800
+  [1m[35m (3.2ms)[0m  SELECT 1 FROM RDB$DATABASE
+
+
+Started GET "/assets/common_custom_fields.js?body=1" for 172.16.11.51 at 2014-03-17 17:42:32 +0800
+Served asset /components/editor_window.js - 304 Not Modified (1ms)
+  [1m[36m (3.1ms)[0m  [1mSELECT 1 FROM RDB$DATABASE[0m
+Served asset /common_custom_fields.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/common_functions.js?body=1" for 172.16.11.51 at 2014-03-17 17:42:32 +0800
+  [1m[35m (3.3ms)[0m  SELECT 1 FROM RDB$DATABASE
+Served asset /common_functions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/components/crud_grid.js?body=1" for 172.16.11.51 at 2014-03-17 17:42:32 +0800
+  [1m[36m (3.2ms)[0m  [1mSELECT 1 FROM RDB$DATABASE[0m
+Served asset /components/crud_grid.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/components/my_fieldset.js?body=1" for 172.16.11.51 at 2014-03-17 17:42:32 +0800
+  [1m[35m (3.3ms)[0m  SELECT 1 FROM RDB$DATABASE
+Served asset /components/my_fieldset.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/authenticity_token.js?body=1" for 172.16.11.51 at 2014-03-17 17:42:32 +0800
+  [1m[36m (3.2ms)[0m  [1mSELECT 1 FROM RDB$DATABASE[0m
+Served asset /authenticity_token.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 172.16.11.51 at 2014-03-17 17:42:32 +0800
+  [1m[35m (4.2ms)[0m  SELECT 1 FROM RDB$DATABASE
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/regular_user/official_travel.js?body=1" for 172.16.11.51 at 2014-03-17 17:42:32 +0800
+  [1m[36m (3.1ms)[0m  [1mSELECT 1 FROM RDB$DATABASE[0m
+Served asset /regular_user/official_travel.js - 304 Not Modified (0ms)
+
+
+Started GET "/employee/rgperez/process_attendance.html" for 172.16.11.51 at 2014-03-17 17:43:02 +0800
+  [1m[35m (3.3ms)[0m  SELECT 1 FROM RDB$DATABASE
+Processing by RegularUserPagesController#process_attendance as HTML
+  Parameters: {"username"=>"rgperez"}
+  Rendered regular_user_pages/process_attendance.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 10ms (Views: 9.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 172.16.11.51 at 2014-03-17 17:43:02 +0800
+  [1m[36m (4.8ms)[0m  [1mSELECT 1 FROM RDB$DATABASE[0m
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 172.16.11.51 at 2014-03-17 17:43:02 +0800
+  [1m[35m (9.6ms)[0m  SELECT 1 FROM RDB$DATABASE
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_notification.css?body=1" for 172.16.11.51 at 2014-03-17 17:43:02 +0800
+  [1m[36m (2.7ms)[0m  [1mSELECT 1 FROM RDB$DATABASE[0m
+Served asset /jquery_notification.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/mypeps_main.css?body=1" for 172.16.11.51 at 2014-03-17 17:43:02 +0800
+  [1m[35m (3.0ms)[0m  SELECT 1 FROM RDB$DATABASE
+Served asset /mypeps_main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/extjs/resources/css/ext-all-scoped-debug.css?body=1" for 172.16.11.51 at 2014-03-17 17:43:03 +0800
+  [1m[36m (3.2ms)[0m  [1mSELECT 1 FROM RDB$DATABASE[0m
+Served asset /extjs/resources/css/ext-all-scoped-debug.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/icons.css?body=1" for 172.16.11.51 at 2014-03-17 17:43:03 +0800
+  [1m[35m (3.1ms)[0m  SELECT 1 FROM RDB$DATABASE
+Served asset /icons.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 172.16.11.51 at 2014-03-17 17:43:03 +0800
+  [1m[36m (4.5ms)[0m  [1mSELECT 1 FROM RDB$DATABASE[0m
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 172.16.11.51 at 2014-03-17 17:43:03 +0800
+  [1m[35m (3.0ms)[0m  SELECT 1 FROM RDB$DATABASE
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_notification_v.1.js?body=1" for 172.16.11.51 at 2014-03-17 17:43:03 +0800
+  [1m[36m (2.9ms)[0m  [1mSELECT 1 FROM RDB$DATABASE[0m
+Served asset /jquery_notification_v.1.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/extjs/ext-all.js?body=1" for 172.16.11.51 at 2014-03-17 17:43:03 +0800
+  [1m[35m (3.2ms)[0m  SELECT 1 FROM RDB$DATABASE
+Served asset /extjs/ext-all.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/components/editor_window.js?body=1" for 172.16.11.51 at 2014-03-17 17:43:03 +0800
+  [1m[36m (2.9ms)[0m  [1mSELECT 1 FROM RDB$DATABASE[0m
+Served asset /components/editor_window.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/common_custom_fields.js?body=1" for 172.16.11.51 at 2014-03-17 17:43:03 +0800
+  [1m[35m (4.5ms)[0m  SELECT 1 FROM RDB$DATABASE
+Served asset /common_custom_fields.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/common_functions.js?body=1" for 172.16.11.51 at 2014-03-17 17:43:03 +0800
+  [1m[36m (18.0ms)[0m  [1mSELECT 1 FROM RDB$DATABASE[0m
+Served asset /common_functions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/components/crud_grid.js?body=1" for 172.16.11.51 at 2014-03-17 17:43:03 +0800
+  [1m[35m (5.1ms)[0m  SELECT 1 FROM RDB$DATABASE
+Served asset /components/crud_grid.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/components/my_fieldset.js?body=1" for 172.16.11.51 at 2014-03-17 17:43:03 +0800
+  [1m[36m (3.1ms)[0m  [1mSELECT 1 FROM RDB$DATABASE[0m
+Served asset /components/my_fieldset.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/authenticity_token.js?body=1" for 172.16.11.51 at 2014-03-17 17:43:03 +0800
+  [1m[35m (3.1ms)[0m  SELECT 1 FROM RDB$DATABASE
+Served asset /authenticity_token.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 172.16.11.51 at 2014-03-17 17:43:03 +0800
+  [1m[36m (2.4ms)[0m  [1mSELECT 1 FROM RDB$DATABASE[0m
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/regular_user/process_attendance.js?body=1" for 172.16.11.51 at 2014-03-17 17:43:03 +0800
+  [1m[35m (2.6ms)[0m  SELECT 1 FROM RDB$DATABASE
+Served asset /regular_user/process_attendance.js - 304 Not Modified (0ms)
+
+
+Started GET "/employee/rgperez/process_attendance.html" for 172.16.11.51 at 2014-03-17 17:44:48 +0800
+  [1m[36m (44.2ms)[0m  [1mSELECT 1 FROM RDB$DATABASE[0m
+Processing by RegularUserPagesController#process_attendance as HTML
+  Parameters: {"username"=>"rgperez"}
+  Rendered regular_user_pages/process_attendance.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 7ms (Views: 6.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 172.16.11.51 at 2014-03-17 17:44:48 +0800
+  [1m[35m (3.3ms)[0m  SELECT 1 FROM RDB$DATABASE
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 172.16.11.51 at 2014-03-17 17:44:49 +0800
+  [1m[36m (3.2ms)[0m  [1mSELECT 1 FROM RDB$DATABASE[0m
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_notification.css?body=1" for 172.16.11.51 at 2014-03-17 17:44:49 +0800
+  [1m[35m (4.3ms)[0m  SELECT 1 FROM RDB$DATABASE
+Served asset /jquery_notification.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/mypeps_main.css?body=1" for 172.16.11.51 at 2014-03-17 17:44:49 +0800
+  [1m[36m (2.1ms)[0m  [1mSELECT 1 FROM RDB$DATABASE[0m
+Served asset /mypeps_main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/extjs/resources/css/ext-all-scoped-debug.css?body=1" for 172.16.11.51 at 2014-03-17 17:44:49 +0800
+  [1m[35m (2.4ms)[0m  SELECT 1 FROM RDB$DATABASE
+Served asset /extjs/resources/css/ext-all-scoped-debug.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/icons.css?body=1" for 172.16.11.51 at 2014-03-17 17:44:49 +0800
+  [1m[36m (18.7ms)[0m  [1mSELECT 1 FROM RDB$DATABASE[0m
+Served asset /icons.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 172.16.11.51 at 2014-03-17 17:44:49 +0800
+  [1m[35m (3.6ms)[0m  SELECT 1 FROM RDB$DATABASE
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 172.16.11.51 at 2014-03-17 17:44:49 +0800
+  [1m[36m (3.0ms)[0m  [1mSELECT 1 FROM RDB$DATABASE[0m
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_notification_v.1.js?body=1" for 172.16.11.51 at 2014-03-17 17:44:49 +0800
+  [1m[35m (3.3ms)[0m  SELECT 1 FROM RDB$DATABASE
+Served asset /jquery_notification_v.1.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/extjs/ext-all.js?body=1" for 172.16.11.51 at 2014-03-17 17:44:49 +0800
+  [1m[36m (3.0ms)[0m  [1mSELECT 1 FROM RDB$DATABASE[0m
+Served asset /extjs/ext-all.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/components/editor_window.js?body=1" for 172.16.11.51 at 2014-03-17 17:44:49 +0800
+  [1m[35m (2.8ms)[0m  SELECT 1 FROM RDB$DATABASE
+Served asset /components/editor_window.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/common_custom_fields.js?body=1" for 172.16.11.51 at 2014-03-17 17:44:49 +0800
+  [1m[36m (3.4ms)[0m  [1mSELECT 1 FROM RDB$DATABASE[0m
+Served asset /common_custom_fields.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/common_functions.js?body=1" for 172.16.11.51 at 2014-03-17 17:44:49 +0800
+  [1m[35m (2.8ms)[0m  SELECT 1 FROM RDB$DATABASE
+Served asset /common_functions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/components/crud_grid.js?body=1" for 172.16.11.51 at 2014-03-17 17:44:49 +0800
+  [1m[36m (3.2ms)[0m  [1mSELECT 1 FROM RDB$DATABASE[0m
+Served asset /components/crud_grid.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/components/my_fieldset.js?body=1" for 172.16.11.51 at 2014-03-17 17:44:49 +0800
+  [1m[35m (3.0ms)[0m  SELECT 1 FROM RDB$DATABASE
+Served asset /components/my_fieldset.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/authenticity_token.js?body=1" for 172.16.11.51 at 2014-03-17 17:44:49 +0800
+  [1m[36m (4.3ms)[0m  [1mSELECT 1 FROM RDB$DATABASE[0m
+Served asset /authenticity_token.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 172.16.11.51 at 2014-03-17 17:44:49 +0800
+  [1m[35m (2.9ms)[0m  SELECT 1 FROM RDB$DATABASE
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/regular_user/process_attendance.js?body=1" for 172.16.11.51 at 2014-03-17 17:44:49 +0800
+  [1m[36m (3.4ms)[0m  [1mSELECT 1 FROM RDB$DATABASE[0m
+Served asset /regular_user/process_attendance.js - 304 Not Modified (0ms)
