@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  id: MyString
+  description: MyString
+  seqno: 1
+  isactive: 1
+
+two:
+  id: MyString
+  description: MyString
+  seqno: 1
+  isactive: 1

@@ -1,0 +1,124 @@
+
+.active-icon{
+    background-image: url(/assets/icons/active.png) !important ;
+}
+
+.save-icon{
+    background-image:url(/assets/icons/save.gif) !important;
+}
+
+.save-add-icon{
+    background-image:url(/assets/icons/save_add.png) !important;
+}
+
+.view-icon{
+	background-image:url(/assets/icons/view-icon.png) !important;
+}
+
+.pdf-icon{
+	background-image: url(/assets/icons/pdf-icon.png) !important;
+}
+.cancel-icon{
+    background-image:url(/assets/icons/cancel.gif) !important;
+}
+
+.update-icon{
+    background-image: url(/assets/icons/update-icon.gif) !important;
+}
+
+.add-icon{
+    background-image:url(/assets/icons/add.png) !important;
+}
+
+.delete-icon{
+    background-image:url(/assets/icons/delete.gif) !important;
+}
+
+.include-icon{
+	background-image:url(/assets/icons/include.png) !important;
+}
+.include-all-icon{
+	background-image:url(/assets/icons/include-all.png) !important;
+}
+
+.exclude-icon{
+	background-image: url(/assets/icons/exclude.png) !important;
+}
+
+.exclude-all-icon{
+	background-image: url(/assets/icons/exclude-all.png) !important;
+}
+
+.search-icon{
+    background-image:url(/assets/icons/search-icon.png) !important;
+}
+
+.reset-icon{
+    background-image:url(/assets/icons/refresh-icon.png) !important;
+}
+
+
+
+
+
+/*SYSTEM ACTION ICONS*/
+.emngnt-icon{
+	background-image:url(/assets/icons/manage-ico.png) !important;
+}
+.language-icon{
+	background-image:url(/assets/icons/language.png) !important;
+}
+.education-icon{
+	background-image:url(/assets/icons/education-icon.png) !important;
+}
+.skills-icon{
+	background-image:url(/assets/icons/skills-icon.png) !important;
+}
+.seminar-icon{
+	background-image:url(/assets/icons/training.png) !important;
+}
+.history-icon{
+	background-image:url(/assets/icons/history-ico.png) !important;
+}
+.acct-icon{
+	background-image:url(/assets/icons/acct.png) !important;
+}
+.exit-icon{
+	background-image:url(/assets/icons/exit.png) !important;
+}
+.data-icon{
+	background-image:url(/assets/icons/data-ico.png) !important;
+}
+.time-icon{
+	background-image:url(/assets/icons/time.png) !important;
+}
+.benefits-icon{
+	background-image:url(/assets/icons/money-ico.png) !important;
+}
+.payment-icon{
+	background-image:url(/assets/icons/payment-ico.png) !important;
+}
+.remit-icon{
+	background-image:url(/assets/icons/remit.png) !important;
+}
+.allowance-icon{
+	background-image:url(/assets/icons/allowances.png) !important;
+}
+.leave-icon{
+	background-image:url(/assets/icons/leave.png) !important;
+}
+.monetary-icon{
+	background-image:url(/assets/icons/monetary.png) !important;
+}
+.nonmonetary-icon{
+	background-image:url(/assets/icons/folder-ico.png) !important;
+}
+.asched-icon{
+	background-image:url(/assets/icons/asched.png) !important;
+}
+.flexsched-icon{
+	background-image:url(/assets/icons/flexsched.png) !important;
+}
+.strsched-icon{
+	background-image:url(/assets/icons/strsched-icon.png) !important;
+}

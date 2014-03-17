@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  id: 1
+  description: MyString
+  isactive: 1
+  createddate: 2014-01-28 13:18:30
+  createdby: MyString
+  lastupdatedate: 2014-01-28 13:18:30
+  lastupdateby: MyString
+
+two:
+  id: 1
+  description: MyString
+  isactive: 1
+  createddate: 2014-01-28 13:18:30
+  createdby: MyString
+  lastupdatedate: 2014-01-28 13:18:30
+  lastupdateby: MyString

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>MyPeople</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Open Eye Solutions Online Payroll and Timekeeping System Online Payslip">
+    <meta name="author" content="" ="Adamson Ibus">
+    <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+    <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    <%= csrf_meta_tags %>
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="../assets/js/html5shiv.js"></script>
+    <![endif]-->
+
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li><a href="#" class="dropdown-toggle navbar-link" data-toggle="dropdown"><%= image_tag("drawer-small.png") %></a>
+                <ul class="dropdown-menu">
+                    <div>
+                      <%= link_to image_tag("dtr_hist.png", :class => "droid_icon") + '', "/employee/#{session[:username]}/dtr_history.html" %>
+                      <%= link_to image_tag("payroll.png", :class => "droid_icon") + '', "/employee/#{session[:username]}/payslip.html" %>
+                    </di>
+                    <div>
+                      <%= link_to image_tag("sl.png", :class => "droid_icon") + '', "/employee/#{session[:username]}/account_sl.html" %>
+                      <%= link_to image_tag("process_attendance.png", :class => "droid_icon") + '', "/employee/#{session[:username]}/process_attendance.html" %>
+                    </div>
+                    <div>
+                      <%= link_to image_tag("ot.png", {:class => "droid_icon"}) + '', "/employee/#{session[:username]}/overtime.html" %>
+                      <%= link_to image_tag("lf.png", {:class => "droid_icon"}) + '', "/employee/#{session[:username]}/leave.html" %>
+                    </div>
+                    <div>
+                    <%= link_to image_tag("dtr.png", {:class => "droid_icon"}) + '', "/employee/#{session[:username]}/dtr_log.html" %>
+                    <%= link_to image_tag("travel.png", :class => "droid_icon") + '', "/employee/#{session[:username]}/official_travel.html" %>
+                    </div>
+                </ul>
+              </li>
+            </ul>
+            <%= link_to 'MyPeople HR Management Solutions', home_path, :class => "brand" %>
+           <ul class="nav navbar-text pull-right">  
+            <li><a href="#"  class="dropdown-toggle navbar-link" data-toggle="dropdown"><%= "Logged in as #{session[:username]}" %></a>
+              <ul class="dropdown-menu">
+                  <% if session[:with_admin_role] %>
+                    <li><%= link_to('Login as Administrator', adminlogin_path) %></li>
+                  <% end %>
+                  <li><%= link_to 'Profile', "/employee/#{session[:username]}/profile.html" %></li>
+                  <li><%= link_to 'Update Password', "/#{session[:username]}/security/change_password.html" %></li>
+                  <li><%= link_to 'Logout', logout_path %></li>
+              </ul>
+            </li>
+            </ul>  
+            
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid transaction">
+        <div id="my-render-area">
+            <%= yield %>
+        </div>
+    </div>
+
+     <footer>
+        <!-- <p>&copy; Company 2013</p> -->
+      </footer>
+
+  </body>
+
+</html>

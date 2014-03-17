@@ -1,0 +1,1415 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"new_",
+				"new_store"
+			],
+			[
+				"ne",
+				"new_column"
+			],
+			[
+				"tim",
+				"timein"
+			],
+			[
+				"ti",
+				"timein"
+			],
+			[
+				"su",
+				"submit_empty_text"
+			],
+			[
+				"sub",
+				"submit_empty_text"
+			],
+			[
+				"submit",
+				"submitEmptyText"
+			],
+			[
+				"req",
+				"required_time_field"
+			],
+			[
+				"re",
+				"required_time_field"
+			],
+			[
+				"Ex",
+				"ExtCmp"
+			],
+			[
+				"succe",
+				"successfully"
+			],
+			[
+				"requ",
+				"request_result"
+			],
+			[
+				"form",
+				"form_name"
+			],
+			[
+				"b",
+				"background-size"
+			],
+			[
+				"h",
+				"min-height"
+			],
+			[
+				"ma",
+				"margin"
+			],
+			[
+				"tex",
+				"text"
+			],
+			[
+				"la",
+				"fieldLabel"
+			],
+			[
+				"grid",
+				"grid_sm"
+			],
+			[
+				"emplo",
+				"employee_list_grid"
+			],
+			[
+				"position",
+				"position_desc"
+			],
+			[
+				"depa",
+				"department_desc"
+			],
+			[
+				"compan",
+				"company_desc"
+			],
+			[
+				"d",
+				"datehired"
+			],
+			[
+				"emp",
+				"empnamemiddle"
+			],
+			[
+				"em",
+				"empnamefirst"
+			],
+			[
+				"employ",
+				"employee_list_store"
+			],
+			[
+				"Empl",
+				"EmployeeModel"
+			],
+			[
+				"def",
+				"defaults"
+			],
+			[
+				"field",
+				"fieldLabel"
+			],
+			[
+				"bo",
+				"border"
+			],
+			[
+				"fiel",
+				"fieldLabel"
+			],
+			[
+				"defa",
+				"defaultType"
+			],
+			[
+				"dep",
+				"dependents_list_grid"
+			],
+			[
+				"wi",
+				"motocar_plan_window"
+			],
+			[
+				"m",
+				"medical_window"
+			],
+			[
+				"de",
+				"defaults"
+			],
+			[
+				"te",
+				"textfield"
+			],
+			[
+				"wid",
+				"medical_window"
+			],
+			[
+				"win",
+				"medical_window"
+			],
+			[
+				"load",
+				"loaded_scripts"
+			],
+			[
+				"e",
+				"exec_function"
+			],
+			[
+				"In",
+				"Insurance"
+			],
+			[
+				"aut",
+				"autoWidth"
+			],
+			[
+				"my",
+				"my_window"
+			],
+			[
+				"fie",
+				"fieldLabel"
+			],
+			[
+				"pas",
+				"password_selection"
+			],
+			[
+				"new",
+				"new_password"
+			],
+			[
+				"pa",
+				"password_selection"
+			],
+			[
+				"rand",
+				"array_rand"
+			],
+			[
+				"user",
+				"usermodel"
+			],
+			[
+				"rea",
+				"reactivateAccountWithEAF"
+			],
+			[
+				"sec_ta",
+				"sec_tab_id"
+			],
+			[
+				"add",
+				"addEducationPanel"
+			],
+			[
+				"fa",
+				"family_counter"
+			],
+			[
+				"ex",
+				"exp_counter"
+			],
+			[
+				"acti",
+				"active_tab_id"
+			],
+			[
+				"edu",
+				"educ_counter"
+			],
+			[
+				"get",
+				"getComponent"
+			],
+			[
+				"me",
+				"messageBox"
+			],
+			[
+				"all",
+				"allowBlank"
+			],
+			[
+				"pho",
+				"photo_tab"
+			],
+			[
+				"se",
+				"security_tab"
+			],
+			[
+				"ol",
+				"old_tab_id"
+			],
+			[
+				"save",
+				"saveActiveTab"
+			],
+			[
+				"per",
+				"personal_tab"
+			],
+			[
+				"pro",
+				"profile_tab"
+			],
+			[
+				"status",
+				"status-complete"
+			],
+			[
+				"init",
+				"init_marital_status"
+			],
+			[
+				"bir",
+				"birth_date"
+			],
+			[
+				"mar",
+				"margin-right"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"err",
+				"error_code"
+			],
+			[
+				"er",
+				"error_msg"
+			],
+			[
+				"preg_",
+				"preg_match"
+			],
+			[
+				"is",
+				"is_first_job"
+			],
+			[
+				"respon",
+				"response"
+			],
+			[
+				"_",
+				"_action"
+			],
+			[
+				"up",
+				"update"
+			],
+			[
+				"getC",
+				"getCmp"
+			],
+			[
+				"sec",
+				"security_model"
+			],
+			[
+				"pr",
+				"profile"
+			],
+			[
+				"My",
+				"MyPersonModel"
+			],
+			[
+				"th",
+				"throw	Throw Exception"
+			],
+			[
+				"str_re",
+				"str_replace"
+			],
+			[
+				"ac",
+				"active_security_tab"
+			],
+			[
+				"time_set",
+				"date_default_timezone_set"
+			],
+			[
+				"res",
+				"response"
+			],
+			[
+				"account",
+				"account_unlock_hour"
+			],
+			[
+				"un",
+				"unlock_hour_dec"
+			],
+			[
+				"acc",
+				"account_unlock_hour"
+			],
+			[
+				"function",
+				"function_exists"
+			],
+			[
+				"set",
+				"set_ups"
+			],
+			[
+				"CTN",
+				"CTNUMBERID"
+			],
+			[
+				"U",
+				"UserAccountModel"
+			],
+			[
+				"ge",
+				"getRandomChallenge"
+			],
+			[
+				"curr",
+				"current_quest_code"
+			],
+			[
+				"resp",
+				"response"
+			],
+			[
+				"recover",
+				"recoverPassword"
+			],
+			[
+				"con",
+				"confirm_new_password"
+			],
+			[
+				"an",
+				"answer"
+			],
+			[
+				"que",
+				"quest_code"
+			],
+			[
+				"ans",
+				"answer_md5"
+			],
+			[
+				"SEC",
+				"SECQCODE"
+			],
+			[
+				"s",
+				"secret_questions"
+			],
+			[
+				"cha",
+				"challenge_code"
+			],
+			[
+				"fon",
+				"font-weight"
+			],
+			[
+				"ch",
+				"challenge_code"
+			],
+			[
+				"c",
+				"challenge_code"
+			],
+			[
+				"chall",
+				"challenge"
+			],
+			[
+				"ran",
+				"random_question"
+			],
+			[
+				"ba",
+				"badge_no"
+			],
+			[
+				"us",
+				"username"
+			],
+			[
+				"erro",
+				"error_code"
+			],
+			[
+				"error",
+				"error_msg"
+			],
+			[
+				"lo",
+				"login_fail_count"
+			],
+			[
+				"USERA",
+				"USERACCT"
+			],
+			[
+				"confirm",
+				"confirmation_window"
+			],
+			[
+				"va",
+				"value"
+			],
+			[
+				"co",
+				"code"
+			],
+			[
+				"request_",
+				"request_id"
+			],
+			[
+				"text",
+				"textfield"
+			],
+			[
+				"vali",
+				"validateChallenge"
+			],
+			[
+				"insert",
+				"insert_index"
+			],
+			[
+				"js",
+				"js_compression"
+			],
+			[
+				"new_fil",
+				"new_file"
+			],
+			[
+				"file_",
+				"file_ext"
+			],
+			[
+				"file",
+				"file_ext"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "config/routes.rb",
+			"settings":
+			{
+				"buffer_size": 5445,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/assets/javascripts/admin_setup/timekeeping/pattern_setup.js",
+			"settings":
+			{
+				"buffer_size": 8943,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/assets/javascripts/admin_setup/timekeeping/pattern_setup.min.js",
+			"settings":
+			{
+				"buffer_size": 3516,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/assets/javascripts/admin_setup/index.js",
+			"settings":
+			{
+				"buffer_size": 19244,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/assets/javascripts/admin_setup/index.min.js",
+			"settings":
+			{
+				"buffer_size": 11961,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/controllers/workskedpatterns_controller.rb",
+			"settings":
+			{
+				"buffer_size": 4843,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/controllers/stripper.rb",
+			"settings":
+			{
+				"buffer_size": 451,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/models/workskedpattern.rb",
+			"settings":
+			{
+				"buffer_size": 1799,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/assets/javascripts/components/break_time_grid_editor.js",
+			"settings":
+			{
+				"buffer_size": 6848,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "vendor/assets/javascripts/common_functions.js",
+			"settings":
+			{
+				"buffer_size": 6265,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/controllers/workskeds_controller.rb",
+			"settings":
+			{
+				"buffer_size": 4503,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+			[
+				"P",
+				"Package Control: Upgrade Package"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 449.0
+	},
+	"console":
+	{
+		"height": 50.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/var/www/mypeps/app/assets/javascripts/components/break_time_grid_editor.js",
+		"/var/www/mypeps/vendor/assets/javascripts/common_functions.js",
+		"/var/www/mypeps/app/views/holidays/index.html.erb",
+		"/var/www/mypeps/app/assets/javascripts/holiday/holiday_editor.js",
+		"/var/www/mypeps/app/controllers/holidays_controller.rb",
+		"/var/www/mypeps/app/views/layouts/administrator_template.html.erb",
+		"/var/www/mypeps/app/assets/stylesheets/mypeps_main.css",
+		"/var/www/mypeps/app/assets/stylesheets/application.css",
+		"/var/www/mypeps/app/views/layouts/session_login.html.erb",
+		"/var/www/mypeps/app/views/sessions/loginpage.html.erb",
+		"/var/www/mypeps/app/views/user/home.html.erb",
+		"/var/www/mypeps/app/controllers/sessions_controller.rb",
+		"/var/www/mypeps/app/views/admin_pages/home.html.erb",
+		"/var/www/mypeps/app/assets/javascripts/new_employee.js",
+		"/var/www/mypeps/app/assets/javascripts/employee_list.js",
+		"/var/www/mypeps/app/assets/javascripts/holiday/holiday_list.js",
+		"/var/www/mypeps/app/controllers/holiday_controller.rb",
+		"/var/www/mypeps/app/assets/javascripts/motor_car_plan.js",
+		"/var/www/mypeps/app/assets/javascripts/repair_maintenance.js",
+		"/var/www/mypeps/app/assets/javascripts/laptop_plan.js",
+		"/var/www/mypeps/app/assets/javascripts/leave_benefit.js",
+		"/var/www/mypeps/app/assets/javascripts/payroll.js",
+		"/var/www/mypeps/app/assets/javascripts/editor_window.js",
+		"/var/www/mypeps/app/assets/javascripts/monetary_benefit.js",
+		"/var/www/mypeps/app/assets/javascripts/allowance.js",
+		"/var/www/mypeps/app/assets/javascripts/uniform.js",
+		"/var/www/mypeps/app/assets/javascripts/gas_fleet.js",
+		"/var/www/mypeps/app/assets/javascripts/medical_insurance.js",
+		"/var/www/mypeps/app/views/employees/index.html.erb",
+		"/var/www/mypeps/app/controllers/employees_controller.rb",
+		"/var/www/mypeps/config/routes.rb",
+		"/var/www/mypeps/app/assets/javascripts/application.js",
+		"/home/admin02/.config/sublime-text-2/Packages/User/Preferences.sublime-settings",
+		"/var/www/mypeps/app/assets/javascripts/my_javascript_loader.js",
+		"/var/www/mypeps/app/assets/javascripts/my_javascript_loader.min.js",
+		"/var/www/mypeps/config/database.yml",
+		"/var/www/mypeps/app/models/useracct.rb",
+		"/var/www/mypeps/app/models/admuserrole.rb",
+		"/var/www/mypeps/app/assets/javascripts/test.js",
+		"/home/admin02/.gvfs/sc - ehr mall on athena.scinnova.com.ph/hrm.php",
+		"/home/admin02/.gvfs/source folder on 172.16.1.132/adam/my201/config/database.php",
+		"/home/admin02/.gvfs/sites on 172.16.11.55/mypeps/app/assets/stylesheets/application.css",
+		"/home/admin02/.gvfs/sites on 172.16.11.55/mypeps/app/views/layouts/administrator_template.html.erb",
+		"/home/admin02/.gvfs/sites on 172.16.11.55/mypeps/app/assets/javascripts/app.js.erb",
+		"/var/www/simple/app.js",
+		"/home/admin02/.gvfs/sites on 172.16.11.55/mypeps/app/assets/javascripts/apps.js",
+		"/var/www/my201/assets/js/security.js",
+		"/var/www/my201/application/controller/Education.php",
+		"/var/www/my201/assets/js/education.min.js",
+		"/var/www/my201/assets/js/security.min.js",
+		"/var/www/my201/assets/js/photo.js",
+		"/var/www/my201/assets/js/photo.min.js",
+		"/var/www/my201/application/controller/Security.php",
+		"/var/www/my201/application/controller/Profile.php",
+		"/var/www/my201/application/controller/Employment.php",
+		"/var/www/my201/assets/js/profile.js",
+		"/var/www/my201/assets/js/profile.min.js",
+		"/var/www/my201/assets/js/employment.js",
+		"/var/www/my201/assets/js/employment.min.js",
+		"/var/www/my201/assets/js/personal.js",
+		"/var/www/my201/assets/js/personal.min.js",
+		"/var/www/my201/assets/js/education.js",
+		"/var/www/my201/assets/js/login.min.js",
+		"/var/www/my201/application/model/MyEducationModel.php",
+		"/var/www/my201/application/controller/ProfileCompletion.php",
+		"/var/www/my201/config/system_constants.php",
+		"/var/www/my201/application/model/CTSpecialPostModel.php",
+		"/var/www/my201/application/controller/Recovery.php",
+		"/var/www/my201/application/view/recovery/request_form.php",
+		"/var/www/my201/assets/js/hrad.js",
+		"/var/www/my201/assets/js/hrad.min.js",
+		"/var/www/my201/assets/js/login.js",
+		"/var/www/my201/assets/js/recovery.js",
+		"/var/www/my201/assets/js/recovery.min.js",
+		"/var/www/my201/assets/js/session.js",
+		"/var/www/my201/assets/js/session.min.js",
+		"/var/www/my201/application/view/my201/generic_view.php",
+		"/var/www/my201/assets/css/ui-style.css",
+		"/var/www/my201/assets/js/common.js",
+		"/var/www/my201/application/view/template/menu.php",
+		"/home/admin02/.gvfs/source folder on 172.16.1.132/adam/my201/config/system_constants.php",
+		"/var/www/my201/application/model/MyPersonModel.php",
+		"/var/www/my201/application/controller/Employee.php",
+		"/var/www/my201/application/controller/LookUp.php",
+		"/var/www/my201/application/controller/Photo.php",
+		"/home/admin02/.gvfs/source folder on 172.16.1.132/adam/my201/config/constants.php",
+		"/var/www/my201/application/view/recovery/password.php",
+		"/var/www/my201/application/controller/User.php",
+		"/var/www/my201/application/model/EBenefitModel.php",
+		"/var/www/my201/core/Database.php",
+		"/var/www/my201/application/view/user/login.php",
+		"/var/www/my201/application/model/Mailer.php",
+		"/var/www/my201/assets/js/custome_fields.js",
+		"/var/www/my201/index.php",
+		"/var/www/my201/application/controller/Session.php",
+		"/var/www/my201/core/ActionController.php",
+		"/var/www/my201/config/constants.php",
+		"/var/www/my201/application/controller/FileViewer.php",
+		"/var/www/my201/assets/js/common.min.js",
+		"/var/www/my201/application/controller/ErrorPage.php",
+		"/var/www/my201/application/controller/UserGuide.php",
+		"/home/admin02/.gvfs/source folder on 172.16.1.132/adam/my201/assets/js/session.js",
+		"/home/admin02/.gvfs/source folder on 172.16.1.132/adam/my201/assets/js/session.min.js",
+		"/home/admin02/.config/sublime-text-2/Packages/JsMinifier/Minifier.sublime-settings",
+		"/var/www/my201/config/database.php",
+		"/var/www/my201/application/model/CTNumber.php",
+		"/var/www/my201/application/model/EmployeeModel.php",
+		"/var/www/my201/application/model/LookUpModel.php",
+		"/var/www/my201/application/model/MyEmploymentModel.php",
+		"/var/www/my201/application/model/MySecurityModel.php",
+		"/var/www/my201/application/model/TaxModel.php",
+		"/var/www/my201/application/model/UserAccountModel.php",
+		"/var/www/my201/application/view/user/homepage.php",
+		"/var/www/my201/application/view/template/header.php",
+		"/var/www/my201/assets/css/ext-bootstrap-fix-conflict.css",
+		"/var/www/my201/assets/css/recovery.css",
+		"/var/www/my201/assets/css/report-style.css",
+		"/var/www/my201/core/Model.php",
+		"/var/www/my201/helper/Logger.php",
+		"/var/www/my201/helper/Uploader.php",
+		"/var/www/my201/helper/calculator.php",
+		"/var/www/my201/helper/exception_helper.php",
+		"/var/www/my201/helper/sanitizer.php",
+		"/var/www/my201/helper/session_helper.php",
+		"/var/www/my201/assets/js/custome_fields.min.js",
+		"/var/www/my201/application/view/template/footer.php",
+		"/var/www/my201/application/view/error/forbidden.php",
+		"/var/www/my201/assets/css/login-style.css"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			"/var/www/mypeps/app/assets/javascripts",
+			"/var/www/my201/assets/js",
+			"/home/admin02/.gvfs/source folder on 172.16.1.132/FIN1_SENSE/application/view",
+			"/home/admin02/.gvfs/source folder on 172.16.1.132/FIN1_SENSE/scripts/ajax",
+			"/var/www/erequest/scripts/js",
+			"/var/www/erequest",
+			"/var/www/erequest/application/view",
+			"/var/www/e_report/application/controllers",
+			"/var/www/southlandcoop/systems/lots/application",
+			"/var/www/southlandcoop/systems/tims",
+			"/var/www/southlandcoop/systems/lots",
+			"/var/www/southlandcoop/systems/epay",
+			"/var/www/e_report/libraries"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			">",
+			"admin",
+			"    background: url(/assets/body_background.jpg) no-repeat;\n    background-size: 100% 100%;",
+			"People.addedit.Window",
+			"325",
+			"medical_window",
+			"fleet_window",
+			"motocar_plan_window",
+			"my_window",
+			"laptop_window",
+			"my_window",
+			"',\n",
+			"$this->usermodel",
+			"deleteRecord",
+			"deleteChallengeConfirmation",
+			"hrad_panel",
+			"savePersonalParticular()",
+			"            \n",
+			"console.log",
+			"updatePhoto()",
+			"calculator",
+			" ",
+			"                \n",
+			"fetchQuestionByBadgeAndCode",
+			"confirm-window",
+			"'));\n",
+			"approveFL",
+			"tax_status_store",
+			"date_ended",
+			"date_started",
+			"date_ended",
+			"date_started",
+			"family[",
+			"if[",
+			"setValue(",
+			"pd",
+			"particular_raw",
+			"particular_raw ",
+			"e-Request",
+			"close-icon",
+			"images/",
+			"atibus",
+			"input",
+			"label",
+			"control-label",
+			"label",
+			"legend",
+			"control-label",
+			"navbar-inverse",
+			" navbar-inverse",
+			"form-horizontal .control-label",
+			".form-horizontal .control-label",
+			"user_roles_dtl",
+			"              \n",
+			"droid_icon",
+			"span5",
+			"clientcode",
+			"client_code",
+			"renderRequestForm",
+			"showNewPickList",
+			"postPriceEval",
+			"Post",
+			"warehouse",
+			"NAME",
+			"Branch\n",
+			"Branch:\n",
+			",\n",
+			"Branch:",
+			"rpl_store",
+			"STATUS OF ACCOUNT",
+			"Account No.:",
+			"Support Central",
+			"issuedesc",
+			"imagens",
+			"fileUpload",
+			"uploadfile",
+			"imagens",
+			"issuedesc",
+			"uploadFile",
+			"$file",
+			"$_SESSION['filename']",
+			"facebox",
+			"function id",
+			"id",
+			"fetchKraData",
+			"fetchData",
+			"SELECT",
+			"updateFinnOneStatus",
+			"subject",
+			"getTYPECODE()",
+			"gettypecode",
+			"postjaveForm_btn",
+			"updateForm",
+			"ERQ_FRM",
+			"departmentcode",
+			"label",
+			"control-label",
+			"INSERT INTO ADROLEMAST (ROLECODE, ROLEDESC, APPCODE, SEQNO, ISACTIVE, CREATEDDATE, CREATEDBY, LASTUPDATEDATE, LASTUPDATEBY) ",
+			"/>\"",
+			"userpassword",
+			"forwardRes",
+			"sanitize_money( post('total_pay_customer'",
+			"$total_pa",
+			"updateResDetail",
+			"getRequestList",
+			"EREQDOC",
+			"ERQDOC",
+			"ACKNOWLBADGENO",
+			"transmitDoc",
+			"processDoc()",
+			"setUserMenu",
+			"calculateExpectedReturnDate",
+			"collectAccountableFormItems()",
+			"approved by",
+			"computer",
+			"Computer",
+			"Computed",
+			"item_approve_amount_arr",
+			"approveRM",
+			"validated_name",
+			"approver_name",
+			"updated_name",
+			"collectRESDtls",
+			"CNCAPPROVERNAME",
+			"approver_name",
+			"CNC Approval",
+			"approver_name",
+			"disapproveRes()"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"People.editor.Window",
+			"editor_window",
+			"deleteConfirmation",
+			"challenge-form",
+			"year_ended",
+			"year_started",
+			"year_ended",
+			"year_started",
+			"families[",
+			"family[",
+			"setValue( ",
+			"particular",
+			"My201",
+			"../images/",
+			"nav-icon",
+			"span4",
+			"mypclient_id",
+			"client_id",
+			"",
+			"$this->request_header[0]",
+			"$this->status",
+			"$this->request_id",
+			"form_request",
+			"computeResNumDueDay",
+			"computeResNetReceivable",
+			"computeResTotalPayable",
+			"computeResGrossReceivable",
+			"computeResInterestGap",
+			"ACTION_SUCCESS_MSG",
+			"pre_computation_panel",
+			"value:'0.00'",
+			"details_form_panel",
+			"detail_obj",
+			"header_obj",
+			"id",
+			"id:",
+			"adamson-MS-1453",
+			"history_grid",
+			"history_grid_store",
+			"showMRFHistory",
+			"$this->user_id",
+			"$this->role_id_tims",
+			"this->requestmodel",
+			"e-MRF",
+			"employeemodel",
+			"",
+			"$this->request_items",
+			"$this->request_details",
+			"$this->header_details",
+			"upload_full_path",
+			"request_form",
+			"collectRepairMaintenanceDtls",
+			"collectRMItemDtls",
+			"collectRepairMaintenanceReqDtls",
+			"collectFuelLubeReqDtls",
+			"",
+			"mytextfield",
+			"65",
+			"store3_item_grand_total_price",
+			"store2_item_grand_total_price",
+			"pci_item_grand_total_price",
+			"items_grand_total_price",
+			"store2",
+			"store3",
+			"store2",
+			"store3",
+			"_item_number",
+			"SUTYPE",
+			"_item_number_value",
+			"_action",
+			"_page",
+			"requestor_position",
+			"requestor_branch_code",
+			"requestor_branch",
+			"requestor_name",
+			"= ",
+			"header_details_arr",
+			"','",
+			"getValue()",
+			"$('#",
+			"')?>\" />",
+			"<input type=\"hidden\" id=\"\" value=\"<?=userSession('",
+			"$this",
+			"APPS_DIR",
+			"connection",
+			"$db_config",
+			"$data['form_title']",
+			"include_once",
+			"libraries/",
+			"load->completeView",
+			"load->css",
+			"load->js",
+			"system_grid",
+			"33A133",
+			"008A00",
+			"$db_trans",
+			"user",
+			"report",
+			"../../library/",
+			"active_sheet",
+			"pay_slip"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 9,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "config/routes.rb",
+					"settings":
+					{
+						"buffer_size": 5445,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								799,
+								799
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 360.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app/assets/javascripts/admin_setup/timekeeping/pattern_setup.js",
+					"settings":
+					{
+						"buffer_size": 8943,
+						"regions":
+						{
+						},
+						"selection":
+						[
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 585.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "app/assets/javascripts/admin_setup/timekeeping/pattern_setup.min.js",
+					"settings":
+					{
+						"buffer_size": 3516,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "app/assets/javascripts/admin_setup/index.js",
+					"settings":
+					{
+						"buffer_size": 19244,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2784,
+								2784
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 585.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "app/assets/javascripts/admin_setup/index.min.js",
+					"settings":
+					{
+						"buffer_size": 11961,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "app/controllers/workskedpatterns_controller.rb",
+					"settings":
+					{
+						"buffer_size": 4843,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								879,
+								879
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 495.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "app/controllers/stripper.rb",
+					"settings":
+					{
+						"buffer_size": 451,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								412,
+								412
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "app/models/workskedpattern.rb",
+					"settings":
+					{
+						"buffer_size": 1799,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								775,
+								775
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "app/assets/javascripts/components/break_time_grid_editor.js",
+					"settings":
+					{
+						"buffer_size": 6848,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 945.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "vendor/assets/javascripts/common_functions.js",
+					"settings":
+					{
+						"buffer_size": 6265,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1469,
+								1469
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 2745.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "app/controllers/workskeds_controller.rb",
+					"settings":
+					{
+						"buffer_size": 4503,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								244,
+								244
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1665.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 25.0
+	},
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": false,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 320.0,
+	"status_bar_visible": true
+}

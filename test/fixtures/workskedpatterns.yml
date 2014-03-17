@@ -1,0 +1,69 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  id: 1
+  mypclient_id: MyString
+  company_id: 1
+  patterncode: MyString
+  description: MyString
+  workskedcategory_id: MyString
+  timein: 2014-02-01 12:54:59
+  timeout: 2014-02-01 12:54:59
+  requiredhrs: 9.99
+  break1fr: 2014-02-01 12:54:59
+  break1to: 2014-02-01 12:54:59
+  break1hrs: 9.99
+  break2fr: 2014-02-01 12:54:59
+  break2to: 2014-02-01 12:54:59
+  break2hrs: 9.99
+  break3fr: 2014-02-01 12:54:59
+  break3to: 2014-02-01 12:54:59
+  break3hrs: 9.99
+  break4fr: 2014-02-01 12:54:59
+  break4to: 2014-02-01 12:54:59
+  break4hrs: 9.99
+  break5fr: 2014-02-01 12:54:59
+  break5to: 2014-02-01 12:54:59
+  break5hrs: 9.99
+  hrswkam: 9.99
+  hrswkpm: 9.99
+  flexiearliestin: 2014-02-01 12:54:59
+  flexilatestin: 2014-02-01 12:54:59
+  createddate: 2014-02-01 12:54:59
+  createdby: MyString
+  lastupdatedate: 2014-02-01 12:54:59
+  lastupdateby: MyString
+
+two:
+  id: 1
+  mypclient_id: MyString
+  company_id: 1
+  patterncode: MyString
+  description: MyString
+  workskedcategory_id: MyString
+  timein: 2014-02-01 12:54:59
+  timeout: 2014-02-01 12:54:59
+  requiredhrs: 9.99
+  break1fr: 2014-02-01 12:54:59
+  break1to: 2014-02-01 12:54:59
+  break1hrs: 9.99
+  break2fr: 2014-02-01 12:54:59
+  break2to: 2014-02-01 12:54:59
+  break2hrs: 9.99
+  break3fr: 2014-02-01 12:54:59
+  break3to: 2014-02-01 12:54:59
+  break3hrs: 9.99
+  break4fr: 2014-02-01 12:54:59
+  break4to: 2014-02-01 12:54:59
+  break4hrs: 9.99
+  break5fr: 2014-02-01 12:54:59
+  break5to: 2014-02-01 12:54:59
+  break5hrs: 9.99
+  hrswkam: 9.99
+  hrswkpm: 9.99
+  flexiearliestin: 2014-02-01 12:54:59
+  flexilatestin: 2014-02-01 12:54:59
+  createddate: 2014-02-01 12:54:59
+  createdby: MyString
+  lastupdatedate: 2014-02-01 12:54:59
+  lastupdateby: MyString

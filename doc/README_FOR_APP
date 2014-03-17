@@ -1,0 +1,18 @@
+Use this README file to introduce your application and point to useful places in the API for learning more.
+Run "rake doc:app" to generate API documentation for your models, controllers, helpers, and libraries.
+
+
+PDF CREATOR
+
+LINUX UBUNTU 
+    https://code.google.com/p/wkhtmltopdf/downloads/detail?name=wkhtmltopdf-0.9.9-static-i386.tar.bz2&can=2&q=
+    sudo aptitude install openssl build-essential xorg libssl-dev
+    sudo tar xvjf wkhtmltopdf-####.tar.bz
+    sudo mv wkhtmltopdf-### /usr/local/bin/wkhtmltopdf
+    gem install pdfkit
+    gem 'pdfkit'
+
+WINDOWS 
+
+    download wkhtmltopdf @ http://sourceforge.net/projects/wkhtmltopdf/postdownload?source=dlp
+    and tell pdfkit whereis wkhtmltopdf install directory

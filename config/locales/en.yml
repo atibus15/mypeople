@@ -1,0 +1,26 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+en:
+  activerecord:
+    attributes:
+        company:
+            companycode: "Company Code"
+            holidaypaybasis: "Holiday Pay Basis"
+        department:
+            departmentcode: "Department Code"
+            mypclient_id: ""
+        busgroup:
+            busgroupcode: "Business Group Code"
+        deptgroup:
+            mypclient_id: ""
+            deptgroupcode: "Department Sub-Group Code"
+        employee:
+            empidno: "Employee's ID No."
+            empbadgeno: "Badge No."
+            empno: "Employee No."
+
+        location:
+            locationcode: "Location Code"
+        leavetype:
+            leavetypecode: "Leave Type Code"

@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  id: 1
+  mypclient_id: MyString
+  company_id: 1
+  cutoffcode: MyString
+  description: MyString
+  datefr: 2014-03-03
+  dateto: 2014-03-03
+  createddate: 2014-03-03 18:00:50
+  createdby: MyString
+  lastupdatedate: 2014-03-03 18:00:50
+  lastupdateby: MyString
+
+two:
+  id: 1
+  mypclient_id: MyString
+  company_id: 1
+  cutoffcode: MyString
+  description: MyString
+  datefr: 2014-03-03
+  dateto: 2014-03-03
+  createddate: 2014-03-03 18:00:50
+  createdby: MyString
+  lastupdatedate: 2014-03-03 18:00:50
+  lastupdateby: MyString

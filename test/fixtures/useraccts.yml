@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  id: 1
+  mypclient_id: MyString
+  username: MyString
+  userpasswd: MyString
+  isactive: 1
+  islocked: 1
+
+two:
+  id: 1
+  mypclient_id: MyString
+  username: MyString
+  userpasswd: MyString
+  isactive: 1
+  islocked: 1

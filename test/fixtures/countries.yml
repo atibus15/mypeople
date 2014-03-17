@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  id: MyString
+  description: MyString
+  countrycode: 1
+  timezone_id: 1
+  isactive: false
+  createddate: 2014-02-08 03:26:47
+  createdby: MyString
+  lastupdatedate: 2014-02-08 03:26:47
+  lastupdateby: MyString
+
+two:
+  id: MyString
+  description: MyString
+  countrycode: 1
+  timezone_id: 1
+  isactive: false
+  createddate: 2014-02-08 03:26:47
+  createdby: MyString
+  lastupdatedate: 2014-02-08 03:26:47
+  lastupdateby: MyString

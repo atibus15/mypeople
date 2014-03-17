@@ -1,0 +1,2 @@
+module RegularUserPagesHelper
+end

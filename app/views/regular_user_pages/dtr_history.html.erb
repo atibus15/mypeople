@@ -1,0 +1,5 @@
+<%=javascript_include_tag 'regular_user/dtr_history'%>
+
+<% session.each {|k, v| %>
+<input type='hidden' id='<%= k %>'  value='<%= v %>'>
+<%}%>

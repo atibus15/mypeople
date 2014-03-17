@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  id: 1
+  country_id: MyString
+  holidaytypecode: MyString
+  description: MyString
+  seqno: 1
+  isactive: false
+
+two:
+  id: 1
+  country_id: MyString
+  holidaytypecode: MyString
+  description: MyString
+  seqno: 1
+  isactive: false

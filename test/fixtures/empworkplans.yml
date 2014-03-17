@@ -1,0 +1,39 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  id: 1
+  mypclient_id: MyString
+  company_id: 1
+  empidno: MyString
+  w_sked_pattern_id: MyString
+  skeddatein: 2014-02-27
+  dayintype: MyString
+  skedtimein: 2014-02-27 17:42:54
+  skeddateout: 2014-02-27
+  dayouttype: MyString
+  skedtimeout: 2014-02-27 17:42:54
+  workskedcategory_id: MyString
+  workskedpolicy_id: 1
+  createddate: 2014-02-27 17:42:54
+  createdby: MyString
+  lastupdatedate: 2014-02-27 17:42:54
+  lastupdateby: MyString
+
+two:
+  id: 1
+  mypclient_id: MyString
+  company_id: 1
+  empidno: MyString
+  w_sked_pattern_id: MyString
+  skeddatein: 2014-02-27
+  dayintype: MyString
+  skedtimein: 2014-02-27 17:42:54
+  skeddateout: 2014-02-27
+  dayouttype: MyString
+  skedtimeout: 2014-02-27 17:42:54
+  workskedcategory_id: MyString
+  workskedpolicy_id: 1
+  createddate: 2014-02-27 17:42:54
+  createdby: MyString
+  lastupdatedate: 2014-02-27 17:42:54
+  lastupdateby: MyString

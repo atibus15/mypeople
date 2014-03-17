@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  id: 1
+  mypclient_id: MyString
+  company_id: 1
+  leavetypecode: MyString
+  description: MyString
+  converttoatt: false
+  isactive: false
+  createddate: 2014-02-20 11:53:50
+  createdby: MyString
+  lastupdatedate: 2014-02-20 11:53:50
+  lastupdateby: MyString
+
+two:
+  id: 1
+  mypclient_id: MyString
+  company_id: 1
+  leavetypecode: MyString
+  description: MyString
+  converttoatt: false
+  isactive: false
+  createddate: 2014-02-20 11:53:50
+  createdby: MyString
+  lastupdatedate: 2014-02-20 11:53:50
+  lastupdateby: MyString

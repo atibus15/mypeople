@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  id: 1
+  holiday_id: 1
+  mypclient_id: MyString
+  company_id: 1
+  createddate: 2014-02-08 03:30:15
+  createdby: MyString
+  lastupdatedate: 2014-02-08 03:30:15
+  lastupdateby: 2014-02-08 03:30:15
+
+two:
+  id: 1
+  holiday_id: 1
+  mypclient_id: MyString
+  company_id: 1
+  createddate: 2014-02-08 03:30:15
+  createdby: MyString
+  lastupdatedate: 2014-02-08 03:30:15
+  lastupdateby: 2014-02-08 03:30:15

@@ -1,0 +1,44 @@
+function trainingSeminar()
+{
+    var training_window = Ext.create('Ext.window.Window',{
+        title:'Training and Seminar',
+        layout:'fit',
+        modal:true,
+        autoHeight:true,
+        autoWidth:true,
+        items:[
+            {
+                xtype:'gridpanel',
+                width:650,
+                height:450,
+                forceFit:true,
+                store:[],
+                columns:[
+                    {text:'Training/Seminar'},
+                    {text:'Facilitator/Organizer'},
+                    {text:'Venue'},
+                    {text:'From'},
+                    {text:'To'}
+                ],
+                tbar:[
+                    {
+                        text:'Add',
+                        handler:function(){
+                            trainingSeminarEditor();
+                        }
+                    },
+                    {
+                        text:'Edit',
+                        handler:function(){
+                            trainingSeminarEditor();
+                        }
+                    },
+                    {
+                        text:'Delete'
+                    }
+                ]
+            }
+        ]
+    });
+    training_window.show();
+}

@@ -1,0 +1,129 @@
+
+
+
+#info_message{
+    display: none;
+    width: 100%;
+    height: 25px;
+/*    bottom:0;*/
+    position: absolute;
+    position: fixed;
+    z-index: 50000;
+    margin: 0;
+    padding: 5px 0px 5px 15px;
+}
+.center_auto{
+    margin: 0 auto;
+    width: 98%;
+    padding: 5px 25px;
+}
+#info_message .message_area{
+    float: left; 
+    width: 90%;
+}
+#info_message .message_area span.link_ribbon{
+    color: #999999;
+    text-decoration: underline;
+    cursor: pointer;
+}
+#info_message .button_area{
+    float: left;
+    width: 11px;
+    height: 10px;
+    margin-top: 3px;
+}
+#info_message .notif-icon{
+    float: left;
+    width: 25px;
+    height: 100%;
+    margin: 0;
+}
+
+.warning-icon{
+    background-image: url(/assets/icons/warning.png) top left no-repeat; 
+}
+
+.success-icon{
+    background-image: url(/assets/icons/success.png) 0 0 no-repeat;   
+}
+
+.error-icon{
+    background-image: url(/assets/icons/error.png) 0 0 no-repeat;   
+}
+
+.error_bg{
+    /*background: url('/assets/error_bg.png') 0 0 repeat-x;*/
+    background: #FF0000;
+}
+.error_bg .message_area{
+    font:12px arial;
+    color: white;
+    /*text-shadow: 0 1px 0 #fff; */
+}
+.error_bg .button_area{
+    background: url('/assets/error_close.png') 0 0 no-repeat;    
+    cursor: pointer;
+}
+
+.error_bg .info_more_descrption{
+
+    -moz-box-shadow: 0 0 5px #b2495b;
+    -webkit-box-shadow: 0 0 5px #b2495b;
+    box-shadow: 0 0 5px #b2495b;
+}
+.succ_bg{
+    /*background: url('/assets/succ_bg.png') 0 0 repeat-x;*/
+    background: #00CC00;
+}
+.succ_bg .message_area{
+    font:12px arial;
+    color: #000000;
+/*    text-shadow: 0 1px 0 #fff; */
+}
+.succ_bg .button_area{
+    background: url('/assets/succ_close.png') 0 0 no-repeat;    
+    cursor: pointer;
+}
+.info_bg{
+    background: url('/assets/info_bg.png') 0 0 repeat-x;
+}
+.info_bg .message_area{
+    font:12px arial;
+    color: #000000;
+    /*text-shadow: 0 1px 0 #fff; */
+}
+.info_bg .button_area{
+    background: url('/assets/info_close.png') 0 0 no-repeat;    
+    cursor: pointer;
+}
+.warn_bg{
+    /*background: url('/assets/warn_bg.png') 0 0 repeat-x;*/
+    background: yellow;
+}
+.warn_bg .message_area{
+    font:12px arial;
+    color: #000000;
+    /*text-shadow: 0 1px 0 #fff; */
+}
+.warn_bg .button_area{
+    background: url('/assets/warn_close.png') 0 0 no-repeat;    
+    cursor: pointer;
+}
+.clearboth{
+    clear: both;
+}
+.info_more_descrption{
+    display: none;
+    width: 950px;
+    height: 300px;
+    background: #fff;
+    margin: 0 auto;
+    padding: 10px;
+    background: #fbfbfb;
+    overflow: auto;
+}
+.succ_bg .info_more_descrption{    
+    -moz-box-shadow: 0 0 5px #56a25e;
+    -webkit-box-shadow: 0 0 5px #56a25e;
+    box-shadow: 0 0 5px #56a25e;
+}

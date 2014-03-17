@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  id: 1
+  mypclient_id: MyString
+  company_id: 1
+  locationcode: MyString
+  description: MyString
+  isactive: 1
+  createdby: MyString
+  lastupdateby: MyString
+
+two:
+  id: 1
+  mypclient_id: MyString
+  company_id: 1
+  locationcode: MyString
+  description: MyString
+  isactive: 1
+  createdby: MyString
+  lastupdateby: MyString

@@ -1,0 +1,377 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  id: 1
+  mypclient_id: MyString
+  company_id: 1
+  policycode: MyString
+  description: MyString
+  isactive: false
+  wr_withmealallow: false
+  wr_withmealallow_firstamt: 1
+  wr_withmealallow_firstmins: 1
+  wr_withmealallow_succamt: 1
+  wr_withmealallow_succmins: 1
+  wr_withmealallow_beyondamt: 1
+  wr_withmealallow_beyondmins: 1
+  wr_strictlatepolicy: false
+  wr_strictlatepolicy_hdmins: 1
+  wr_strictlatepolicy_abmins: 1
+  wr_strictutpolicy: false
+  wr_strictutpolicy_hdmins: 1
+  wr_strictutpolicy_abmins: 1
+  wr_strictlateut_applytondiff: false
+  wr_withgraceprd_timein: false
+  wr_withgraceprd_timein_mins: 1
+  wr_graceprd_deductfromlate: false
+  wr_withgraceprd_timeout: false
+  wr_withgraceprd_timeout_mins: 1
+  wr_graceprd_deductfromut: false
+  wr_loa_ignorelogs: false
+  wr_loa_prioritizeapp: false
+  wr_loa_minchargemins: 1
+  wr_oth_sethrswkcomplete: false
+  wr_oth_offsetlatetoexthrs: false
+  wo_bi_allowot: false
+  wo_bi_minotmins: 1
+  wo_bi_completestandardhrs: false
+  wo_bi_offsetuttoebot: false
+  wo_bi_withmealallow: false
+  wo_bi_withmealallow_firstamt: 1
+  wo_bi_withmealallow_firstmins: 1
+  wo_bi_withmealallow_succamt: 1
+  wo_bi_withmealallow_succmins: 1
+  wo_bi_withmealallow_beyondamt: 1
+  wo_bi_withmealallow_beyondmins: 1
+  wo_ao_allowot: false
+  wo_ao_minotmins: 1
+  wo_ao_earliesttime: 2014-02-12 13:36:20
+  wo_ao_completestandardhrs: false
+  wo_ao_offsetlatetoot: false
+  wo_ao_withmealallow: false
+  wo_ao_withmealallow_firstamt: 1
+  wo_ao_withmealallow_firstmins: 1
+  wo_ao_withmealallow_succamt: 1
+  wo_ao_withmealallow_succmins: 1
+  wo_ao_withmealallow_beyondamt: 1
+  wo_ao_withmealallow_beyondmins: 1
+  wo_mb_1stbrk_allowot: false
+  wo_mb_1stbrk_minotmins: 1
+  wo_mb_2ndbrk_allowot: false
+  wo_mb_2ndbrk_minotmins: 1
+  wo_mb_3rdbrk_allowot: false
+  wo_mb_3rdbrk_minotmins: 1
+  wo_mb_4thbrk_allowot: false
+  wo_mb_4thbrk_minotmins: 1
+  wo_mb_5thbrk_allowot: false
+  wo_mb_5thbrk_minotmins: 1
+  wb_with1stbrk: false
+  wb_strict1stbrk: false
+  wb_strict1stbrk_starttime: 2014-02-12 13:36:20
+  wb_strict1stbrk_endtime: 2014-02-12 13:36:20
+  wb_with2ndbrk: false
+  wb_strict2ndbrk: false
+  wb_strict2ndbrk_starttime: 2014-02-12 13:36:20
+  wb_strict2ndbrk_endtime: 2014-02-12 13:36:20
+  wb_with3rdbrk: false
+  wb_strict3rdbrk: false
+  wb_strict3rdbrk_starttime: 2014-02-12 13:36:20
+  wb_strict3rdbrk_endtime: 2014-02-12 13:36:20
+  wb_with4thbrk: false
+  wb_strict4thbrk: false
+  wb_strict4thbrk_starttime: 2014-02-12 13:36:20
+  wb_strict4thbrk_endtime: 2014-02-12 13:36:20
+  wb_with5thbrk: false
+  wb_strict5thbrk: false
+  wn_duringregworkhr: false
+  wb_strict5thbrk_starttime: 2014-02-12 13:36:20
+  wb_strict5thbrk_endtime: 2014-02-12 13:36:20
+  wn_duringregworkhr_starttime: 2014-02-12 13:36:20
+  wn_duringregworkhr_endtime: 2014-02-12 13:36:20
+  wn_onvalidotbti: false
+  wn_onvalidotbti_starttime: 2014-02-12 13:36:20
+  wn_onvalidotbti_endtime: 2014-02-12 13:36:20
+  wn_onvalidotato: false
+  wn_onvalidotato_starttime: 2014-02-12 13:36:20
+  wn_onvalidotato_endtime: 2014-02-12 13:36:20
+  ws_duringregworkhr: false
+  ws_duringregworkhr_starttime: 2014-02-12 13:36:20
+  ws_duringregworkhr_endtime: 2014-02-12 13:36:20
+  ws_onvalidotbti: false
+  ws_onvalidotbti_starttime: 2014-02-12 13:36:20
+  ws_onvalidotbti_endtime: 2014-02-12 13:36:20
+  ws_onvalidotato: false
+  ws_onvalidotato_starttime: 2014-02-12 13:36:20
+  ws_onvalidotato_endtime: 2014-02-12 13:36:20
+  wo_bi_withtransallow: false
+  wo_bi_withtransallow_firstamt: 1
+  wo_bi_withtransallow_firstmins: 1
+  wo_bi_withtransallow_succamt: 1
+  wo_bi_withtransallow_succmins: 1
+  wo_bi_withtransallow_beyondamt: 1
+  wo_bi_withtransallow_beyondmins: 1
+  wo_ao_withtransallow: false
+  wo_ao_withtransallow_firstamt: 1
+  wo_ao_withtransallow_firstmins: 1
+  wo_ao_withtransallow_succamt: 1
+  wo_ao_withtransallow_succmins: 1
+  wo_ao_withtransallow_beyondamt: 1
+  wo_ao_withtransallow_beyondmins: 1
+  no_allowot: false
+  no_minotmins: 1
+  no_withmealallow: false
+  no_withmealallow_firstamt: 1
+  no_withmealallow_firstmins: 1
+  no_withmealallow_succamt: 1
+  no_withmealallow_succmins: 1
+  no_withmealallow_beyondamt: 1
+  no_withmealallow_beyondmins: 1
+  no_withtransallow: false
+  no_withtransallow_firstamt: 1
+  no_withtransallow_firstmins: 1
+  no_withtransallow_succamt: 1
+  no_withtransallow_succmins: 1
+  no_withtransallow_beyondamt: 1
+  no_withtransallow_beyondmins: 1
+  nb_with1stbrk: false
+  nb_1stbrk_fixed: false
+  nb_1stbrk_fixmins: 1
+  nb_1stbrk_range: false
+  nb_1stbrk_starttime: 2014-02-12 13:36:20
+  nb_1stbrk_endtime: 2014-02-12 13:36:20
+  nb_with2ndbrk: false
+  nb_2ndbrk_fixed: false
+  nb_2ndbrk_fixmins: 1
+  nb_2ndbrk_range: false
+  nb_2ndbrk_starttime: 2014-02-12 13:36:20
+  nb_2ndbrk_endtime: 2014-02-12 13:36:20
+  nb_with3rdbrk: false
+  nb_3rdbrk_fixed: false
+  nb_3rdbrk_fixmins: 1
+  nb_3rdbrk_range: false
+  nb_3rdbrk_starttime: 2014-02-12 13:36:20
+  nb_3rdbrk_endtime: 2014-02-12 13:36:20
+  nb_with4thbrk: false
+  nb_4thbrk_fixed: false
+  nb_4thbrk_fixmins: 1
+  nb_4thbrk_range: false
+  nb_4thbrk_starttime: 2014-02-12 13:36:20
+  nb_4thbrk_endtime: 2014-02-12 13:36:20
+  nb_with5thbrk: false
+  nb_5thbrk_fixed: false
+  nb_5thbrk_fixmins: 1
+  nb_5thbrk_range: false
+  nb_5thbrk_starttime: 2014-02-12 13:36:20
+  nb_5thbrk_endtime: 2014-02-12 13:36:20
+  nn_computendiff: false
+  nn_ndiff_starttime: 2014-02-12 13:36:20
+  nn_ndiff_endtime: 2014-02-12 13:36:20
+  ns_computesdiff: false
+  ns_sdiff_starttime: 2014-02-12 13:36:20
+  ns_sdiff_endtime: 2014-02-12 13:36:20
+  com_payhollg: false
+  com_requireattbefhollg: false
+  com_requireattafthollg: false
+  com_payholsp: false
+  com_requireattbefholsp: false
+  com_requireattaftholsp: false
+  com_payholtype1: false
+  com_requireattbefholtype1: false
+  com_requireattaftholtype1: false
+  com_payholtype2: false
+  com_requireattbefholtype2: false
+  com_requireattaftholtype2: false
+  com_mealallowcode: MyString
+  com_transallowcode: MyString
+  createddate: 2014-02-12 13:36:20
+  createdby: MyString
+  lastupdatedate: 2014-02-12 13:36:20
+  lastupdateby: MyString
+
+two:
+  id: 1
+  mypclient_id: MyString
+  company_id: 1
+  policycode: MyString
+  description: MyString
+  isactive: false
+  wr_withmealallow: false
+  wr_withmealallow_firstamt: 1
+  wr_withmealallow_firstmins: 1
+  wr_withmealallow_succamt: 1
+  wr_withmealallow_succmins: 1
+  wr_withmealallow_beyondamt: 1
+  wr_withmealallow_beyondmins: 1
+  wr_strictlatepolicy: false
+  wr_strictlatepolicy_hdmins: 1
+  wr_strictlatepolicy_abmins: 1
+  wr_strictutpolicy: false
+  wr_strictutpolicy_hdmins: 1
+  wr_strictutpolicy_abmins: 1
+  wr_strictlateut_applytondiff: false
+  wr_withgraceprd_timein: false
+  wr_withgraceprd_timein_mins: 1
+  wr_graceprd_deductfromlate: false
+  wr_withgraceprd_timeout: false
+  wr_withgraceprd_timeout_mins: 1
+  wr_graceprd_deductfromut: false
+  wr_loa_ignorelogs: false
+  wr_loa_prioritizeapp: false
+  wr_loa_minchargemins: 1
+  wr_oth_sethrswkcomplete: false
+  wr_oth_offsetlatetoexthrs: false
+  wo_bi_allowot: false
+  wo_bi_minotmins: 1
+  wo_bi_completestandardhrs: false
+  wo_bi_offsetuttoebot: false
+  wo_bi_withmealallow: false
+  wo_bi_withmealallow_firstamt: 1
+  wo_bi_withmealallow_firstmins: 1
+  wo_bi_withmealallow_succamt: 1
+  wo_bi_withmealallow_succmins: 1
+  wo_bi_withmealallow_beyondamt: 1
+  wo_bi_withmealallow_beyondmins: 1
+  wo_ao_allowot: false
+  wo_ao_minotmins: 1
+  wo_ao_earliesttime: 2014-02-12 13:36:20
+  wo_ao_completestandardhrs: false
+  wo_ao_offsetlatetoot: false
+  wo_ao_withmealallow: false
+  wo_ao_withmealallow_firstamt: 1
+  wo_ao_withmealallow_firstmins: 1
+  wo_ao_withmealallow_succamt: 1
+  wo_ao_withmealallow_succmins: 1
+  wo_ao_withmealallow_beyondamt: 1
+  wo_ao_withmealallow_beyondmins: 1
+  wo_mb_1stbrk_allowot: false
+  wo_mb_1stbrk_minotmins: 1
+  wo_mb_2ndbrk_allowot: false
+  wo_mb_2ndbrk_minotmins: 1
+  wo_mb_3rdbrk_allowot: false
+  wo_mb_3rdbrk_minotmins: 1
+  wo_mb_4thbrk_allowot: false
+  wo_mb_4thbrk_minotmins: 1
+  wo_mb_5thbrk_allowot: false
+  wo_mb_5thbrk_minotmins: 1
+  wb_with1stbrk: false
+  wb_strict1stbrk: false
+  wb_strict1stbrk_starttime: 2014-02-12 13:36:20
+  wb_strict1stbrk_endtime: 2014-02-12 13:36:20
+  wb_with2ndbrk: false
+  wb_strict2ndbrk: false
+  wb_strict2ndbrk_starttime: 2014-02-12 13:36:20
+  wb_strict2ndbrk_endtime: 2014-02-12 13:36:20
+  wb_with3rdbrk: false
+  wb_strict3rdbrk: false
+  wb_strict3rdbrk_starttime: 2014-02-12 13:36:20
+  wb_strict3rdbrk_endtime: 2014-02-12 13:36:20
+  wb_with4thbrk: false
+  wb_strict4thbrk: false
+  wb_strict4thbrk_starttime: 2014-02-12 13:36:20
+  wb_strict4thbrk_endtime: 2014-02-12 13:36:20
+  wb_with5thbrk: false
+  wb_strict5thbrk: false
+  wn_duringregworkhr: false
+  wb_strict5thbrk_starttime: 2014-02-12 13:36:20
+  wb_strict5thbrk_endtime: 2014-02-12 13:36:20
+  wn_duringregworkhr_starttime: 2014-02-12 13:36:20
+  wn_duringregworkhr_endtime: 2014-02-12 13:36:20
+  wn_onvalidotbti: false
+  wn_onvalidotbti_starttime: 2014-02-12 13:36:20
+  wn_onvalidotbti_endtime: 2014-02-12 13:36:20
+  wn_onvalidotato: false
+  wn_onvalidotato_starttime: 2014-02-12 13:36:20
+  wn_onvalidotato_endtime: 2014-02-12 13:36:20
+  ws_duringregworkhr: false
+  ws_duringregworkhr_starttime: 2014-02-12 13:36:20
+  ws_duringregworkhr_endtime: 2014-02-12 13:36:20
+  ws_onvalidotbti: false
+  ws_onvalidotbti_starttime: 2014-02-12 13:36:20
+  ws_onvalidotbti_endtime: 2014-02-12 13:36:20
+  ws_onvalidotato: false
+  ws_onvalidotato_starttime: 2014-02-12 13:36:20
+  ws_onvalidotato_endtime: 2014-02-12 13:36:20
+  wo_bi_withtransallow: false
+  wo_bi_withtransallow_firstamt: 1
+  wo_bi_withtransallow_firstmins: 1
+  wo_bi_withtransallow_succamt: 1
+  wo_bi_withtransallow_succmins: 1
+  wo_bi_withtransallow_beyondamt: 1
+  wo_bi_withtransallow_beyondmins: 1
+  wo_ao_withtransallow: false
+  wo_ao_withtransallow_firstamt: 1
+  wo_ao_withtransallow_firstmins: 1
+  wo_ao_withtransallow_succamt: 1
+  wo_ao_withtransallow_succmins: 1
+  wo_ao_withtransallow_beyondamt: 1
+  wo_ao_withtransallow_beyondmins: 1
+  no_allowot: false
+  no_minotmins: 1
+  no_withmealallow: false
+  no_withmealallow_firstamt: 1
+  no_withmealallow_firstmins: 1
+  no_withmealallow_succamt: 1
+  no_withmealallow_succmins: 1
+  no_withmealallow_beyondamt: 1
+  no_withmealallow_beyondmins: 1
+  no_withtransallow: false
+  no_withtransallow_firstamt: 1
+  no_withtransallow_firstmins: 1
+  no_withtransallow_succamt: 1
+  no_withtransallow_succmins: 1
+  no_withtransallow_beyondamt: 1
+  no_withtransallow_beyondmins: 1
+  nb_with1stbrk: false
+  nb_1stbrk_fixed: false
+  nb_1stbrk_fixmins: 1
+  nb_1stbrk_range: false
+  nb_1stbrk_starttime: 2014-02-12 13:36:20
+  nb_1stbrk_endtime: 2014-02-12 13:36:20
+  nb_with2ndbrk: false
+  nb_2ndbrk_fixed: false
+  nb_2ndbrk_fixmins: 1
+  nb_2ndbrk_range: false
+  nb_2ndbrk_starttime: 2014-02-12 13:36:20
+  nb_2ndbrk_endtime: 2014-02-12 13:36:20
+  nb_with3rdbrk: false
+  nb_3rdbrk_fixed: false
+  nb_3rdbrk_fixmins: 1
+  nb_3rdbrk_range: false
+  nb_3rdbrk_starttime: 2014-02-12 13:36:20
+  nb_3rdbrk_endtime: 2014-02-12 13:36:20
+  nb_with4thbrk: false
+  nb_4thbrk_fixed: false
+  nb_4thbrk_fixmins: 1
+  nb_4thbrk_range: false
+  nb_4thbrk_starttime: 2014-02-12 13:36:20
+  nb_4thbrk_endtime: 2014-02-12 13:36:20
+  nb_with5thbrk: false
+  nb_5thbrk_fixed: false
+  nb_5thbrk_fixmins: 1
+  nb_5thbrk_range: false
+  nb_5thbrk_starttime: 2014-02-12 13:36:20
+  nb_5thbrk_endtime: 2014-02-12 13:36:20
+  nn_computendiff: false
+  nn_ndiff_starttime: 2014-02-12 13:36:20
+  nn_ndiff_endtime: 2014-02-12 13:36:20
+  ns_computesdiff: false
+  ns_sdiff_starttime: 2014-02-12 13:36:20
+  ns_sdiff_endtime: 2014-02-12 13:36:20
+  com_payhollg: false
+  com_requireattbefhollg: false
+  com_requireattafthollg: false
+  com_payholsp: false
+  com_requireattbefholsp: false
+  com_requireattaftholsp: false
+  com_payholtype1: false
+  com_requireattbefholtype1: false
+  com_requireattaftholtype1: false
+  com_payholtype2: false
+  com_requireattbefholtype2: false
+  com_requireattaftholtype2: false
+  com_mealallowcode: MyString
+  com_transallowcode: MyString
+  createddate: 2014-02-12 13:36:20
+  createdby: MyString
+  lastupdatedate: 2014-02-12 13:36:20
+  lastupdateby: MyString

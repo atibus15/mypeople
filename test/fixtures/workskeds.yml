@@ -1,0 +1,97 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  id: 1
+  mypclient_id: MyString
+  company_id: 1
+  workskedcode: MyString
+  description: MyString
+  workskedcategory_id: MyString
+  requiredtimein: MyString
+  requiredtimeout: MyString
+  requireddayhrs: 9.99
+  requiredwkhrs: 9.99
+  requiredmonhrs: 9.99
+  requiredannualhrs: 9.99
+  break1fr: MyString
+  break1to: MyString
+  break1hrs: 9.99
+  break2fr: MyString
+  break2to: MyString
+  break2hrs: 9.99
+  break3fr: MyString
+  break3to: MyString
+  break3hrs: 9.99
+  break4fr: MyString
+  break4to: MyString
+  break4hrs: 9.99
+  break5fr: MyString
+  break5to: MyString
+  break5hrs: 9.99
+  hrswkam: 9.99
+  hrswkpm: 9.99
+  monday: MyString
+  tuesday: MyString
+  wednesday: MyString
+  thursday: MyString
+  friday: MyString
+  saturday: MyString
+  sunday: MyString
+  flexiearliestin: MyString
+  flexilatestin: MyString
+  workdaysperwk: 9.99
+  workdayspermo: 9.99
+  workdaysperyr: 9.99
+  workmosperyr: 9.99
+  createddate: 2014-01-30 08:34:44
+  createdby: MyString
+  lastupdatedate: 2014-01-30 08:34:44
+  lastupdateby: MyString
+
+two:
+  id: 1
+  mypclient_id: MyString
+  company_id: 1
+  workskedcode: MyString
+  description: MyString
+  workskedcategory_id: MyString
+  requiredtimein: MyString
+  requiredtimeout: MyString
+  requireddayhrs: 9.99
+  requiredwkhrs: 9.99
+  requiredmonhrs: 9.99
+  requiredannualhrs: 9.99
+  break1fr: MyString
+  break1to: MyString
+  break1hrs: 9.99
+  break2fr: MyString
+  break2to: MyString
+  break2hrs: 9.99
+  break3fr: MyString
+  break3to: MyString
+  break3hrs: 9.99
+  break4fr: MyString
+  break4to: MyString
+  break4hrs: 9.99
+  break5fr: MyString
+  break5to: MyString
+  break5hrs: 9.99
+  hrswkam: 9.99
+  hrswkpm: 9.99
+  monday: MyString
+  tuesday: MyString
+  wednesday: MyString
+  thursday: MyString
+  friday: MyString
+  saturday: MyString
+  sunday: MyString
+  flexiearliestin: MyString
+  flexilatestin: MyString
+  workdaysperwk: 9.99
+  workdayspermo: 9.99
+  workdaysperyr: 9.99
+  workmosperyr: 9.99
+  createddate: 2014-01-30 08:34:44
+  createdby: MyString
+  lastupdatedate: 2014-01-30 08:34:44
+  lastupdateby: MyString

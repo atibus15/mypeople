@@ -1,0 +1,57 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  id: 1
+  mypclient_id: MyString
+  empno: MyString
+  empbadgeno: MyString
+  emptitle_id: MyString
+  empnamelast: MyString
+  empnamemiddle: MyString
+  empnamefirst: MyString
+  empnamealias: MyString
+  empfullnamefml: MyString
+  empfullnamelfm: MyString
+  emailaddress: MyString
+  datehired: 2014-02-07
+  company_id: 1
+  busgroup_id: 1
+  holdcompany_id: 1
+  department_id: 1
+  deptgroup_id: 1
+  position_id: 1
+  location_id: 1
+  positionlevel_id: 1
+  isactivestatus: false
+  createddate: 2014-02-07 16:55:31
+  createdby: MyString
+  lastupdatedate: 2014-02-07 16:55:31
+  lastupdateby: MyString
+
+two:
+  id: 1
+  mypclient_id: MyString
+  empno: MyString
+  empbadgeno: MyString
+  emptitle_id: MyString
+  empnamelast: MyString
+  empnamemiddle: MyString
+  empnamefirst: MyString
+  empnamealias: MyString
+  empfullnamefml: MyString
+  empfullnamelfm: MyString
+  emailaddress: MyString
+  datehired: 2014-02-07
+  company_id: 1
+  busgroup_id: 1
+  holdcompany_id: 1
+  department_id: 1
+  deptgroup_id: 1
+  position_id: 1
+  location_id: 1
+  positionlevel_id: 1
+  isactivestatus: false
+  createddate: 2014-02-07 16:55:31
+  createdby: MyString
+  lastupdatedate: 2014-02-07 16:55:31
+  lastupdateby: MyString

@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  id: MyString
+  mypclient_id: MyString
+  rolecode: MyString
+  description: MyString
+  isadmin: 1
+  seqno: 1
+  isactive: 1
+
+two:
+  id: MyString
+  mypclient_id: MyString
+  rolecode: MyString
+  description: MyString
+  isadmin: 1
+  seqno: 1
+  isactive: 1

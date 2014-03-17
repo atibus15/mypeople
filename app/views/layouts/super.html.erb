@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>MyPeople</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Open Eye Solutions Online Payroll and Timekeeping System Online Payslip">
+    <meta name="author" content="" ="Adamson Ibus">
+    <script>
+      window.oncontextmenu = function(){return false;}
+    </script>
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+    <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="../assets/js/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li><a href="#" id="app-link" class="dropdown-toggle navbar-link" data-toggle="dropdown"><%= image_tag("drawer-small.png") %></a>
+                <ul class="dropdown-menu">
+                    <li><%= link_to 'Client Management', '/super/client_manager.html' %></li>
+                </ul>
+              </li>
+            </ul>
+            <%= link_to 'MyPeople Enterprise Payroll Solutions', '/admin/home', :class => "brand" %>
+            <ul class="nav navbar-text pull-right">
+              <li><a href="#"  class="dropdown-toggle navbar-link" data-toggle="dropdown"><%= "Logged in as #{session[:username]}" %></a>
+                <ul class="dropdown-menu">
+                  <li><%= link_to 'Logout', logout_path %></li>
+                </ul>
+              </li>
+            </ul>   
+            
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid transaction">
+        <div id="my-render-area">
+            <%= yield %>
+        </div>
+    </div>
+
+<!--      <footer>
+        <p>&copy; Company 2013</p>
+      </footer> -->
+
+  </body>
+
+</html>
