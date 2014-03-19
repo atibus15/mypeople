@@ -9,8 +9,8 @@ gem 'activerecord-fb-adapter'
 
 gem "strip_attributes", "~> 1.4.4"
 
- gem 'sprockets'
- gem 'sprockets-rails'
+gem 'sprockets'
+gem 'sprockets-rails'
 
 # Gems used only for assets and not required
 # in production environments by default.

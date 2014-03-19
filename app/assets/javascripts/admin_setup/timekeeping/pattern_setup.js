@@ -1,17 +1,16 @@
 pattern_id = false;
 
-
-
 function patternEditor(pattern, category_id, is_copy)
 {
     pattern_id = (pattern && !is_copy) ? pattern.get('id') : null;
 
+    var temp_id = pattern ? pattern.get('id') : null;
 
     var submit_function = function(){
         var save_url = pattern_id ? '/workskedpatterns/'+pattern_id : '/workskedpatterns';
         var method = pattern_id ? 'PUT' : 'POST';
         var submit_empty_text = pattern_id ? true : false;
-        console.log(submit_empty_text);
+        
         ExtCmp('break_time_grid').createBreakTextFields();
 
         submitForm('pattern_editor_form', save_url, method, 
@@ -21,6 +20,7 @@ function patternEditor(pattern, category_id, is_copy)
             }, 
         submit_empty_text);
     };
+
     var pattern_win = Ext.create('People.editor.Window',{
         title:'Pattern Editor',
         id:'pattern_editor_window',
@@ -130,7 +130,7 @@ function patternEditor(pattern, category_id, is_copy)
                                 form_name:'pattern',
                                 height:200,
                                 width:400,
-                                store:breakTimeStore('/workskedpatterns/'+pattern_id+'/breaks')
+                                store:breakTimeStore('/workskedpatterns/'+temp_id+'/breaks')
                             }
                         ]
                     }

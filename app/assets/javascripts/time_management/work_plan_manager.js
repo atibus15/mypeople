@@ -7,23 +7,23 @@ Ext.define('People.workplan.Grid',{
 	extend:'Ext.grid.GridPanel',
 	alias:'widget.workplangrid',
 	require:['Ext.window.*'],
+	store:createJsonStore('/work_plan_manager/employee_work_plan.json','id',false),
+	columns:[
+		{dataIndex:'skeddatein', 	text:'Date In', renderer:function(val){return Ext.util.Format.date(val, 'D, d M Y')}},
+		{dataIndex:'dayintype', 	text:'Day In Type'},
+		{dataIndex:'skedtimein', 	text:'Time In'},
+		{dataIndex:'skedtimeout', 	text:'Time Out'},
+		{dataIndex:'skeddateout', 	text:'Date Out', renderer:function(val){return Ext.util.Format.date(val, 'D, m d Y')}},
+		{dataIndex:'dayouttype', 	text:'Day Out Type'},
+		{hidden:true, dataIndex:'skedtimein', 	text:'Earliest In'},
+		{hidden:true, dataIndex:'skedtimein', 	text:'Latest In'},
+		{dataIndex:'workskedcategory_id', text:'Category Code'},
+		{dataIndex:'policy_code', 	text:'Policy Code'}
+	],
 	initComponent:function(){
 		var me = this;
 		Ext.apply(me, {
-			columns:[
-				{dataIndex:'skeddatein', 	text:'Date In'},
-				{dataIndex:'dayin', 		text:'Day In'},
-				{dataIndex:'dayintype', 	text:'Day In Type'},
-				{dataIndex:'skedtimein', 	text:'Time In'},
-				{hidden:true,dataIndex:'flexiearliestin', text:'Earliest In'},
-				{dataIndex:'skeddateout', 	text:'Date Out'},
-				{dataIndex:'dayout', 		text:'Day Out'},
-				{dataIndex:'dayouttype', 	text:'Day Out Type'},
-				{dataIndex:'skedtimeout', 	text:'Time Out'},
-				{hidden:true,dataIndex:'flexilatestin', text:'Latest In'},
-				{dataIndex:'workskedcategory_id', text:'Category Code'},
-				{dataIndex:'policy_code', 	text:'Policy Code'}
-			],
+			
 			tbar:[
 				{
 					xtype:'datefield',
@@ -79,105 +79,14 @@ Ext.define('People.workplan.Grid',{
 			notify('Please Set Date Range.', 'warning');
 			return false;
 		}
-
 		me.store.load({
 			params:{
 				company_id:company_id,
 				id_number:id_number,
 				start_date:start_date,
 				end_date:end_date
-			},
-			callback:function(records){
-				me.pushRecordByDateRange(records);
 			}
 		});
-
-		
-	},
-	pushRecordByDateRange:function(records){
-		var employee = this.employee;
-		var my_store = this.store;
-		var start_date = new Date(this.start_date);
-		var end_date = new Date(this.end_date);
-		
-		
-		Ext.define('Workplan',{
-			extend:'Ext.data.Model',
-			fields:[
-				{name:'company_id'},
-				{name:'createdby'},
-				{name:'createddate'},
-				{name:'dayin'},
-				{name:'dayintype'},
-				{name:'dayout'},
-				{name:'dayouttype'},
-				{name:'empidno'},
-				{name:'id'},
-				{name:'lastupdateby'},
-				{name:'lastupdatedate'},
-				{name:'mypclient_id'},
-				{name:'skeddatein'},
-				{name:'skeddateout'},
-				{name:'skedtimein'},
-				{name:'flexiearliestin'},
-				{name:'skedtimeout'},
-				{name:'flexilatestin'},
-				{name:'w_sked_pattern_id'},
-				{name:'workskedcategory_id'},
-				{name:'workskedpolicy_id'},
-				{name:'policy_code'}
-			]
-		});
-
-		new_records = new Array();
-		while(!Ext.Date.isEqual(start_date, end_date)){
-			var date_in 	= Ext.util.Format.date(start_date, 'm/d/Y');
-
-			if(my_store.find('skeddatein', date_in) < 0)
-			{
-				var day_in_name = Ext.util.Format.date(new Date(date_in), 'l');
-				var day_in_type = employee.get(day_in_name.toLowerCase());
-				var time_in 	= Ext.util.Format.date(employee.get('requiredtimein'),'g:i A');
-				var time_out 	= Ext.util.Format.date(employee.get('requiredtimeout'),'g:i A');
-				var time_in_24 	= parseInt(Ext.util.Format.date(employee.get('requiredtimein'),'G'));
-				var time_out_24 = parseInt(Ext.util.Format.date(employee.get('requiredtimeout'),'G'));
-
-				if(time_out_24 < time_in_24){
-					date_out = Ext.Date.add(new Date(date_in), Ext.Date.DAY, 1);
-					day_out_name = Ext.util.Format.date(new Date(date_out), 'l');
-					day_out_type = employee.get(day_out_name.toLowerCase());
-				}else{
-					date_out = date_in;
-					day_out_name = day_in_name;
-					day_out_type = day_in_type
-				}
-
-				var new_model = Ext.create('Workplan',{
-					company_id			:employee.get('company_id'),
-					dayin 				:day_in_name,
-					dayintype			:day_in_type,
-					dayout 				:day_out_name,
-					dayouttype			:day_out_type,
-					empidno				:employee.get('empidno'),
-					mypclient_id 		:employee.get('mypclient_id'),
-					skeddatein 			:date_in,
-					skeddateout 		:date_out,
-					skedtimein 			:time_in,
-					skedtimeout 		:time_out,
-					flexiearliestin 	:Ext.util.Format.date(new Date(employee.get('flexiearliestin')), 'g:i A'),
-					flexilatestin 		:Ext.util.Format.date(new Date(employee.get('flexilatestin')), 'g:i A'),
-					w_sked_pattern_id	:employee.get('w_sked_pattern_id'),
-					workskedcategory_id :employee.get('workskedcategory_id'),
-					workskedpolicy_id 	:employee.get('workskedpolicy_id'),
-					policy_code 		:employee.get('policycode')
-				});
-
-				new_records.push(new_model);
-			}
-			
-			start_date = Ext.Date.add(new Date(start_date), Ext.Date.DAY, 1);
-		}
-		my_store.add(new_records);
 	},
 	setEmployee:function(new_employeee){
 		this.employee = new_employeee;
@@ -189,22 +98,21 @@ Ext.define('People.workplan.Grid',{
 	},
 	reconfigureGridColumns:function(){
 		var grid_columns = this.getDockedComponent(1);
+
 		if(this.workskedcategory_id == 'FLX'){
-			grid_columns.getHeaderAtIndex(4).show();
-			grid_columns.getHeaderAtIndex(9).show();
-			grid_columns.getHeaderAtIndex(3).hide();
-			grid_columns.getHeaderAtIndex(5).hide();
-			grid_columns.getHeaderAtIndex(6).hide();
-			grid_columns.getHeaderAtIndex(7).hide();
-			grid_columns.getHeaderAtIndex(8).hide();
-		}else{
-			grid_columns.getHeaderAtIndex(4).hide();
-			grid_columns.getHeaderAtIndex(9).hide();
-			grid_columns.getHeaderAtIndex(3).show();
-			grid_columns.getHeaderAtIndex(5).show();
 			grid_columns.getHeaderAtIndex(6).show();
 			grid_columns.getHeaderAtIndex(7).show();
-			grid_columns.getHeaderAtIndex(8).show();
+			grid_columns.getHeaderAtIndex(2).hide();
+			grid_columns.getHeaderAtIndex(3).hide();
+			grid_columns.getHeaderAtIndex(4).hide();
+			grid_columns.getHeaderAtIndex(5).hide();
+		}else{
+			grid_columns.getHeaderAtIndex(6).hide();
+			grid_columns.getHeaderAtIndex(7).hide();
+			grid_columns.getHeaderAtIndex(2).show();
+			grid_columns.getHeaderAtIndex(3).show();
+			grid_columns.getHeaderAtIndex(4).show();
+			grid_columns.getHeaderAtIndex(5).show();
 		}
 	},
 	setStartDate:function(new_start_date){
@@ -270,9 +178,7 @@ Ext.define('People.workplan.Grid',{
 				'skedtimein' 		: time_in,
 				'skeddateout' 		: new Date(date_out),
 				'dayouttype' 		: day_out_type,
-				'skedtimeout' 		: time_out,
-				'workskedcategory_id': work_plan.get('workskedcategory_id'),
-				'workskedpolicy_id'	: work_plan.get('workskedpolicy_id')
+				'skedtimeout' 		: time_out
 			};
 			new_work_plans.push(new_plan);
 		});
@@ -301,11 +207,13 @@ Ext.define('People.workplan.Grid',{
 					notify(response.notice ,'success');
 
 					Ext.each(new_work_plans, function(work_plan){
-						work_plan_model = me.store.findRecord('skeddatein', Ext.util.Format.date(work_plan.skeddatein, 'm/d/Y'));
+						work_plan_model = me.store.findRecord('id', work_plan.id);
 						$.map(work_plan, function(value,key){
 							work_plan_model.set(key, value);
 						});
 					});
+					work_plan_model.commit();
+					me.editor_window.destroy();
 				}
 				else{
 					return notify(response.errormsg, 'warning');
@@ -417,6 +325,9 @@ Ext.define('People.workplan.Manager',{
 					listeners:{
 						select:function(model, record, index){
 							me.getWorkPlanGrid().setEmployee(record);
+						},
+						selectionchange:function(model, record){
+							me.getWorkPlanGrid().store.removeAll();
 						}
 					},
 					dockedItems:[
@@ -499,8 +410,7 @@ Ext.define('People.workplan.Manager',{
 					selModel:{
 						mode:'SIMPLE',
 						allowDeselect:true
-					},
-					store:createJsonStore('/work_plan_manager/employee_work_plan.json','id',false),
+					}
 				}
 			]
 		});

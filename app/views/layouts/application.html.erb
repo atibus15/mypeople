@@ -33,18 +33,18 @@
                 <ul class="dropdown-menu">
                     <div>
                       <%= link_to image_tag("dtr_hist.png", :class => "droid_icon") + '', "/employee/#{session[:username]}/dtr_history.html" %>
-                      <%= link_to image_tag("payroll.png", :class => "droid_icon") + '', "/employee/#{session[:username]}/payslip.html" %>
+                      <%= link_to image_tag("payslip.png", :class => "droid_icon") + '', "/employee/#{session[:username]}/payslip.html" %>
                     </di>
                     <div>
-                      <%= link_to image_tag("sl.png", :class => "droid_icon") + '', "/employee/#{session[:username]}/account_sl.html" %>
-                      <%= link_to image_tag("process_attendance.png", :class => "droid_icon") + '', "/employee/#{session[:username]}/process_attendance.html" %>
+                      <%= link_to image_tag("account_sl.png", :class => "droid_icon") + '', "/employee/#{session[:username]}/account_sl.html" %>
+                      <%= link_to image_tag("attendance_details.png", :class => "droid_icon") + '', "/employee/#{session[:username]}/process_attendance.html" %>
                     </div>
                     <div>
-                      <%= link_to image_tag("ot.png", {:class => "droid_icon"}) + '', "/employee/#{session[:username]}/overtime.html" %>
-                      <%= link_to image_tag("lf.png", {:class => "droid_icon"}) + '', "/employee/#{session[:username]}/leave.html" %>
+                      <%= link_to image_tag("overtime.png", {:class => "droid_icon"}) + '', "/employee/#{session[:username]}/overtime.html" %>
+                      <%= link_to image_tag("leave.png", {:class => "droid_icon"}) + '', "/employee/#{session[:username]}/leave.html" %>
                     </div>
                     <div>
-                    <%= link_to image_tag("dtr.png", {:class => "droid_icon"}) + '', "/employee/#{session[:username]}/dtr_log.html" %>
+                    <%= link_to image_tag("dtr_log.png", {:class => "droid_icon"}) + '', "/employee/#{session[:username]}/dtr_log.html" %>
                     <%= link_to image_tag("travel.png", :class => "droid_icon") + '', "/employee/#{session[:username]}/official_travel.html" %>
                     </div>
                 </ul>

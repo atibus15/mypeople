@@ -206,4 +206,48 @@ class EmployeesController < ApplicationController
     render json: @@request_result
   end
 
+
+
+  def without_policy
+    begin
+      @employees = Employee.where("mypclient_id = ? and empidno not in (?)", @@client_id, with_policy)
+      @employees.each {|emp| emp[:company] = emp.Company.description}
+      @clean_employees = @@stripper.activeRecordData(@employees)
+      @meta = @@meta_data.create(@employees)
+      @@request_result = {success: true, data: @clean_employees, metaData: @meta}
+    rescue Exception => e
+      @request_result[:errormsg] = e.message
+    end
+    respond_to_request
+  end
+
+  def without_schedule
+    begin
+      @employees = Employee.where("mypclient_id = ? and empidno not in (?)", @@client_id, with_schedule)
+      @employees.each {|emp| emp[:company] = emp.Company.description}
+      @clean_employees = @@stripper.activeRecordData(@employees)
+      @meta = @@meta_data.create(@employees)
+      @@request_result = {success: true, data: @clean_employees, metaData: @meta}
+    rescue Exception => e
+      @request_result[:errormsg] = e.message
+    end
+    respond_to_request
+  end
+
+  private
+  def with_policy
+    @assigned_employees = Emppolicy.assigned_employees(@@client_id)
+    @assigned_employees_idnos = []
+
+    @assigned_employees.each {|emp| @assigned_employees_idnos << emp.empidno.strip}
+    return @assigned_employees_idnos
+  end
+
+  def with_schedule
+    @assigned_employees = Empsked.assigned_employees(@@client_id)
+    @assigned_employees_idnos = []
+
+    @assigned_employees.each{|emp|@assigned_employees_idnos << emp.empidno.strip}
+    return @assigned_employees_idnos
+  end
 end

@@ -33,9 +33,6 @@ Ext.define('People.dtr.History',{
                             maxValue:_today_date,
                             emptyText:'To',
                             width:150,
-                            fieldLabel:'-',
-                            labelSeparator:'',
-                            labelWidth:6,
                             submitFormat:'m/d/Y',
                             editable:false
                         },

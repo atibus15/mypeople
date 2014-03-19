@@ -132,14 +132,12 @@ Ext.define('People.schedule.Assignment',{
                                                 {
                                                     xtype:'datefield',
                                                     fieldLabel:'Start Date',
-                                                    id:'schedule-start-date',
-                                                    minValue:_today_date
+                                                    id:'schedule-start-date'
                                                 },
                                                 {
                                                     xtype:'datefield',
                                                     fieldLabel:'End Date',
-                                                    id:'schedule-end-date',
-                                                    minValue:_today_date
+                                                    id:'schedule-end-date'
                                                 }
                                             ],
                                             buttons:[
@@ -160,7 +158,6 @@ Ext.define('People.schedule.Assignment',{
                 }
             ]
         });
-
         me.callParent(arguments);
     },
     createEmployeePicker:function(){
@@ -176,11 +173,11 @@ Ext.define('People.schedule.Assignment',{
         Ext.create('People.employee.Selector',{
             id:'schedule-employee-selector',
             saveFn:function(selector){
-                var selections = selector.getSelectedEmployeeGrid().getStore();
-                me.saveChanges(selections);
+                var selected_employee = selector.getSelectedEmployeeGrid().getStore();
+                me.saveChanges(selected_employee);
             },
             resultStore:createJsonStore('/employee/list.json?company_id='+company_id, 'empidno', false, 'total_employee'),
-            selectedStore:createJsonStore('/schedule/assigned_employees.json?schedule_id='+schedule_id, 'empidno', false)
+            selectedStore:[] //createJsonStore('/schedule/assigned_employees.json?schedule_id='+schedule_id, 'empidno', false)
         }).show();
     },
     constructor:function(configs){
@@ -197,22 +194,22 @@ Ext.define('People.schedule.Assignment',{
             me.bindLocationStore();
         });
     },
-    consolidateRecordChanges:function(selections){
+    consolidateRecordChanges:function(selected_employee){
         var me = this;
         var consolidated_selections = [];
-        var new_records = selections.queryBy(function(rec){
+        var new_records = selected_employee.queryBy(function(rec){
             return (typeof(rec.get('empsked_id')) == 'undefined');
         });
-        var deleted_records = selections.getRemovedRecords();
-        Ext.each(deleted_records, function(employee){
-            consolidated_selections.push({
-                action:'destroy',
-                mypclient_id:employee.get('mypclient_id'),
-                company_id:employee.get('company_id'),
-                empidno:employee.get('empidno'),
-                worksked_id:me.selected_schedule.get('id')
-            });
-        });
+        // var deleted_records = selections.getRemovedRecords();
+        // Ext.each(deleted_records, function(employee){
+        //     consolidated_selections.push({
+        //         action:'destroy',
+        //         mypclient_id:employee.get('mypclient_id'),
+        //         company_id:employee.get('company_id'),
+        //         empidno:employee.get('empidno'),
+        //         worksked_id:me.selected_schedule.get('id')
+        //     });
+        // });
 
         new_records.each(function(employee){
             consolidated_selections.push({
@@ -221,16 +218,16 @@ Ext.define('People.schedule.Assignment',{
                 company_id:employee.get('company_id'),
                 empidno:employee.get('empidno'),
                 worksked_id:me.selected_schedule.get('id'),
-                startdate:Ext.getCmp('schedule-start-date').getValue(),
-                enddate:Ext.getCmp('schedule-end-date').getValue()
+                startdate:Ext.util.Format.date(Ext.getCmp('schedule-start-date').getValue(),'m/d/Y'),
+                enddate:Ext.util.Format.date(Ext.getCmp('schedule-end-date').getValue(),'m/d/Y')
             });
         });
 
         return Ext.JSON.encode(consolidated_selections);
     },
-    saveChanges:function(selections){
+    saveChanges:function(selected_employee){
         var me = this;
-        var consolidated_records = me.consolidateRecordChanges(selections);
+        var consolidated_records = me.consolidateRecordChanges(selected_employee);
         Ext.Ajax.request({
             url:'/schedule/update_assignment',
             method:'POST',
@@ -310,6 +307,22 @@ Ext.onReady(function(){
         layout: 'border',
         autoRender:'my-render-area',
         items: [
+            {
+                region:'west',
+                xtype:'gridpanel',
+                collapsed:true,
+                collapsible:true,
+                width:450,
+                forceFit:true,
+                split:true,
+                store:createJsonStore('/employees/without_schedule.json', 'id', true),
+                title:'Employees without assigned Schedule',
+                columns:[
+                    {maxWidth:60,dataIndex:'empidno',text:'ID No.'},
+                    {dataIndex:'empfullnamelfm',text:'Fullname'},
+                    {dataIndex:'company',text:'Company'}
+                ]
+            },
             {
                 region:'center',
                 title:'Schedule Assignment',

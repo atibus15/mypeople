@@ -56,7 +56,7 @@ Ext.onReady(function(){
         items:[
             {
                 region:'center',
-                title:'Overtime Application',
+                title:'Overtime Filings',
                 xtype:'overtimegrid',
                 forceFit:true
             }

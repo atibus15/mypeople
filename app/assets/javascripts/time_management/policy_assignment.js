@@ -114,46 +114,7 @@ Ext.define('People.policy.Assignment',{
                                     iconCls:'add-icon',
                                     tooltip:'Manage',
                                     handler:function(){
-                                        var policy = me.getSelectedPolicy();
-                                        if(!policy){
-                                            notify('Please select policy.', 'warning');
-                                            return false;
-                                        }
-                                        var policy_id = policy.get('id');
-                                        var company_id = policy.get('company_id');
-
-
-
-                                        Ext.create('People.editor.Window',{
-                                            title:'Policy Date Range',
-                                            id:'policy-date-range-window',
-                                            enterFn:function(){
-                                                me.createEmployeePicker();
-                                            },
-                                            items:[
-                                                {
-                                                    xtype:'datefield',
-                                                    fieldLabel:'Start Date',
-                                                    id:'policy-start-date',
-                                                    minValue:_today_date
-                                                },
-                                                {
-                                                    xtype:'datefield',
-                                                    fieldLabel:'End Date',
-                                                    id:'policy-end-date',
-                                                    minValue:_today_date
-                                                }
-                                            ],
-                                            buttons:[
-                                                {
-                                                    text:'Set',
-                                                    handler:function(){
-                                                        if(!ExtCmp('policy-start-date').getValue()) return notify('Start Date is required.', 'warning');
-                                                        me.createEmployeePicker();
-                                                    }
-                                                }
-                                            ]
-                                        }).show();
+                                        me.createEmployeePicker();
                                     }
                                 }
                             ]
@@ -224,9 +185,7 @@ Ext.define('People.policy.Assignment',{
                 mypclient_id:employee.get('mypclient_id'),
                 company_id:employee.get('company_id'),
                 empidno:employee.get('empidno'),
-                workskedpolicy_id:me.getSelectedPolicy().get('id'),
-                startdate:Ext.getCmp('policy-start-date').getValue(),
-                enddate:Ext.getCmp('policy-end-date').getValue()
+                workskedpolicy_id:me.getSelectedPolicy().get('id')
             });
         });
 
@@ -247,15 +206,13 @@ Ext.define('People.policy.Assignment',{
                 if(response.success){
                     notify(response.notice, 'success');
                     Ext.getCmp('policy-employee-selector').destroy();
-                    Ext.getCmp('policy-date-range-window').destroy();
                     me.loadCurrentlyAssignedEmployees();
                 }
                 else{
                     notify(response.errormsg, 'error'); return false;
                 }
             }
-        })
-
+        });
     },
     setSelectedPolicy:function(new_policy){
         this.selected_policy = new_policy;
@@ -319,6 +276,22 @@ Ext.onReady(function(){
         layout: 'border',
         autoRender:'my-render-area',
         items: [
+            {
+                region:'west',
+                xtype:'gridpanel',
+                collapsed:true,
+                collapsible:true,
+                width:450,
+                forceFit:true,
+                split:true,
+                store:createJsonStore('/employees/without_policy.json', 'id', true),
+                title:'Employees without assigned Policy',
+                columns:[
+                    {maxWidth:60,dataIndex:'empidno',text:'ID No.'},
+                    {dataIndex:'empfullnamelfm',text:'Fullname'},
+                    {dataIndex:'company',text:'Company'}
+                ]
+            },
             {
                 region:'center',
                 title:'Policy Assignment',

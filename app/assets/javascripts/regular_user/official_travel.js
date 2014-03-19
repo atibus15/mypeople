@@ -56,7 +56,7 @@ Ext.onReady(function(){
             {
                 region:'center',
                 forceFit:true,
-                title:'Official Travel',
+                title:'Official Travel Filings',
                 xtype:'officialtravel',
                 width:'100%'
             }

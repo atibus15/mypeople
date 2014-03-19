@@ -10,55 +10,61 @@ class Workskedpattern < ActiveRecord::Base
   validates_uniqueness_of :patterncode, scope:[:mypclient_id, :company_id], message: 'is already exists.'
 
   def timein
-    self.convert_to_time self[:timein] unless self[:timein].blank?
+    self.convert_to_time self[:timein] 
   end
 
   def timeout
-    self.convert_to_time self[:timeout] unless self[:timeout].blank?
+    self.convert_to_time self[:timeout]
   end
 
   def break1to
-    self.convert_to_time self[:break1to] unless self[:break1to].blank?
+    self.convert_to_time self[:break1to]
   end
 
   def break1fr
-    self.convert_to_time self[:break1fr] unless self[:break1fr].blank?
+    self.convert_to_time self[:break1fr]
   end
 
   def break2to
-    self.convert_to_time self[:break2to] unless self[:break2to].blank?
+    self.convert_to_time self[:break2to]
   end
 
   def break2fr
-    self.convert_to_time self[:break2fr] unless self[:break2fr].blank?
+    self.convert_to_time self[:break2fr]
   end
   
   def break3to
-    self.convert_to_time self[:break3to] unless self[:break3to].blank?
+    self.convert_to_time self[:break3to]
   end
 
   def break3fr
-    self.convert_to_time self[:break3fr] unless self[:break3fr].blank?
+    self.convert_to_time self[:break3fr]
   end
 
   def break4to
-    self.convert_to_time self[:break4to] unless self[:break4to].blank?
+    self.convert_to_time self[:break4to]
   end
 
   def break4fr
-    self.convert_to_time self[:break4fr] unless self[:break4fr].blank?
+    self.convert_to_time self[:break4fr]
   end
 
   def break5to
-    self.convert_to_time self[:break5to] unless self[:break5to].blank?
+    self.convert_to_time self[:break5to]
   end
 
   def break5fr
-    self.convert_to_time self[:break5fr] unless self[:break5fr].blank?
+    self.convert_to_time self[:break5fr]
   end
 
+  def flexiearliestin
+    self.convert_to_time self[:flexiearliestin] 
+  end
+
+  def flexilatestin
+    self.convert_to_time self[:flexilatestin]
+  end
   def convert_to_time(dt)
-    dt.strftime('%l:%M %p').to_s.strip
+    dt.strftime('%l:%M %p').to_s.strip unless dt.blank?
   end
-
 end

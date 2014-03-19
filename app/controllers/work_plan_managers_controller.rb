@@ -1,4 +1,3 @@
-
 class WorkPlanManagersController < EmployeesController
 	def employees
 		begin
@@ -29,17 +28,22 @@ class WorkPlanManagersController < EmployeesController
 			id_number = params[:id_number]
 			start_date = params[:start_date]
 			end_date = params[:end_date]
-			@work_plans = Empworkplan.where({:mypclient_id=>@@client_id, :company_id=>company_id, :empidno => id_number, :skeddatein => start_date..end_date});
-			@work_plans.each {|plan|
-				plan[:dayin] = plan.day_in_name
-				plan[:dayout] = plan.day_out_name
-				plan[:policy_code] = plan.Workskedpolicy.policycode
-			}
+
+			Empworkplan.transaction do
+				if Empworkplan.fill_up(@@client_id, id_number, start_date, end_date, 0, 1)
+					@work_plans = Empworkplan.where({:mypclient_id=>@@client_id, :company_id=>company_id, :empidno => id_number, :skeddatein => start_date..end_date});
+					@work_plans.each {|plan|
+						plan[:policy_code] = plan.Workskedpolicy.policycode
+					}
+				end
+			end
 
 			cl_work_plans = @@stripper.activeRecordData(@work_plans)
 			meta = @@meta_data.create(@work_plans)
 
 			@@request_result = {success: true, data: cl_work_plans, metaData:meta}
+		rescue ActiveRecord::ActiveRecordError
+			@@request_result[:errormsg] = 'Something went wrong while inserting or updating employee work plan.'
 		rescue Exception => e
 			@@request_result[:errormsg] = e.message
 		end
@@ -53,20 +57,12 @@ class WorkPlanManagersController < EmployeesController
 			work_plans.each {|work_plan|
 				@@request_result[:plan] = work_plan
 				work_plan[:mypclient_id] = @@client_id
-
-				if work_plan['id'].blank?
-					work_plan[:createdby] = session[:username]
-					new_work_plan = Empworkplan.new(work_plan)
-					new_work_plan.save
-				else
-					emp_work_plan = Empworkplan.find(work_plan['id'])
-					emp_work_plan.update_attributes(work_plan)
-				end
+				emp_work_plan = Empworkplan.find(work_plan['id'])
+				emp_work_plan.update_attributes(work_plan)
 			}
 			@@request_result = {success: true, notice: 'Operation ended successfully.'}
 		rescue Exception => e
 			@@request_result[:errormsg] = e.message
-			
 		end
 		render json: @@request_result
 	end

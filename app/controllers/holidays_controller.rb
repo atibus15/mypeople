@@ -58,15 +58,19 @@ class HolidaysController < ApplicationController
         @new_holiday[:holidaydate] = Date.strptime(@new_holiday[:holidaydate], "%m/%d/%Y")
         @locals = JSON.parse params[:locals] unless params[:locals].empty? 
 
-        @holiday = Holiday.new(@new_holiday)
-        if @holiday.save
-            self.add_holiday_local(@locals, @holiday.id)
-            @@request_result[:success] = true
-            @@request_result[:notice] = "Holiday was successfully created."
-        else
-            @@request_result[:errormsg] = @holiday.errors.full_messages[0]
+        Holiday.transaction do
+          @holiday = Holiday.new(@new_holiday)
+          if @holiday.save
+              self.add_holiday_local(@locals, @holiday.id)
+              @@request_result[:success] = true
+              @@request_result[:notice] = "Holiday was successfully created."
+          else
+              @@request_result[:errormsg] = @holiday.errors.full_messages[0]
+              ActiveRecord::Rollback
+          end
         end
     rescue Exception => e
+        ActiveRecord::Rollback
         @@request_result[:errormsg] = e.message
     end
     render json: @@request_result

@@ -41,6 +41,8 @@ Mypeople::Application.routes.draw do
   get "employees/newEmployeeNumber"
   get "employees/initial_selections"
   get "employees/time_logs"
+  get "employees/without_policy"
+  get "employees/without_schedule"
   post "holidaylocals/multi_delete"
   post "emppolicies/update_assignment"
   # post "/update_assignment"
@@ -48,7 +50,7 @@ Mypeople::Application.routes.draw do
   resources :emptitles, :companies, :workskeds, :workskedpatterns, :payrolls, :departments, :positions, :deptgroups, :busgroups, 
             :holdcompanies, :positionlevels, :userroles, :mypclients, :admuserroles, :user_accounts, :sessions, :employees, :lookups, 
             :administrators, :new_employees, :holidays, :locations, :timezones, :holidaytypes, :holidaylocals, :countries,:workskedpolicies,
-            :holidays,:holidaytypes ,:leavetypes, :timelogs, :emppolicies, :empskeds, :daytypes, :cut_offs, :attendance_files
+            :holidays,:holidaytypes ,:leavetypes, :timelogs, :emppolicies, :daytypes, :cut_offs, :attendance_files
 
   resources :super_admroles, :super_user_accounts
 
@@ -99,8 +101,8 @@ Mypeople::Application.routes.draw do
   match 'super/:action' => 'super#:action'
   match "holidaylocals/affected_locations/:id" => "holidaylocals#affected_locations"
   match "policy/assigned_employees" => "emppolicies#assigned_employees"
-  match "schedule/assigned_employees" => "empskeds#assigned_employees"
-  match "schedule/update_assignment" => "empskeds#update_assignment"
+  match "schedule/assigned_employees" => "employee_schedule#assigned_employees"
+  match "schedule/update_assignment" => "employee_schedule#update_assignment"
   match "work_plan_manager/:action" => "work_plan_managers#:action"
   match "company/:id/day_types" => "companies#day_types" 
 

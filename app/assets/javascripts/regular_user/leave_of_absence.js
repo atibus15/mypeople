@@ -8,12 +8,12 @@ Ext.define('People.leave.Grid',{
         {dataIndex:'field4', text:'Date To'},
         {dataIndex:'field5', text:'Reason'},
         {dataIndex:'field6', text:'Remarks'},
-        {dataIndex:'field7', text:'Wit Pay?'},
+        {dataIndex:'field7', text:'With Pay?'},
         {dataIndex:'field8', text:'Credit Used'}
     ],
     store:[
         ['03/07/2014','Sick Leave','03/05/2014','03/06/2014','Severe headache','','N','1'],
-        ['03/04/2014','Vecation Leave','03/12/2014','03/14/2014','Family Reunion','','Y','3']
+        ['03/04/2014','Vacation Leave','03/12/2014','03/14/2014','Family Reunion','','Y','3']
     ],
     initComponent:function(){
         var me = this;
@@ -59,7 +59,7 @@ Ext.onReady(function(){
             {
                 region:'center',
                 forceFit:true,
-                title:'Leave of Absence',
+                title:'Leave of Absence Filings',
                 xtype:'leavegrid'
             }
         ]

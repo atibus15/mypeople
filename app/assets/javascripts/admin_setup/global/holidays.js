@@ -223,9 +223,13 @@ function holidayEditor(holiday, is_copy)
                             afterrender:function(){
                                 this.store.load();
                                 this.store.group('company');
-                                if(!is_copy){
-                                    this.store.on('load',function(record){
-                                        
+                                if(is_copy){
+                                    this.store.on('load',function(model,records){
+                                        Ext.each(records, function(record){
+                                            record.set('id', record.get('location_id'));
+                                            record.set('hl_id', null);
+                                            console.log(record);
+                                        });
                                     });
                                 }
                             }
@@ -297,6 +301,11 @@ function deleteHolidayLocals(selections)
         icon:Ext.MessageBox.QUESTION,
         fn:function(btn){
             if(btn == 'yes'){
+                if(holidaylocal_ids.length == 0){
+                    ExtCmp('affected_location_grid').store.remove(selections);
+                    return;
+                }
+
                 Ext.Ajax.request({
                     url:'/holidaylocals/multi_delete',
                     method:'POST',

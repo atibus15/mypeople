@@ -5,12 +5,17 @@ class Empworkplan < ActiveRecord::Base
 
   belongs_to :Workskedpolicy, :foreign_key => :workskedpolicy_id
   
+  def self.fill_up(client_id, id_number, start_date, end_date=nil, clear_data=1, trans_type=1)
+    @sql = "EXECUTE PROCEDURE P_TM_FILL_EMPWORKPLANS('#{client_id}', '#{id_number}','#{start_date}', '#{end_date}', #{clear_data}, '#{trans_type}', '#{nil}')"
+    connection.execute(@sql)
+  end
+
   def skeddatein
-    convert_to_date self[:skeddatein]
+    convert_to_date self[:skeddatein], "%a, %d %B %Y"
   end
 
   def skeddateout
-    convert_to_date self[:skeddateout]
+    convert_to_date self[:skeddateout], "%a, %d %B %Y"
   end
 
   def skedtimein
@@ -21,19 +26,11 @@ class Empworkplan < ActiveRecord::Base
     convert_to_time self[:skedtimeout]
   end
 
-  def day_in_name
-    self[:skeddatein].strftime('%A')
-  end
-
-  def day_out_name
-    self[:skeddateout].strftime('%A')
-  end
-
   def convert_to_time(dt)
     dt.strftime('%l:%M %p').to_s.strip unless dt.blank?
   end
 
-  def convert_to_date(date)
-    date.strftime("%m/%d/%Y").to_s.strip unless date.blank?
+  def convert_to_date(date, format = "%m/%d/%Y")
+    date.strftime(format).to_s.strip unless date.blank?
   end
 end

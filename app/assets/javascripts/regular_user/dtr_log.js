@@ -27,7 +27,7 @@ Ext.define('People.dtrlog.Grid',{
                     xtype:'combobox',
                     name:'ot_status',
                     id:'ot_status',
-                    store:[['P','Pending'],['A','Approve'],['D','Disapproved']],
+                    store:[['P','Pending'],['A','Approved'],['D','Disapproved']],
                     value:'P',
                     width:200,
                     labelWidth:50
@@ -37,7 +37,7 @@ Ext.define('People.dtrlog.Grid',{
                     xtype:'datefield',
                     id:'filedate_from',
                     maxValue:_today_date,
-                    emptyText:'from',
+                    emptyText:'From',
                     width:200,
                     labelWidth:50
                 },
@@ -45,7 +45,7 @@ Ext.define('People.dtrlog.Grid',{
                     xtype:'datefield',
                     id:'filedate_to',
                     maxValue:_today_date,
-                    emptyText:'to',
+                    emptyText:'To',
                     width:150
                 },
                 {
@@ -69,7 +69,7 @@ Ext.define('People.dtrlog.Grid',{
 
         var me = this;
         Ext.create('People.editor.Window',{
-            title:'DTR Log Application',
+            title:'File DTR Log',
             closeAction:'destroy',
             items:
             [ 
@@ -139,7 +139,7 @@ Ext.onReady(function(){
             {
                 region:'center',
                 forceFit:true,
-                title:'DTR LOG Application',
+                title:'DTR LOG Filings',
                 xtype:'dtrlog',
                 width:'100%'
             }
