@@ -103,9 +103,7 @@ class EmppoliciesController < ApplicationController
         emp_policies.each {|emp_policy|
           @assigned = Emppolicy.where({:mypclient_id=>emp_policy['mypclient_id'],:company_id=>emp_policy['company_id'], :empidno=>emp_policy['empidno']})
           
-          if emp_policy['action'] == 'destroy'
-            @assigned.destroy_all
-          elsif @assigned.empty?
+          if @assigned.empty?
             emp_policy.delete('action')
             @assign = Emppolicy.new(emp_policy)
             @assign.save

@@ -1,7 +1,9 @@
 //= require components/list_grid
 //= require components/combo_modal
 //= require components/employee
+//= require ./exception_grid
 //= require_self
+
 var selections = createLocalDataFromServer('/client/default_selections.json');
 Ext.define('People.schedule.Grid',{
     extend:'Ext.grid.GridPanel',
@@ -194,26 +196,12 @@ Ext.define('People.schedule.Assignment',{
             me.bindLocationStore();
         });
     },
-    consolidateRecordChanges:function(selected_employee){
+    consolidateRecordChanges:function(selected_employees){
         var me = this;
         var consolidated_selections = [];
-        var new_records = selected_employee.queryBy(function(rec){
-            return (typeof(rec.get('empsked_id')) == 'undefined');
-        });
-        // var deleted_records = selections.getRemovedRecords();
-        // Ext.each(deleted_records, function(employee){
-        //     consolidated_selections.push({
-        //         action:'destroy',
-        //         mypclient_id:employee.get('mypclient_id'),
-        //         company_id:employee.get('company_id'),
-        //         empidno:employee.get('empidno'),
-        //         worksked_id:me.selected_schedule.get('id')
-        //     });
-        // });
 
-        new_records.each(function(employee){
+        selected_employees.each(function(employee){
             consolidated_selections.push({
-                action:'create',
                 mypclient_id:employee.get('mypclient_id'),
                 company_id:employee.get('company_id'),
                 empidno:employee.get('empidno'),
@@ -242,6 +230,7 @@ Ext.define('People.schedule.Assignment',{
                     Ext.getCmp('schedule-employee-selector').destroy();
                     Ext.getCmp('schedule-date-range-window').destroy();
                     me.loadCurrentlyAssignedEmployees();
+                    Ext.getCmp('schedule-exception-grid').removeEmployees(Ext.JSON.decode(consolidated_records));
                 }
                 else{
                     notify(response.errormsg, 'error'); return false;
@@ -309,19 +298,13 @@ Ext.onReady(function(){
         items: [
             {
                 region:'west',
-                xtype:'gridpanel',
+                xtype:'exceptiongrid',
+                id:'schedule-exception-grid',
                 collapsed:true,
                 collapsible:true,
-                width:450,
-                forceFit:true,
                 split:true,
                 store:createJsonStore('/employees/without_schedule.json', 'id', true),
                 title:'Employees without assigned Schedule',
-                columns:[
-                    {maxWidth:60,dataIndex:'empidno',text:'ID No.'},
-                    {dataIndex:'empfullnamelfm',text:'Fullname'},
-                    {dataIndex:'company',text:'Company'}
-                ]
             },
             {
                 region:'center',

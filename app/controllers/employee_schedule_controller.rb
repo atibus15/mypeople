@@ -31,10 +31,9 @@ class EmployeeScheduleController < ApplicationController
         emp_schedules.each {|emp_sched|
           @assigned = Empsked.where({:mypclient_id=>emp_sched['mypclient_id'],:company_id=>emp_sched['company_id'], :empidno=>emp_sched['empidno']})
           
-          if emp_sched['action'] == 'destroy'
-            @assigned.destroy_all
-          elsif @assigned.empty?
-            emp_sched.delete('action')
+          # if emp_sched['action'] == 'destroy'
+          #   @assigned.destroy_all
+          if @assigned.empty?
             @assign = Empsked.new(emp_sched)
             @assign.save 
           else

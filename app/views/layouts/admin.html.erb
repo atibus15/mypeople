@@ -59,7 +59,6 @@
             <ul class="nav navbar-text pull-right">
               <li><a href="#"  class="dropdown-toggle navbar-link" data-toggle="dropdown"><%= "Logged in as #{session[:username]}" %></a>
                 <ul class="dropdown-menu">
-                  <li><%= link_to 'Profile', admin_profile_path %></li>
                   <li><%= link_to 'Update Password', "/#{session[:username]}/security/change_password.html" %></li>
                   <li><%= link_to 'Logout', logout_path %></li>
                 </ul>

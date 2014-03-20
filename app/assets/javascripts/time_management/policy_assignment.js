@@ -1,6 +1,7 @@
 //= require components/list_grid
 //= require components/combo_modal
 //= require components/employee
+//= require ./exception_grid
 //= require_self
 
 Ext.define('People.policy.Grid',{
@@ -144,7 +145,7 @@ Ext.define('People.policy.Assignment',{
                 me.saveChanges(selections);
             },
             resultStore:createJsonStore('/employee/list.json?company_id='+company_id, 'empidno', false, 'total_employee'),
-            selectedStore:createJsonStore('/policy/assigned_employees?policy_id='+policy_id, 'empidno', false)
+            selectedStore:[] //createJsonStore('/policy/assigned_employees?policy_id='+policy_id, 'empidno', false)
         }).show();
     },
 
@@ -162,26 +163,13 @@ Ext.define('People.policy.Assignment',{
             me.bindLocationStore();
         });
     },
-    consolidateRecordChanges:function(selections){
+    consolidateRecordChanges:function(employees){
         var me = this;
         var consolidated_selections = [];
-        var new_records = selections.queryBy(function(rec){
-            return (typeof(rec.get('emppolicy_id')) == 'undefined');
-        });
-        var deleted_records = selections.getRemovedRecords();
-        Ext.each(deleted_records, function(employee){
-            consolidated_selections.push({
-                action:'destroy',
-                mypclient_id:employee.get('mypclient_id'),
-                company_id:employee.get('company_id'),
-                empidno:employee.get('empidno'),
-                workskedpolicy_id:me.getSelectedPolicy().get('id')
-            });
-        });
 
-        new_records.each(function(employee){
+
+        employees.each(function(employee){
             consolidated_selections.push({
-                action:'create',
                 mypclient_id:employee.get('mypclient_id'),
                 company_id:employee.get('company_id'),
                 empidno:employee.get('empidno'),
@@ -191,9 +179,9 @@ Ext.define('People.policy.Assignment',{
 
         return Ext.JSON.encode(consolidated_selections);
     },
-    saveChanges:function(selections){
+    saveChanges:function(employees){
         var me = this;
-        var consolidated_records = me.consolidateRecordChanges(selections);
+        var consolidated_records = me.consolidateRecordChanges(employees);
         Ext.Ajax.request({
             url:'/emppolicies/update_assignment.json',
             method:'POST',
@@ -207,6 +195,8 @@ Ext.define('People.policy.Assignment',{
                     notify(response.notice, 'success');
                     Ext.getCmp('policy-employee-selector').destroy();
                     me.loadCurrentlyAssignedEmployees();
+
+                    Ext.getCmp('policy-exception-grid').removeEmployees(Ext.JSON.decode(consolidated_records));
                 }
                 else{
                     notify(response.errormsg, 'error'); return false;
@@ -278,19 +268,13 @@ Ext.onReady(function(){
         items: [
             {
                 region:'west',
-                xtype:'gridpanel',
+                xtype:'exceptiongrid',
+                id:'policy-exception-grid',
                 collapsed:true,
                 collapsible:true,
-                width:450,
-                forceFit:true,
                 split:true,
-                store:createJsonStore('/employees/without_policy.json', 'id', true),
-                title:'Employees without assigned Policy',
-                columns:[
-                    {maxWidth:60,dataIndex:'empidno',text:'ID No.'},
-                    {dataIndex:'empfullnamelfm',text:'Fullname'},
-                    {dataIndex:'company',text:'Company'}
-                ]
+                title:'Employees without Policy',
+                store:createJsonStore('/employees/without_policy.json', 'id', true)
             },
             {
                 region:'center',
