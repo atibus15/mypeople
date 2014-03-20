@@ -1,6 +1,7 @@
 
 class ClientController < ApplicationController
 
+    before_filter :restrict_regular_user
 
     def default_selections
         begin
@@ -117,17 +118,19 @@ class ClientController < ApplicationController
     def holidays
         begin
             holidays = Holiday.joins(:Holidaytype, :Country)
-                    .select('holidays.*, holidaytypes.description as holiday_type, countries.description as country').where({:mypclient_id => @@client_id}).order(:country_id)
+                    .select('holidays.*, holidaytypes.description as holiday_type, countries.description as country')
+                    .where({:mypclient_id => @@client_id}).order(:country_id)
+                    .order('holidaydate')
+            holidays.each {|holiday| holiday[:country_year] = holiday[:country]+' - '+ holiday[:holidaydate].strftime("%Y")}
             clean_holidays = @@stripper.activeRecordData(holidays)
             meta_data = @@meta_data.create(holidays) unless holidays.empty?
 
-            @@request_result[:data] = clean_holidays
-            @@request_result[:metaData] = meta_data
-            @@request_result[:success] = true
+            @@request_result = {success: true, data: clean_holidays, metaData: meta_data}
+
         rescue
             @@request_result[:errormsg] = e.message
         end
-        render json: @@request_result
+        respond_to_request
     end
 
     def locations

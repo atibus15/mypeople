@@ -9,7 +9,7 @@ development:
 
 production:
   adapter: fb
-  database: 172.16.11.55/3050:mypepsdev
+  database: localhost/3050:mypepsprod
   username: SYSDBA
-  password: masterkey
+  password: p3p$@dm!n
   downcase_names: true

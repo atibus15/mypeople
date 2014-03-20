@@ -7,4 +7,9 @@ class Holiday < ActiveRecord::Base
   belongs_to :Country, :foreign_key => :country_id
   validates :country_id, :holidaytype_id, :description, :holidaydate, :coverage , presence: {message: 'is requires'}
   validates_uniqueness_of :description, scope:[:mypclient_id, :country_id], message: 'is already exists.'
+
+  def holidaydate
+  	self[:holidaydate].strftime("%B %d %Y")
+  end
+
 end

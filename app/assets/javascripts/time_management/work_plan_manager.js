@@ -67,6 +67,9 @@ Ext.define('People.workplan.Grid',{
 	},
 	loadWorkPlans:function(){
 		var me = this;
+		console.log(this.workskedcategory_id);
+		if(this.workskedcategory_id == 'ACT') return notify('No Work Plan Setup for "Actual" Schedule.', 'warning');
+		if(this.workskedcategory_id == null) return notify('Please assign employee work schedule before assigning work plan.', 'warning');
 		var start_date = me.start_date,
 		end_date = me.end_date,
 		company_id = me.company_id,

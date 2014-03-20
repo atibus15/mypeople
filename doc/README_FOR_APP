@@ -16,3 +16,11 @@ WINDOWS
 
     download wkhtmltopdf @ http://sourceforge.net/projects/wkhtmltopdf/postdownload?source=dlp
     and tell pdfkit whereis wkhtmltopdf install directory
+
+
+1 - no workplan setup for "Actual" schedule
+2 - Holidays: group by year or option to display only current year
+
+adam, yang #1 yan ung last nting nadiscuss sa workplan mgr na nkshow lng ung Actual skeds pero mgpprompt tyo ng msg if mgaattempt xa na mgview sa workplan? ok na ba tyo d2?
+
+...tpos yang #2 wishlist lng yan if pupwede na, kc nkikita ko now sabog ung display nkhalo lng ung mga 2013 holidays hehe...tska nga pla dapat sorted by holiday date ascending

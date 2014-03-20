@@ -1,15 +1,6 @@
 class HolidaysController < ApplicationController
-  before_filter :construct
-  def construct
-      @@meta_data = MetaData.new
-      @@stripper = Stripper.new
-      @@data_util = DataUtil.new
-      @@request_result = {}
-      redirect_to login_path unless session[:loggedin]
-      @@request_result[:success] = false
-      @@client_id = session[:client_id].strip
-      @@username = session[:username].strip
-  end
+  before_filter :restrict_regular_user
+
   # GET /holidays
   # GET /holidays.json
   def index

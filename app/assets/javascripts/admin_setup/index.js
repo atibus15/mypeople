@@ -162,7 +162,7 @@ var dept_group_store    = createJsonStore('/deptgroups/setupList', 'id');
 var bizgroup_store      = createJsonStore('/busgroups/setupList', 'group_id');
 var holding_company_store = createJsonStore('/holdcompanies/setupList', 'holding_id'); 
 var position_store      = createJsonStore('/positions/setupList', 'position_id');  
-var holiday_store       = createJsonStore('/client/holidays', 'position_id');
+var holiday_store       = createJsonStore('/client/holidays.json', 'position_id');
 var position_level_store= createLocalStore(selections.position_levels);
 var policy_store        = createJsonStore('/workskedpolicies/client_list');
 var wsched_store        = createJsonStore('/workskeds/setupList','id');
@@ -360,7 +360,7 @@ Ext.define('People.setup.Grid',{
             break;
             case 'holiday': 
                 me.reconfigureGrid(holiday_store,holiday_columns); 
-                me.store.group('country');
+                me.store.group('country_year');
             break;
             case 'wpol' : 
                 me.reconfigureGrid(policy_store, policy_columns); 

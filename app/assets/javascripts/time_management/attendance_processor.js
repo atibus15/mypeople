@@ -530,6 +530,20 @@ Ext.onReady(function(){
                         ]
                     }
                 ]
+            },
+            {
+                region:'south',
+                title:'<font color="red">Exceptions</font>',
+                xtype:'gridpanel',
+                height:100,
+                forceFit:true,
+                columns:[
+                    {text:'ID No.'},
+                    {text:'Badge No.'},
+                    {text:'Name'},
+                    {text:'Remarks'}
+                ],
+                store:[]
             }
         ]
     });

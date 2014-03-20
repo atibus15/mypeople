@@ -27,8 +27,9 @@ class EmployeeScheduleController < ApplicationController
   def update_assignment
     begin 
       emp_schedules = JSON.parse params[:emp_schedule]
-      Empsked.transaction do
-        emp_schedules.each {|emp_sched|
+      
+      emp_schedules.each {|emp_sched|
+        Empsked.transaction do
           @assigned = Empsked.where({:mypclient_id=>emp_sched['mypclient_id'],:company_id=>emp_sched['company_id'], :empidno=>emp_sched['empidno']})
           
           # if emp_sched['action'] == 'destroy'
@@ -39,13 +40,12 @@ class EmployeeScheduleController < ApplicationController
           else
             @assigned[0].update_attributes({:worksked_id => emp_sched['worksked_id']})
           end
-        }
-      end
-
-      Empworkplan.transaction do
-        Empworkplan.fill_up(emp_sched['mypclient_id'], emp_sched['empidno'], emp_sched['startdate'], emp_sched['enddate'], 1, 1)
-      end
-
+        end
+        Empworkplan.transaction do
+            Empworkplan.fill_up(emp_sched['mypclient_id'], emp_sched['empidno'], emp_sched['startdate'], emp_sched['enddate'], 1, 1)
+        end
+      }
+      
       @@request_result = {success: true, notice: 'Operation ended successfully.'}
     rescue ActiveRecord::ActiveRecordError
       ActiveRecord::Rollback
