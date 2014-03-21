@@ -27,11 +27,11 @@ class ApplicationController < ActionController::Base
     end
 
     def is_logged_in
-        return !session[:loggedin].nil?
+        return !session[:loggedin].blank?
     end
 
     def is_admin
-        return session[:logged_admin] || false
+        session[:logged_admin] || false
     end
 
     def is_super?
@@ -79,7 +79,9 @@ class ApplicationController < ActionController::Base
     end
 
     def respond_to_request
+
         respond_to do |format|
+            response.headers["Content-Type"] = "text/html"
             format.html
             format.json {render json: @@request_result}
         end

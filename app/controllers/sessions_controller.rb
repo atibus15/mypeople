@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
     end
     
     def loginpage
-       redirect_to home_path if session[:loggedin]
+       redirect_to home_path if is_logged_in
     end
 
     def adminlogin

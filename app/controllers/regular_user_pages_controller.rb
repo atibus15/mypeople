@@ -1,7 +1,8 @@
 class RegularUserPagesController < ApplicationController
-  before_filter :restrict_guest
+    
   layout :get_layout
-
+  before_filter :restrict_guest
+  
   def profile
     begin
       @my_profile = Employee.find(session[:employee_id])

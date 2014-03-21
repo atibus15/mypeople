@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  id: 1
+  employee_id: 1
+  photodata: MyString
+  createddate: 2014-03-21 10:17:39
+  createdby: MyString
+  lasupdatedate: 2014-03-21 10:17:39
+  lastupdateby: MyString
+
+two:
+  id: 1
+  employee_id: 1
+  photodata: MyString
+  createddate: 2014-03-21 10:17:39
+  createdby: MyString
+  lasupdatedate: 2014-03-21 10:17:39
+  lastupdateby: MyString

@@ -13,7 +13,7 @@
 //= require jquery
 //= require bootstrap.min
 //= require jquery_notification_v.1
-//= require extjs/ext-all
+//= require extjs/ext-all-debug
 //= require components/editor_window
 //= require common_custom_fields
 //= require common_functions

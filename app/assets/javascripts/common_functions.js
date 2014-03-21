@@ -358,6 +358,7 @@ function submitForm(form_id, action_url, method, success_callback, submit_empty_
                 additional_params:additional_params
             },
             success:function(f, action){
+
                 var response = action.result;
                 Ext.MessageBox.hide();
                 notify(response.notice, 'success');

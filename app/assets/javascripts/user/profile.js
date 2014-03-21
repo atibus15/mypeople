@@ -21,8 +21,8 @@ Ext.onReady(function(){
                         border:false,
                         items:[
                             {
-                                xtype:'image',
-                                src:'http://www.wilerandassociates.com/includes/img/profile_images/no_image.png'
+                                xtype:'box',
+                                html:'<img id="my-profile-pic" src="/profile_photos/'+profile.id+'">'
                             },
                             {
                                 xtype:'box',
@@ -65,10 +65,12 @@ Ext.onReady(function(){
                 
 
     Ext.get('change-photo').on('click',function(){
-        Ext.create('People.editor.Window',{
+        var photo_uploader_window = Ext.create('People.editor.Window',{
             layout:'fit',
+            enterFn:function(){},
             items:[
                 {
+                    id:'photo-form',
                     items:[
                         {
                             fieldLabel:"Photo",
@@ -83,17 +85,27 @@ Ext.onReady(function(){
                     buttons:[
                         {
                             text:'Upload', 
-                            type:'submit', 
                             formBind:true, 
                             handler:function(){
-                                var form = this.up('form').getForm();
-                                if(!form.isValid()) return notify('Please select Photo.');
 
+                                var form = Ext.getCmp('photo-form').getForm();
+                                if(!form.isValid())return notify('Please selection Profile Photo.');
                                 form.submit({
-                                    url:'/employee_photos',
-                                    method:'POST',
-                                    callback:function(f, action){
-                                        console.log(action);
+                                    url:'/profile_photos.json',
+                                    method:'post',
+                                    params:{
+                                        authenticity_token:authToken(),
+                                        employee_id:profile.id
+                                    },
+                                    success:function(form, action){
+                                        var response = action.result;
+                                        notify(response.notice,'success');
+                                        $('#my-profile-pic').attr('src','/profile_photos/'+profile.id+'?v='+response.version);
+                                        photo_uploader_window.destroy();
+                                    },
+                                    failure:function(form, action){
+                                        var response = action.result;
+                                        notify(response.errormsg,'error');
                                     }
                                 })
                             }
