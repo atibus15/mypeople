@@ -2,9 +2,138 @@
 //= require components/combo_modal
 //= require components/employee
 //= require ./exception_grid
+//= require ./current_assignment
 //= require_self
 
 var selections = createLocalDataFromServer('/client/default_selections.json');
+var schedules =  createLocalDataFromServer('/workskeds/setupList.json');
+var schedule_store = createLocalStore(schedules);
+schedule_store.group('company');
+
+Ext.define('People.schedule.DateRange',{
+    extend:'People.editor.Window',
+    xtype:'scheduledaterange',
+    title:'Schedule Date Range',
+    id:'schedule-date-range-window',
+    items:[
+        {
+            xtype:'datefield',
+            fieldLabel:'Start Date',
+            id:'schedule-start-date'
+        },
+        {
+            xtype:'datefield',
+            fieldLabel:'End Date',
+            id:'schedule-end-date'
+        }
+    ],
+    initComponent:function(){
+        var me = this;
+        Ext.apply(me,{
+            enterFn:function(){
+                me.setFn();
+            },
+            buttons:[
+                {
+                    text:'Set',
+                    handler:function(){
+                        me.setFn();
+                    }
+                }
+            ]
+        });
+        me.callParent(arguments);
+    }
+})
+
+Ext.define('People.employee.Assignment',{
+    extend:'People.editor.Window',
+    xtype:'employeeassignment',
+    title:'Employee to Schedule',
+    initComponent:function(){
+        var me = this;
+        Ext.apply(me,{
+            enterFn:function(){
+                me.saveAssignment();
+            },
+            tbar:[
+                {
+                    iconCls:'save-icon',
+                    tooltip:'Save Assignment',
+                    handler:function(){
+                        me.saveAssignment();
+                    }
+                }
+            ],
+            items:[
+                {
+                    id:'employee-assignment-form',
+                    items:[
+                        {
+                            fieldLabel:'Full Name',
+                            xtype:'displayfield',
+                            value:me.employee.get('empfullnamelfm')
+                        },
+                        {
+                            xtype:'combomodal',
+                            fieldLabel:'Policy',
+                            labelWidth:55,
+                            id:'employee-schedule-id',
+                            valueField:'id',
+                            codeField:'workskedcode',
+                            displayField:'description',
+                            triggerAction:'all',
+                            queryMode:'local',
+                            editable:false,
+                            store:me.store,
+                            changeFn:function(){},
+                            width:225
+                        }
+                    ]
+                }
+            ]
+        });
+        me.callParent(arguments);
+    },
+    saveAssignment:function(){
+        var me  = this,
+        schedule_id = Ext.getCmp('employee-schedule-id').getValue();
+
+        if(!schedule_id) return notify('Schedule is required.', 'warning');
+
+        var assignee = [{   
+            mypclient_id:me.employee.get('mypclient_id'),
+            company_id:me.employee.get('company_id'),
+            empidno:me.employee.get('empidno'),
+            worksked_id:schedule_id,
+            startdate:Ext.util.Format.date(Ext.getCmp('schedule-start-date').getValue(),'m/d/Y'),
+            enddate:Ext.util.Format.date(Ext.getCmp('schedule-end-date').getValue(),'m/d/Y')
+        }];
+
+        Ext.Ajax.request({
+            url:'/schedule/update_assignment',
+            method:'POST',
+            params:{
+                authenticity_token:authToken(),
+                emp_schedule:Ext.JSON.encode(assignee)
+            },
+            callback:function(success, option, result){
+                var response = Ext.JSON.decode(result.responseText);
+                if(response.success){
+                    notify(response.notice, 'success');
+                    Ext.getCmp('schedule-date-range-window').destroy();
+                    if(me.source == 'unassigned')Ext.getCmp('schedule-exception-grid').removeEmployees(assignee);
+                    me.destroy();
+                    Ext.getCmp('schedule-assignment-panel').loadCurrentlyAssignedEmployees();
+                }
+                else{
+                    notify(response.errormsg, 'error'); return false;
+                }
+            }
+        });
+    }
+});
+
 Ext.define('People.schedule.Grid',{
     extend:'Ext.grid.GridPanel',
     require:['Ext.form.*', 'Ext.grid.*'],
@@ -17,14 +146,14 @@ Ext.define('People.schedule.Grid',{
             viewConfig:{
                 shirnkWrap:true
             },
-            store:createJsonStore('/workskeds/setupList.json', 'id', true),
+            store:schedule_store,
             columns:[
                 {groupable:false, hideable:false,text:'Schedule Code', dataIndex:'workskedcode'},
                 {groupable:false, hideable:false,text:'Schedule Description', dataIndex:'description', width:200},
-                {groupable:false, hidden:false ,text:'Created Date', dataIndex:'createddate'},
-                {groupable:false, hidden:false ,text:'Created by', dataIndex:'createdby'},
-                {groupable:false, hidden:false ,text:'Last Updated Date', dataIndex:'lastupdatedate'},
-                {groupable:false, hidden:false ,text:'Last Updated by', dataIndex:'lastupdateby'}
+                {groupable:false, hidden:true, text:'Created Date', dataIndex:'createddate'},
+                {groupable:false, hidden:true, text:'Created by', dataIndex:'createdby'},
+                {groupable:false, hidden:true, text:'Last Updated Date', dataIndex:'lastupdatedate'},
+                {groupable:false, hidden:true, text:'Last Updated by', dataIndex:'lastupdateby'}
             ]
         });
         me.callParent(arguments);
@@ -32,9 +161,9 @@ Ext.define('People.schedule.Grid',{
     constructor:function(configs){
         this.callParent(arguments);
         this.initConfig(configs);
-        this.store.on('load',function(store){
-            store.group('company');
-        })
+        // this.store.on('load',function(store){
+        //     store.group('company');
+        // })
     },
     getSelected:function(){
         return this.getSelectionModel.getLastSelected();
@@ -50,21 +179,24 @@ Ext.define('People.schedule.Assignment',{
         var me = this;
 
         Ext.apply(me,{
-            layout:'hbox',
+            layout:'border',
             items:[
                 {
+                    region:'west',
                     title:'Work Schedules',
                     xtype:'schedulegrid',
-                    width:'50%',
+                    width:'40%',
                     height:'100%',
-                    id:'worksked-grid'
+                    id:'worksked-grid',
+                    split:true
                 },
                 {
+                    region:'center',
                     xtype:'employeelist',
-                    title:'Employees',
+                    title:'Assigned Employees',
                     id:'schedule-employee-list',
                     store:createJsonStore('/schedule/assigned_employees.json', 'empidno', false, 'total_employee'), 
-                    width:'50%', 
+                    width:'60%', 
                     height:'100%',
                     dockedItems:[
                         {
@@ -95,12 +227,6 @@ Ext.define('People.schedule.Assignment',{
                                     width:225
                                 },
                                 {
-                                    fieldLabel:'Employee Status',
-                                    xtype:'peoplecheckbox',
-                                    checked:true,
-                                    boxLabel:'Active'
-                                },
-                                {
                                     iconCls:'search-icon',
                                     tooltip:'Filter Employee',
                                     handler:function(){
@@ -111,6 +237,12 @@ Ext.define('People.schedule.Assignment',{
                                         }
                                         me.loadCurrentlyAssignedEmployees();
                                     }
+                                },
+                                {
+                                    fieldLabel:'Employee Status',
+                                    xtype:'peoplecheckbox',
+                                    checked:true,
+                                    boxLabel:'Active'
                                 },
                                 {
                                     iconCls:'add-icon',
@@ -124,33 +256,11 @@ Ext.define('People.schedule.Assignment',{
                                         var schedule_id = schedule.get('id');
                                         var company_id = schedule.get('company_id');
 
-                                        Ext.create('People.editor.Window',{
-                                            title:'Schedule Date Range',
-                                            id:'schedule-date-range-window',
-                                            enterFn:function(){
+                                        Ext.create('People.schedule.DateRange',{
+                                            setFn:function(){
+                                                if(!ExtCmp('schedule-start-date').getValue()) return notify('Start Date is required.', 'warning');
                                                 me.createEmployeePicker();
-                                            },
-                                            items:[
-                                                {
-                                                    xtype:'datefield',
-                                                    fieldLabel:'Start Date',
-                                                    id:'schedule-start-date'
-                                                },
-                                                {
-                                                    xtype:'datefield',
-                                                    fieldLabel:'End Date',
-                                                    id:'schedule-end-date'
-                                                }
-                                            ],
-                                            buttons:[
-                                                {
-                                                    text:'Set',
-                                                    handler:function(){
-                                                        if(!ExtCmp('schedule-start-date').getValue()) return notify('Start Date is required.', 'warning');
-                                                        me.createEmployeePicker();
-                                                    }
-                                                }
-                                            ]
+                                            }
                                         }).show();
                                     }
                                 }
@@ -195,6 +305,14 @@ Ext.define('People.schedule.Assignment',{
             me.updateDisplayBox();
             me.bindLocationStore();
         });
+
+        me.getScheduleGrid().on('selectionchange',function(view, schedule){
+            me.getEmployeeGrid().store.removeAll();
+        });
+
+        me.getEmployeeGrid().on('itemdblclick',function(view,record){
+            assignEmployeeToSchedule(record);
+        });
     },
     consolidateRecordChanges:function(selected_employees){
         var me = this;
@@ -236,7 +354,7 @@ Ext.define('People.schedule.Assignment',{
                     notify(response.errormsg, 'error'); return false;
                 }
             }
-        })
+        });
 
     },
     setSelectedSchedule:function(new_schedule){
@@ -256,6 +374,8 @@ Ext.define('People.schedule.Assignment',{
     },
     loadCurrentlyAssignedEmployees:function(){
         var schedule = this.selected_schedule;
+        if(!schedule) return false;
+
         var schedule_id  = schedule.get('id');
         var company_id = schedule.get('company_id');
         var status = this.getEmployeeStatus().getValue() ? 1 : 0;
@@ -277,7 +397,7 @@ Ext.define('People.schedule.Assignment',{
         return this.getComponent(0);
     },
     getEmployeeGrid:function(){
-        return this.getComponent(1);
+        return this.getComponent(2);
     },
     getLocationID:function(){
         return this.getEmployeeGrid().getDockedComponent(2).getComponent(1);
@@ -286,10 +406,25 @@ Ext.define('People.schedule.Assignment',{
         return this.getEmployeeGrid().getDockedComponent(2).getComponent(0);
     },
     getEmployeeStatus:function(){
-        return this.getEmployeeGrid().getDockedComponent(2).getComponent(2);
+        return this.getEmployeeGrid().getDockedComponent(2).getComponent(3);
     }
 });
 
+
+function assignEmployeeToSchedule(employee, source){
+    var company_id = employee.get('company_id');
+    var schedule_selection_store = createLocalStore(filterStoreData(schedules, {'company_id': company_id}));
+    Ext.create('People.schedule.DateRange',{
+        setFn:function(){
+            if(!ExtCmp('schedule-start-date').getValue()) return notify('Start Date is required.', 'warning');
+            Ext.create('People.employee.Assignment',{
+                employee:employee,
+                store :schedule_selection_store, 
+                source:source
+            }).show();
+        }
+    }).show();
+}
 
 Ext.onReady(function(){
     Ext.create('Ext.container.Viewport', {
@@ -304,13 +439,38 @@ Ext.onReady(function(){
                 collapsible:true,
                 split:true,
                 store:createJsonStore('/employees/without_schedule.json', 'id', true),
-                title:'Employees without assigned Schedule',
+                title:'Unassigned Employees'
             },
             {
                 region:'center',
                 title:'Schedule Assignment',
-                xtype:'scheduleassignment'
+                xtype:'scheduleassignment',
+                id:'schedule-assignment-panel'
+            },
+            {
+                region:'east',
+                split:true,
+                collapsed:true,
+                collapsible:true,
+                xtype:'currentassignmentgrid',
+                title:'Current Assignments',
+                id:'policy-current-assignment',
+                store:createJsonStore('/schedule/assigned_employees.json', 'empidno', false, 'total_employee'),
+                width:'30%'
             }
         ]
     });
+
+    var exception_grid = Ext.getCmp('schedule-exception-grid');
+    exception_grid.on('itemdblclick',function(view, record){
+        assignEmployeeToSchedule(record, 'unassigned');
+    });
+    exception_grid.store.on('load',function(store, records){
+        if(records.length > 0) exception_grid.expand(true);
+    });
+
+    Ext.getCmp('policy-current-assignment').on('itemdblclick',function(view, record){
+        assignEmployeeToSchedule(record);
+    });
+
 });

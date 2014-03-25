@@ -2,9 +2,10 @@ Ext.define('People.employee.Grid',{
 	extend:'Ext.grid.GridPanel',
 	alias:'widget.employeelist',
 	columns:[
-		{text:'ID No.', dataIndex:'empidno'},
-		{text:'Name', dataIndex:'empfullnamelfm'},
-		{text:'Badge No.', dataIndex:'empbadgeno'}
+		{text:'ID No.', dataIndex:'empidno', maxWidth:75},
+		{text:'Full Name', dataIndex:'empfullnamelfm'},
+		{text:'Badge No.', dataIndex:'empbadgeno', hidden:true},
+		{text:'Location', dataIndex:'location'}
 	],
 	initComponent:function(){
 		var me = this;
@@ -31,8 +32,8 @@ Ext.define('People.employeefilter.List',{
 			forceFit:true,
 			minHeight:100,	
 			columns:[
-				{text:'ID No.', dataIndex:'empidno'},
-				{text:'Name', dataIndex:'empfullnamelfm'},
+				{maxWidth:75,text:'ID No.', dataIndex:'empidno'},
+				{text:'Full Name', dataIndex:'empfullnamelfm'},
 				{text:'Badge No.', dataIndex:'empbadgeno'}
 			],
 			dockedItems:[
@@ -132,7 +133,7 @@ Ext.define('People.employee.Selector',{
 		var row_editor = Ext.create('Ext.grid.plugin.RowEditing', {clicksToMoveEditor:1, autoCancel:false});
 
 		Ext.apply(me, {
-			title:'Select Employees',
+			title:'Employee Selector',
 			minWidth:600,
 			width:900,
 			modal:true,
@@ -150,12 +151,12 @@ Ext.define('People.employee.Selector',{
 					autoWidth:true,
 					minWidth:750,
 					width:750,
-					margin:'10 5 5 5',
+					margin:'10 0 5 5',
 					minHeight:350,
 					frame:false,
 					border:false,
 					bodyStyle:'background-color:transparent;',
-					padding:'0 5 5 5',
+					padding:'0 0 5 5',
 					layout:{
 						type:'hbox'
 					},
@@ -186,10 +187,9 @@ Ext.define('People.employee.Selector',{
 												editable:false,
 												allowBlank:false,
 												xtype:'combobox',
-												store:['Location Code','ID Number','Lastname'],
+												store:['Location Code','ID Number','Last Name'],
 												triggerAction:'all'
-											} 
-											
+											}
 										},
 										{dataIndex:'operator',text:'Operator',editor:{readOnly:true}},
 										{dataIndex:'value', editor:{xtype:'textfield', allowBlank:false},text:'Value'}
@@ -222,7 +222,6 @@ Ext.define('People.employee.Selector',{
 													}
 												},
 												{
-													text:'Delete all',
 													iconCls:'delete-all-icon',
 													tooltip:'Delete All',
 													handler:function(){
@@ -321,7 +320,7 @@ Ext.define('People.employee.Selector',{
 							xtype:'container',
 							layout:'vbox',
 							defaultType:'button',
-							padding:'50 5 5 5',
+							padding:'50 0 5 5',
 							defaults:{
 								margin:'5'
 							},
@@ -377,7 +376,7 @@ Ext.define('People.employee.Selector',{
 							xtype:'employeelist',
 							height:'100%',
 							store:me.selectedStore,
-							margin:'0 10 0 0',
+							margin:'0 0 0 0',
 							selModel:{
 								mode:'SIMPLE',
 								allowDeselect:true
@@ -401,13 +400,22 @@ Ext.define('People.employee.Selector',{
 					]
 				}
 			],
-			tbar:[
+			dockedItems:[
 				{
-					iconCls:'save-icon',
-					tooltip:'Save Changes',
-					handler:function(){
-						me.saveFn(me);
-					}
+					xtype:'toolbar',
+					dock:'top',
+					layout:{type:'hbox', pack:'end'},
+
+					items:[
+						{
+							margin:'0 10 0 0',
+							iconCls:'save-icon',
+							tooltip:'Save',
+							handler:function(){
+								me.saveFn(me);
+							}
+						}
+					]
 				}
 			],
 			listeners:{

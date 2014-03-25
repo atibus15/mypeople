@@ -122,7 +122,7 @@ Ext.define('Breaktime.editor.Grid',
             ],
             columns:[
                 {
-                    text:'Time start', dataIndex:'break_start',
+                    text:'Time Start', dataIndex:'break_start',
                     editor:{
                         xtype:'peopletimefield',
                         selectOnTab:true,
@@ -144,10 +144,7 @@ Ext.define('Breaktime.editor.Grid',
                     renderer:break_time_renderer
                 },
                 {
-                    text:'Hours', dataIndex:'hours',
-                    editor:{
-                        xtype:'numberfield'
-                    }
+                    text:'Hours', dataIndex:'hours'
                 },
                 {
                     xtype: 'actioncolumn',
@@ -174,6 +171,45 @@ Ext.define('Breaktime.editor.Grid',
     constructor:function(configs){
         this.callParent(arguments);
         this.initConfig(configs);
+
+        // cellEditing.on('validateedit',function(editor, e){
+        //     var record  = e.record,
+        //     break_start = record.get('break_start'),
+        //     break_end   = record.get('break_end');
+
+        //     if(!break_start || !break_end){
+        //         editor.startEditing(e.rowIdx);
+        //         notify('Break Start and Break End is required.', 'warning');
+        //     }
+        //     console.log(break_start, break_end);
+        //     var break_time_ms = Ext.Date.getElapsed(new Date('01/01/2014 '+break_start), new Date('01/01/2014 '+break_end));
+        //     console.log(break_time_ms);
+        //     var total_hrs = (break_time_ms / (60 * 60 * 1000));
+        //     record.set('hours', total_hrs);
+        // });
+
+        this.store.on('update',function(store, record, operation, mod_fields, e){
+
+            if(mod_fields != null && (mod_fields.indexOf('break_start') >= 0 || mod_fields.indexOf('break_end') >= 0)){
+                var break_start = record.get('break_start'),break_end   = record.get('break_end');
+
+                break_start = (typeof(break_start) == 'string') ? '01/01/2008 '+break_start : break_start;
+                break_end = (typeof(break_end) == 'string') ? '01/01/2008 '+break_end : break_end;
+
+
+                if(!break_start || !break_end){
+                    editor.startEditing(e.rowIdx);
+                    notify('Break Start and Break End is required.', 'warning');
+                }
+
+                var break_time_ms = Ext.Date.getElapsed(new Date(break_start),new Date(break_end));
+
+                var total_hrs = (break_time_ms / (60 * 60 * 1000));
+                record.set('hours', total_hrs.toFixed(2));
+                record.commit();
+            }
+            
+        });
     },
     createBreakTextFields:function(){
 

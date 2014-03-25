@@ -5,8 +5,9 @@ Ext.define('People.exception.Grid',{
     forceFit:true,
     columns:[
         {maxWidth:60,dataIndex:'empidno',text:'ID No.'},
-        {dataIndex:'empfullnamelfm',text:'Fullname'},
-        {dataIndex:'company',text:'Company'}
+        {dataIndex:'empfullnamelfm',text:'Full Name'},
+        {dataIndex:'company',text:'Company'},
+        {dataIndex:'location', text:'Location'}
     ],
     removeEmployees:function(employee_records){
         var me = this;

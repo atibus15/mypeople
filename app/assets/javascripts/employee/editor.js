@@ -208,7 +208,7 @@ Ext.define('People.employee.Editor',{
                 },
                 {
                     iconCls:'delete-icon',
-                    tooltip:'Delete employee.',
+                    tooltip:'Delete Employee.',
                     handler:function(){
                         deleteRecordViaAjax('/employees/'+me.employee_id, 'Are you sure you want to delete this employee?' ,function(){
                             ExtCmp('employee_list_grid').store.reload(); me.destroy();});
@@ -678,6 +678,7 @@ function employeeEditor(employee)
         loadRecordToArrayForm(ExtCmp('employee_form'), 'employee', employee);
         resetFormOriginalFieldsValue(ExtCmp('employee_form'));
         ExtCmp('employee_id').setReadOnly(true);
+        ExtCmp('employee_badge_no').setReadOnly(true);
 
         if(employee.get('suggested_username')){
             ExtCmp('gen-account-btn').show();

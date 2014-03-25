@@ -67,7 +67,7 @@ class EmployeesController < ApplicationController
       return 'UPPER(locations.locationcode)' if key.strip == 'Location Code'
       return 'UPPER(employees.empbadgeno)' if key.strip == 'Badge No'
       return 'UPPER(employees.empidno)' if key.strip == 'ID Number'
-      return 'UPPER(employees.empnamelast)' if key.strip == 'Lastname'
+      return 'UPPER(employees.empnamelast)' if key.strip == 'Last Name'
     end
 
     def list
@@ -77,7 +77,7 @@ class EmployeesController < ApplicationController
 
             @employees =  Employee.select("employees.*, companies.description as company_desc, busgroups.description as busgroup_desc,
                     positions.description as position_desc, positionlevels.description as positionlevel_desc, 
-                    holdcompanies.description as holdcompany_desc, departments.description as department_desc, locations.locationcode")
+                    holdcompanies.description as holdcompany_desc, departments.description as department_desc, locations.locationcode, locations.description as location")
                 .joins(:Company, :Busgroup, :Position, :Positionlevel, :Holdcompany, :Department, :Location)
                 .where(conditions)
                 .order('companies.description, employees.empfullnamelfm')
@@ -211,7 +211,10 @@ class EmployeesController < ApplicationController
   def without_policy
     begin
       @employees = Employee.where("mypclient_id = ? and empidno not in (?)", @@client_id, with_policy)
-      @employees.each {|emp| emp[:company] = emp.Company.description}
+      @employees.each {|emp| 
+        emp[:company] = emp.Company.description
+        emp[:location] = emp.Location.description
+      }
       @clean_employees = @@stripper.activeRecordData(@employees)
       @meta = @@meta_data.create(@employees)
       @@request_result = {success: true, data: @clean_employees, metaData: @meta}
@@ -224,7 +227,10 @@ class EmployeesController < ApplicationController
   def without_schedule
     begin
       @employees = Employee.where("mypclient_id = ? and empidno not in (?)", @@client_id, with_schedule)
-      @employees.each {|emp| emp[:company] = emp.Company.description}
+      @employees.each {|emp| 
+        emp[:company] = emp.Company.description
+        emp[:location] = emp.Location.description
+      }
       @clean_employees = @@stripper.activeRecordData(@employees)
       @meta = @@meta_data.create(@employees)
       @@request_result = {success: true, data: @clean_employees, metaData: @meta}

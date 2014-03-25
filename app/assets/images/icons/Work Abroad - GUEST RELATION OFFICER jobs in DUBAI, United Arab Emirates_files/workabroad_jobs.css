@@ -1,0 +1,102 @@
+body { font-family: verdana, arial, Helvetica, sans-serif; font-size:11px;}
+li, td, table,input, textarea { font-family: verdana, arial, Helvetica, sans-serif; font-size:11px;}
+.warning { font-family: verdana, arial, Helvetica, sans-serif; font-size:16px; color:red; font-weight:bold;}
+a:link,a:active,a:visited {font-family:verdana, arial;  color:blue; font-size:12px; text-decoration:none;}     			
+a:hover {font-family:verdana, arial;  color:#aa0000; font-size:12px; text-decoration:underline;}
+.profile a:link,
+.profile a:active,
+.profile a:visited {font-family:Verdana,verdana, arial;  color:blue; font-size:12px; text-decoration:none; font-weight:bold;}     			
+.profile a:hover {font-family:Verdana,verdana, arial;  color:#aa0000; font-size:12px; text-decoration:underline; font-weight:bold;}
+td.job_details {font-size:13px; BACKGROUND-COLOR:#fff; BORDER-BOTTOM:#ffc118 1px solid; BORDER-LEFT:#ffc118 1px solid; BORDER-RIGHT:#ffc118 1px solid; BORDER-TOP:#ffc118 1px solid;
+padding-top:4pt;padding-bottom:4pt;padding-left:4pt;padding-right:4pt;}     			
+.jobtitle {	color:#cc0000; font-size: 18px; font-family: Tahoma;  font-weight:bold;}
+.jobsite { color:#004080; font-size: 14px; font-family: Tahoma; font-weight:bold;}
+.jobexpiration { color:#cc0000; font-size: 12px; font-family: Tahoma; }
+.jobheader { BACKGROUND-COLOR:#ffe295; text-align:center;}
+.jobdethighlight { color: #aa0000; font-size: 14px; font-family: Tahoma;  font-weight:bold; text-align:center; padding: 4px; }
+.jobdetpooling { color: #aa0000; font-size: 14px; font-family: Tahoma;  font-weight:bold; text-align:center; }
+.jobdetbeware { color: red; font-size: 14px; font-family: Tahoma;  font-weight:bold; text-align:center; }
+
+#submitButton {
+  cursor: pointer;
+  height:45px;
+  overflow:hidden;
+  width:165px;
+}
+
+#submitButton:hover input {
+  margin-top:-45px;
+}
+#submitButton2 {
+  cursor: pointer;
+  height:29px;
+  overflow:hidden;
+  width:118px;
+}
+
+#submitButton2:hover input {
+  margin-top:-29px;
+}
+#submitButton3 {
+  cursor: pointer;
+  height:29px;
+  overflow:hidden;
+  width:138px;
+}
+
+#submitButton3:hover input {
+  margin-top:-29px;
+}
+
+
+.cssbutton{
+background-color: #FEDF8A;
+border: 2px #FDC233 outset;
+padding: 1px 2px;
+color: #960202;
+text-decoration: none;
+font: bold 11px "Lucida Grande", "Trebuchet MS", Verdana, Helvetica, sans-serif;
+}
+
+.cssbutton:visited{
+color: black;
+}
+
+.cssbutton:hover{
+
+background-color: #FFF1B4;
+  cursor: pointer;
+}
+
+.cssbutton:active{
+border-style: inset;
+color: #0000FF;
+}
+.watip {
+	padding: 0px 5px 3px 5px;
+	COLOR: #FFFFFF;
+	FONT-FAMILY: tahoma, helvetica, geneva, sans-serif; 
+	font-size:12px; 
+}
+
+.watip a:link, .watip a:active, .watip a:visited{
+	COLOR: #FFCC66;
+	FONT-FAMILY: tahoma, helvetica, geneva, sans-serif; font-size:12px;
+}
+
+.watipn {
+	padding: 0px 10px 3px 10px;
+	COLOR: #000000;
+	FONT-FAMILY: tahoma, helvetica, geneva, sans-serif; 
+	font-size:12px; 
+}
+
+.watipn a:link, .watipn a:active, .watipn a:visited{
+	COLOR: #0000FF;
+	FONT-FAMILY: tahoma, helvetica, geneva, sans-serif; font-size:12px;
+}
+h1
+{
+	font-size:20px;
+	margin-bottom:5px;
+}

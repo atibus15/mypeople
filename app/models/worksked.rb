@@ -28,12 +28,22 @@ class Worksked < ActiveRecord::Base
   belongs_to :Company, :foreign_key => :company_id
 
   def requiredtimein
-    return self.convert_to_time self[:requiredtimein] if self[:requiredtimein]
+    convert_to_time self[:requiredtimein]
   end
 
   def requiredtimeout
-    return self.convert_to_time self[:requiredtimeout] if self[:requiredtimeout]
+    convert_to_time self[:requiredtimeout]
   end
+
+  def flexiearliestin
+    convert_to_time self[:flexiearliestin]
+  end
+  
+  def flexilatestin
+    convert_to_time self[:flexilatestin]
+  end
+  
+
 
   def convert_to_time(dt)
     dt.strftime('%l:%M %p').to_s.strip unless dt.blank?

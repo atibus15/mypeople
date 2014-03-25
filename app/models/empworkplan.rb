@@ -5,8 +5,8 @@ class Empworkplan < ActiveRecord::Base
 
   belongs_to :Workskedpolicy, :foreign_key => :workskedpolicy_id
   
-  def self.fill_up(client_id, id_number, start_date, end_date=nil, clear_data=1, trans_type=1)
-    @sql = "EXECUTE PROCEDURE P_TM_FILL_EMPWORKPLANS('#{client_id}', '#{id_number}','#{start_date}', '#{end_date}', #{clear_data}, '#{trans_type}', '#{nil}')"
+  def self.fill_up(client_id, id_number, start_date, end_date=nil, clear_data=1, trans_type=1, att_file_code=nil)
+    @sql = "EXECUTE PROCEDURE P_TM_FILL_EMPWORKPLANS('#{trans_type}','#{client_id}', '#{id_number}','#{start_date}', '#{end_date}', #{clear_data}, '#{att_file_code}')"
     connection.execute(@sql)
   end
 

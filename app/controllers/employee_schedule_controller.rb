@@ -5,16 +5,22 @@ class EmployeeScheduleController < ApplicationController
   def assigned_employees
     begin
       @schedule_id = params[:schedule_id]
+      @company_id = params[:company_id]
+      @name = params[:name]
       conditions = []
       conditions[0] = ["employees.location_id = #{params[:location_id]}"] unless params[:location_id].blank?
       conditions[1] = ["employees.isactivestatus = #{params[:status]}"] unless params[:status].blank?
       conditions[2] = ["empskeds.worksked_id = #{@schedule_id}"] unless @schedule_id.blank?
       conditions[3] = ["empskeds.mypclient_id = '#{@@client_id}'"]
+      conditions[4] = ["empskeds.company_id = #{@company_id}"] unless @company_id.blank?
+      conditions[5] = ["employees.empfullnamelfm like UPPER('%#{@name}%')"] unless @name.blank?
       clean_conditions = conditions.compact.flatten
 
-      @assigned = Empsked.select('empskeds.*, empskeds.id as empsked_id, employees.*')
-                            .where(clean_conditions.join(' AND '))
-                            .joins('INNER JOIN employees on employees.empidno = empskeds.empidno and employees.mypclient_id = empskeds.mypclient_id')
+      @assigned = Empsked.select('empskeds.*, empskeds.id as empsked_id, employees.*, locations.description as location')
+                  .where(clean_conditions.join(' AND '))
+                  .joins('INNER JOIN employees on employees.empidno = empskeds.empidno and employees.mypclient_id = empskeds.mypclient_id')
+                  .joins('INNER JOIN locations on locations.id = employees.location_id')
+
       clean_records = @@stripper.activeRecordData(@assigned)
       meta_data = @@meta_data.create(@assigned);
       @@request_result = {success:true, data: clean_records, metaData:meta_data}

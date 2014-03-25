@@ -3,7 +3,8 @@ class WorkPlanManagersController < EmployeesController
 		begin
 			@employee_controller = EmployeesController.new
 			@employees = Employee.select('employees.*, empskeds.worksked_id, workskeds.*, workskeds.description as sked_description, workskeds.workskedcode, '+
-						'emppolicies.workskedpolicy_id, workskedpolicies.description as policy_description, workskedpolicies.policycode'
+						'emppolicies.workskedpolicy_id, workskedpolicies.description as policy_description, workskedpolicies.policycode, '+
+						'locations.description as location'
 					)
 					.joins('LEFT JOIN empskeds on empskeds.empidno = employees.empidno '+
 						 'and empskeds.company_id = employees.company_id and empskeds.mypclient_id = employees.mypclient_id')
@@ -11,6 +12,7 @@ class WorkPlanManagersController < EmployeesController
 					.joins('LEFT JOIN emppolicies on emppolicies.empidno = employees.empidno '+
 						 'and emppolicies.company_id = employees.company_id and emppolicies.mypclient_id = employees.mypclient_id')
 					.joins('LEFT JOIN workskedpolicies on workskedpolicies.id = emppolicies.workskedpolicy_id')
+					.joins('INNER JOIN locations on locations.id = employees.location_id')
 					.where(search_condition)
 			@clean_employees = @@stripper.activeRecordData(@employees)
 			@meta = @@meta_data.create(@employees)

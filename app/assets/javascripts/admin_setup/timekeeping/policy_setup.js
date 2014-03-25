@@ -26,6 +26,9 @@ function reconfigureMealTransCombobox(){
         if(allowance.getValue() == 1){
             if(allowance.boxLabel == 'With Meal Allowance') Ext.apply(ExtCmp('meal_allowance_code'),{allowBlank:false});
             else  Ext.apply(ExtCmp('transpo_allowance_code'),{allowBlank:false});
+        }else{
+            if(allowance.boxLabel == 'With Meal Allowance') Ext.apply(ExtCmp('meal_allowance_code'),{allowBlank:true});
+            else  Ext.apply(ExtCmp('transpo_allowance_code'),{allowBlank:true});
         }
     });
 }

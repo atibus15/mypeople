@@ -33,7 +33,9 @@
 .delete-icon{
     background-image:url(/assets/icons/delete.gif) !important;
 }
-
+.delete-all-icon{
+    background-image:url(/assets/icons/delete-all.png) !important;
+}
 .include-icon{
 	background-image:url(/assets/icons/include.png) !important;
 }

@@ -33,13 +33,18 @@ Ext.define('People.workplan.Grid',{
 					listeners:{
 						change:function(obj, new_date){
 							me.setStartDate(new_date);
+							var end_date = Ext.getCmp('wp-end-date');
+							end_date.setMinValue(new_date);
+
+							if(!end_date.isValid()) end_date.setValue(null);
 						}
 					}
 				},
 				{
 					xtype:'datefield',
 					fieldLabel:'End Date',
-					width:200,					
+					width:200,
+					id:'wp-end-date',	
 					labelWidth:60,
 					listeners:{
 						change:function(obj, new_date){
@@ -67,7 +72,7 @@ Ext.define('People.workplan.Grid',{
 	},
 	loadWorkPlans:function(){
 		var me = this;
-		console.log(this.workskedcategory_id);
+
 		if(this.workskedcategory_id == 'ACT') return notify('No Work Plan Setup for "Actual" Schedule.', 'warning');
 		if(this.workskedcategory_id == null) return notify('Please assign employee work schedule before assigning work plan.', 'warning');
 		var start_date = me.start_date,
@@ -78,10 +83,21 @@ Ext.define('People.workplan.Grid',{
 			notify('Please select Employee.', 'warning');
 			return false;
 		}
-		if(!start_date || !end_date){
-			notify('Please Set Date Range.', 'warning');
+		if(!start_date){
+			notify('Start Date is required.', 'warning');
 			return false;
 		}
+
+		if(!end_date){
+			var start_date_ms 	= Ext.Date.format(new Date(start_date),'U'), 
+			today_ms 			= Ext.Date.format(new Date(), 'U');
+			if(start_date_ms > today_ms) {
+				end_date =  start_date;
+			}else{
+				end_date = Ext.util.Format.date(_today_date, 'm/d/Y');
+			}
+		}
+
 		me.store.load({
 			params:{
 				company_id:company_id,
@@ -322,6 +338,7 @@ Ext.define('People.workplan.Manager',{
 					columns:[
 						{text:'ID No.', dataIndex:'empidno', maxWidth:65},
 						{text:'Full Name', dataIndex:'empfullnamelfm'},
+						{text:'Location', dataIndex:'location'},
 						{text:'Schedule Code', dataIndex:'workskedcode'},
 						{text:'Policy Code', dataIndex:'policycode'}
 					],

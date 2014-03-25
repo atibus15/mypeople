@@ -1,5 +1,4 @@
-#   gem install fb
-#   gem 'fb'
+
 development:
   adapter: fb
   database: 172.16.11.55/3050:mypepsdev

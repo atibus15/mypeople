@@ -227,7 +227,7 @@ Ext.define('People.cutoff.Grid',{
 Ext.define('People.payrollfile.Grid',{
     extend:'Ext.grid.GridPanel',
     alias:'widget.payrollfilegrid',
-    title:'Payroll Files',
+    title:'Attendance Files',
     forceFit:true,
     store:createJsonStore('/attendance_files.json', 'id', false),
     initComponent:function(){
@@ -340,7 +340,7 @@ Ext.define('People.payrollfile.Grid',{
         this.updateGridTitle();
     },
     updateGridTitle:function(){
-        var new_title = this.cut_off.get('description')+' Payroll Files';
+        var new_title = this.cut_off.get('description')+' Attendance Files';
         this.setTitle(new_title);
     },
     savePayrollFile:function(){
@@ -356,7 +356,7 @@ Ext.define('People.payrollfile.Grid',{
         var me = this;
 
         me.editor_window = Ext.create('People.editor.Window',{
-            title:'Payroll File Editor',
+            title:'Attendance File Editor',
             enterFn:function(){me.savePayrollFile();},
             tbar:[
                 {

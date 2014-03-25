@@ -56,7 +56,7 @@ function scheduleManager(sched, category, is_copy)
                             {
                                 width:300,
                                 xtype:'myfieldset',
-                                title:'Required Time',
+                                title:'Required Work Hour(s)',
                                 id:'required_time_field',
                                 items:[
                                     {
@@ -105,9 +105,10 @@ function scheduleManager(sched, category, is_copy)
                 ]
             }
         ],
-        fbar:[
+        tbar:[
             {
-                text:'Save and Exit',
+                iconCls:'save-icon',
+                tooltip:'Save and Exit',
                 handler:function(){
                     var save_url = id ? '/workskeds/'+id : '/workskeds';
                     var method = id ? 'PUT' : 'POST';
@@ -118,7 +119,8 @@ function scheduleManager(sched, category, is_copy)
                 }
             },
             {
-                text:'Save and Add New',
+                iconCls:'save-add-icon',
+                tooltip:'Save and Add New',
                 handler:function(){
                     var save_url = id ? '/workskeds/'+id : '/workskeds';
                     var method = id ? 'PUT' : 'POST';
@@ -129,7 +131,8 @@ function scheduleManager(sched, category, is_copy)
                 }
             },
             {
-                text:'Cancel',
+                iconCls:'cancel-icon',
+                tooltip:'Cancel',
                 handler:function(){
                     sched_win.destroy();
                 }
@@ -185,9 +188,9 @@ function scheduleManager(sched, category, is_copy)
     if(sched){
         loadRecordToArrayForm(ExtCmp('schedule_manager_form'), 'sched', sched);
 
-        if(!copy){
-            ExtCmp('sched-company-id'),setReadOnly(true);
-            ExtCmp('sched-code'),setReadOnly(true);
+        if(!is_copy){
+            ExtCmp('sched-company-id').setReadOnly(true);
+            ExtCmp('sched-code').setReadOnly(true);
         }
     }
 }

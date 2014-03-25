@@ -10,7 +10,6 @@ function bizGroupEditor(biz_group, is_copy)
             editor_window.destroy();
             ExtCmp('global_setup').store.load();
             selections = createLocalDataFromServer('/client/default_selections');
-            
         });
     };
     var editor_window = Ext.create('People.editor.Window',{
