@@ -92,7 +92,7 @@ Ext.onReady(function(){
                                 if(!form.isValid())return notify('Please selection Profile Photo.');
                                 form.submit({
                                     url:'/profile_photos.json',
-                                    method:'post',
+                                    method:'POST',
                                     params:{
                                         authenticity_token:authToken(),
                                         employee_id:profile.id

@@ -53,7 +53,7 @@ Mypeople::Application.routes.draw do
             :holidays,:holidaytypes ,:leavetypes, :timelogs, :emppolicies, :daytypes, :cut_offs, :attendance_files
 
   resources :super_admroles, :super_user_accounts
-  resources :profile_photos, only: [:show, :create, :update]
+  resources :profile_photos, only: [:show, :create]
 
   match "employee/:username/:action(.:format)" => "regular_user_pages#:action"
   match "employee/dtr(.:format)" => "dtr_log#index"

@@ -268,7 +268,43 @@ var working_days_regular_fields = {
                 },
                 {
                     title:'Other/s',
+                    width:1000,
                     items:[
+                        {
+                            xtype:'container',
+                            items:[
+                                {
+                                    margin:'0',
+                                    xtype:'peoplecheckbox',
+                                    boxLabel:'Compute Incomplete Logs as',
+                                    inputValue:'1'
+                                },
+                                {
+                                    xtype:'container',
+                                    items:[
+                                        {
+                                            xtype:'radiogroup',
+                                            columns:1,
+                                            vertical:true,
+                                            items:[
+                                                {
+                                                    boxLabel:'Half Day',
+                                                    inputValue:'1'
+                                                },
+                                                {
+                                                    boxLabel:'Absent',
+                                                    inputValue:'1'
+                                                },
+                                                {
+                                                    boxLabel:'Hours of Work',
+                                                    inputValue:'1'
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
                         {
                             xtype:'peoplecheckbox',
                             boxLabel:'Set Hours Work as Complete',

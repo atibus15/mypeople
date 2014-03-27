@@ -18,7 +18,6 @@ Ext.define('People.attendance.Transactions',{
                         fields:['code', 'source'],
                         data:{
                             'data':[
-                                {'code':'dtr', 'source':'DTR'},
                                 {'code':'ot', 'source':'Overtime'},
                                 {'code':'loa', 'source':'LOA'},
                                 {'code':'dirlog', 'source':'DIR LOG'}
@@ -55,7 +54,6 @@ Ext.define('People.timecard.Manager',{
     require:['Ext.grid.*'],
     initComponent:function(){
         var me = this;
-
         Ext.apply(me,{
             width:'65%', 
             height:'100%',
@@ -71,35 +69,54 @@ Ext.define('People.timecard.Manager',{
                 {text:'Log Source', dataIndex:'logsource'}
             ],
             store:createJsonStore('/dtr/logs.json', 'id', false, 'totalProperty'),
-            tbar:[
+            dockedItems:[
                 {
-                    fieldLabel:'Date Start',
-                    xtype:'datefield',
-                    maxValue:_today_date,
-                    format:'m/d/Y',
-                    id:'time-logs-start-date',
-                    value:_today_date,
-                    labelWidth:65,
-                    width:200
-                },
-                {
-                    fieldLabel:'Date End',
-                    xtype:'datefield',
-                    maxValue:_today_date,
-                    id:'time-logs-end-date',
-                    value:_today_date,
-                    format:'m/d/Y',
-                    labelWidth:65,
-                    width:200,
-                    margin:'0 15 0 15'
-                },
-                {
-                    iconCls:'search-icon',
-                    tooltip:'Search',
-                    handler:function(){
-                        me.loadStore();       
-                    }
+                    dock:'top',
+                    xtype:'toolbar',
+                    layout:{type:'table', columns:3},
+                    items:[
+                        {
+                            colspan:3,
+                            xtype:'combobox',
+                            store:[['dtr','DTR LOGS'],['raw','RAW LOGS']],
+                            fieldLabel:'Type',
+                            labelWidth:65,
+                            width:200,
+                            value:'dtr',
+                            editable:false,
+                            typeAhead:false
+                        },
+                        {
+                            fieldLabel:'Date Start',
+                            xtype:'datefield',
+                            maxValue:_today_date,
+                            format:'m/d/Y',
+                            id:'time-logs-start-date',
+                            value:_today_date,
+                            labelWidth:65,
+                            width:200
+                        },
+                        {
+                            fieldLabel:'Date End',
+                            xtype:'datefield',
+                            maxValue:_today_date,
+                            id:'time-logs-end-date',
+                            value:_today_date,
+                            format:'m/d/Y',
+                            labelWidth:65,
+                            width:200,
+                            margin:'0 15 0 15'
+                        },
+                        {
+                            iconCls:'search-icon',
+                            tooltip:'Search',
+                            handler:function(){
+                                me.loadStore();       
+                            }
+                        }
+                    ]
                 }
+                        
             ]
         });
 
